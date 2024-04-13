@@ -4,18 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-
-
 <body>
-
-
-
-
-
-
-
-
-
 <!-- Hero Start -->
 <div class="container-fluid py-5 mb-5 hero-header">
     <div class="container py-5">
