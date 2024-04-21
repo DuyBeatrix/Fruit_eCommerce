@@ -33,7 +33,7 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="index.html" class="navbar-brand">
+            <a href="<c:url value="/"/>" class="navbar-brand">
                 <h1 class="text-primary display-6">Fruitables</h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
@@ -42,19 +42,22 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="shop.html" class="nav-item nav-link">Shop</a>
-                    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                    <a href="<c:url value="/"/>" class="nav-item nav-link active">Trang chủ</a>
+                    <a href="shop.html" class="nav-item nav-link">Cửa hàng</a>
+                    <a href="shop-detail.html" class="nav-item nav-link">Bài viết</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục sản phẩm</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="cart.html" class="dropdown-item">Cart</a>
-                            <a href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
+                            <c:forEach var="cate" items="${categories}">
+                                <a href="cart.html" class="dropdown-item">${cate.cateName}</a>
+                            </c:forEach>
+<%--                            <a href="chackout.html" class="dropdown-item">Chackout</a>--%>
+<%--                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>--%>
+<%--                            <a href="404.html" class="dropdown-item">404 Page</a>--%>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+                    <a href="contact.html" class="nav-item nav-link">Nhà cung cấp</a>
                 </div>
                 <div class="d-flex m-3 me-0">
                     <!-- <button
@@ -63,7 +66,7 @@
                             class="fas fa-search text-primary"></i></button> -->
                     <div class="position-relative me-3">
                         <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text"
-                               placeholder="Search">
+                               placeholder="Tìm kiếm">
                         <button type="submit"
                                 class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"
                                 style="top: 0; right: 0;"></button>
