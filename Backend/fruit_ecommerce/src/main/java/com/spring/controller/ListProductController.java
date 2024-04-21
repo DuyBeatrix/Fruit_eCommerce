@@ -25,7 +25,7 @@ public class ListProductController {
         mv.setViewName("user/listproduct");
 
 
-        System.out.println("index: " + index);
+//        System.out.println("index: " + index);
         if(index !=null && index > 0){
             mv.addObject("paginationProduct", productsService.paginationProduct(index));
         }
