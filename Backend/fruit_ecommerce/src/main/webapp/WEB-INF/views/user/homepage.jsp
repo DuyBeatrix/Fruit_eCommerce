@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<title>Trang chủ</title>
 <body>
 <!-- Hero Start -->
 <div class="container-fluid py-5 mb-5 hero-header">
@@ -21,16 +21,20 @@
                            placeholder="Search">
                     <button type="submit"
                             class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
-                            style="top: 0; right: 25%;">Submit Now</button>
+                            style="top: 0; right: 25%;">Submit Now
+                    </button>
                 </div>
             </div>
+
             <div class="col-md-12 col-lg-5">
+
                 <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <c:forEach var="cate" items="${categories}">
-                            <div class="carousel-item active rounded">
-                                <img src="<c:url value="/resource/user/img/${cate.cateImg}"/>" class="img-fluid w-100 h-100 bg-secondary rounded"
-                                     alt="First slide">
+                        <c:forEach var="cate" items="${categories}" varStatus="loop">
+                            <div class="carousel-item ${loop.first ? "active" : ""}  rounded">
+                                <img src="<c:url value="/resource/user/img/categories/${cate.cateImg}"/>"
+                                     class="img-fluid w-100 h-100 bg-secondary rounded"
+                                     alt="slide-${cate.cateId}">
                                 <a href="#" class="btn px-4 py-2 text-white rounded">${cate.cateName}</a>
                             </div>
                         </c:forEach>
@@ -46,6 +50,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+
             </div>
         </div>
     </div>
@@ -120,95 +125,47 @@
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill"
                                href="#tab-1">
-                                <span class="text-dark" style="width: 130px;">All Products</span>
+                                <span class="text-dark" style="width: 130px;">Tất cả sản phẩm</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                <span class="text-dark" style="width: 130px;">Vegetables</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                <span class="text-dark" style="width: 130px;">Fruits</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                <span class="text-dark" style="width: 130px;">Bread</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                <span class="text-dark" style="width: 130px;">Meat</span>
-                            </a>
-                        </li>
+                        <c:forEach var="cate" items="${categories}">
+                            <li class="nav-item">
+                                <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
+                                   href="#tab-${cate.cateId + 1}" id="cate-${cate.cateId}">
+
+                                    <span class="text-dark" style="width: 130px;">${cate.cateName}</span>
+                                </a>
+                                    <%--                            <form>--%>
+                                    <%--                                <input type="button" value="${cate.cateName}" class="d-flex py-2 m-2 bg-light rounded-pill text-dark" data-bs-toggle="pill" style="width: 130px;" href="#tab-2">--%>
+                                    <%--                            </form>--%>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-5.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Grapes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-5.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Grapes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+        </div>
+<%--        <div class="tab-content">--%>
+<%--            <div id="tab-1" class="tab-pane fade show p-0 active">--%>
+<%--                <div class="row g-4">--%>
+<%--                    <div class="col-lg-12">--%>
+<%--                        <div class="row g-4">--%>
+<%--                            <c:forEach var="product" items="${products}">--%>
 <%--                                <div class="col-md-6 col-lg-4 col-xl-3">--%>
 <%--                                    <div class="rounded position-relative fruite-item">--%>
 <%--                                        <div class="fruite-img">--%>
-<%--                                            <img src="<c:url value="/resource/user/img/fruite-item-2.jpg"/>" class="img-fluid w-100 rounded-top"--%>
+<%--                                            <img src="<c:url value="/resource/user/img/products/${product.productImg}"/>"--%>
+<%--                                                 class="img-fluid w-100 rounded-top"--%>
 <%--                                                 alt="">--%>
 <%--                                        </div>--%>
 <%--                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"--%>
-<%--                                             style="top: 10px; left: 10px;">Fruits</div>--%>
+<%--                                             style="top: 10px; left: 10px;">${product.cateName}</div>--%>
 <%--                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">--%>
-<%--                                            <h4>Raspberries</h4>--%>
-<%--                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do--%>
-<%--                                                eiusmod te incididunt</p>--%>
+<%--                                            <h4>${product.productName}</h4>--%>
+<%--                                            <p>${product.shortDesc}</p>--%>
 <%--                                            <div class="d-flex justify-content-between flex-lg-wrap">--%>
-<%--                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>--%>
+<%--                                                <p class="text-dark fs-5 fw-bold mb-0">${product.productPrice} / kg</p>--%>
 <%--                                                <a href="#"--%>
 <%--                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i--%>
 <%--                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to--%>
@@ -217,356 +174,56 @@
 <%--                                        </div>--%>
 <%--                                    </div>--%>
 <%--                                </div>--%>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-4.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Apricots</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-3.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Banana</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-1.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Oranges</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-<%--                                <div class="col-md-6 col-lg-4 col-xl-3">--%>
-<%--                                    <div class="rounded position-relative fruite-item">--%>
-<%--                                        <div class="fruite-img">--%>
-<%--                                            <img src="<c:url value="/resource/user//fruite-item-2.jpg"/>" class="img-fluid w-100 rounded-top"--%>
-<%--                                                 alt="">--%>
-<%--                                        </div>--%>
-<%--                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"--%>
-<%--                                             style="top: 10px; left: 10px;">Fruits</div>--%>
-<%--                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">--%>
-<%--                                            <h4>Raspberries</h4>--%>
-<%--                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do--%>
-<%--                                                eiusmod te incididunt</p>--%>
-<%--                                            <div class="d-flex justify-content-between flex-lg-wrap">--%>
-<%--                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>--%>
-<%--                                                <a href="#"--%>
-<%--                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i--%>
-<%--                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to--%>
-<%--                                                    cart</a>--%>
-<%--                                            </div>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                </div>--%>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-5.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Grapes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-2" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-5.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Grapes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-<%--                                <div class="col-md-6 col-lg-4 col-xl-3">--%>
-<%--                                    <div class="rounded position-relative fruite-item">--%>
-<%--                                        <div class="fruite-img">--%>
-<%--                                            <img src="<c:url value="/resource/user/img/fruite-item-2.jpg"/>" class="img-fluid w-100 rounded-top"--%>
-<%--                                                 alt="">--%>
-<%--                                        </div>--%>
-<%--                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"--%>
-<%--                                             style="top: 10px; left: 10px;">Fruits</div>--%>
-<%--                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">--%>
-<%--                                            <h4>Raspberries</h4>--%>
-<%--                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do--%>
-<%--                                                eiusmod te incididunt</p>--%>
-<%--                                            <div class="d-flex justify-content-between flex-lg-wrap">--%>
-<%--                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>--%>
-<%--                                                <a href="#"--%>
-<%--                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i--%>
-<%--                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to--%>
-<%--                                                    cart</a>--%>
-<%--                                            </div>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                </div>--%>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-3" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-1.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Oranges</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-6.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Apple</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-4" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-5.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Grapes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-4.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Apricots</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-5" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-3.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Banana</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-<%--                                <div class="col-md-6 col-lg-4 col-xl-3">--%>
-<%--                                    <div class="rounded position-relative fruite-item">--%>
-<%--                                        <div class="fruite-img">--%>
-<%--                                            <img src="<c:url value="/resource/user/img/fruite-item-2.jpg"/>" class="img-fluid w-100 rounded-top"--%>
-<%--                                                 alt="">--%>
-<%--                                        </div>--%>
-<%--                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"--%>
-<%--                                             style="top: 10px; left: 10px;">Fruits</div>--%>
-<%--                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">--%>
-<%--                                            <h4>Raspberries</h4>--%>
-<%--                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do--%>
-<%--                                                eiusmod te incididunt</p>--%>
-<%--                                            <div class="d-flex justify-content-between flex-lg-wrap">--%>
-<%--                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>--%>
-<%--                                                <a href="#"--%>
-<%--                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i--%>
-<%--                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to--%>
-<%--                                                    cart</a>--%>
-<%--                                            </div>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                </div>--%>
-                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                    <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                            <img src="<c:url value="/resource/user/img/fruite-item-1.jpg"/>" class="img-fluid w-100 rounded-top"
-                                                 alt="">
-                                        </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                             style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>Oranges</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                                                eiusmod te incididunt</p>
-                                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
-                                                <a href="#"
-                                                   class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                    cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<%--                            </c:forEach>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="row g-4 list-product">
+
                         </div>
                     </div>
                 </div>
             </div>
+            <c:forEach var="cate" items="${categories}">
+            <div id="tab-${cate.cateId + 1}" class="tab-pane fade show p-0">
+
+                </c:forEach>
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="row g-4 result-ajax">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
 <!-- Fruits Shop End-->
 
+    <div class="col-12 page-product">
+        <div class="pagination d-flex justify-content-center mt-5">
+            <a href="#" class="rounded">&laquo;</a>
+            <c:forEach begin="1" end="${endPage}" var="i">
+                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
+            </c:forEach>
+            <%--        <a href="#" class="rounded">2</a>--%>
+            <%--        <a href="#" class="rounded">3</a>--%>
+            <%--        <a href="#" class="rounded">4</a>--%>
+            <%--        <a href="#" class="rounded">5</a>--%>
+            <%--        <a href="#" class="rounded">6</a>--%>
+            <a href="#" class="rounded">&raquo;</a>
+        </div>
+    </div>
 
 <!-- Featurs Start -->
 <div class="container-fluid service py-5">
@@ -575,7 +232,8 @@
             <div class="col-md-6 col-lg-4">
                 <a href="#">
                     <div class="service-item bg-secondary rounded border border-secondary">
-                        <img src="<c:url value="/resource/user/img/featur-1.jpg"/>" class="img-fluid rounded-top w-100" alt="">
+                        <img src="<c:url value="/resource/user/img/featur-1.jpg"/>" class="img-fluid rounded-top w-100"
+                             alt="">
                         <div class="px-4 rounded-bottom">
                             <div class="service-content bg-primary text-center p-4 rounded">
                                 <h5 class="text-white">Fresh Apples</h5>
@@ -588,7 +246,8 @@
             <div class="col-md-6 col-lg-4">
                 <a href="#">
                     <div class="service-item bg-dark rounded border border-dark">
-                        <img src="<c:url value="/resource/user/img/featur-2.jpg"/>" class="img-fluid rounded-top w-100" alt="">
+                        <img src="<c:url value="/resource/user/img/featur-2.jpg"/>" class="img-fluid rounded-top w-100"
+                             alt="">
                         <div class="px-4 rounded-bottom">
                             <div class="service-content bg-light text-center p-4 rounded">
                                 <h5 class="text-primary">Tasty Fruits</h5>
@@ -601,7 +260,8 @@
             <div class="col-md-6 col-lg-4">
                 <a href="#">
                     <div class="service-item bg-primary rounded border border-primary">
-                        <img src="<c:url value="/resource/user/img/featur-3.jpg"/>" class="img-fluid rounded-top w-100" alt="">
+                        <img src="<c:url value="/resource/user/img/featur-3.jpg"/>" class="img-fluid rounded-top w-100"
+                             alt="">
                         <div class="px-4 rounded-bottom">
                             <div class="service-content bg-secondary text-center p-4 rounded">
                                 <h5 class="text-white">Exotic Vegitable</h5>
@@ -624,10 +284,12 @@
         <div class="owl-carousel vegetable-carousel justify-content-center">
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Parsely</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -640,10 +302,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-1.jpg"/>" class="img-fluid w-100 rounded-top" alt=""/>
+                    <img src="<c:url value="/resource/user/img/vegetable-item-1.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt=""/>
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Parsely</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -656,10 +320,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-3.png"/>" class="img-fluid w-100 rounded-top bg-light" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-3.png"/>"
+                         class="img-fluid w-100 rounded-top bg-light" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Banana</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -672,10 +338,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-4.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-4.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Bell Papper</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -688,10 +356,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-5.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-5.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Potatoes</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -704,10 +374,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Parsely</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -720,10 +392,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-5.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-5.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Potatoes</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -736,10 +410,12 @@
             </div>
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>" class="img-fluid w-100 rounded-top" alt="">
+                    <img src="<c:url value="/resource/user/img/vegetable-item-6.jpg"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                     style="top: 10px; right: 10px;">Vegetable</div>
+                     style="top: 10px; right: 10px;">Vegetable
+                </div>
                 <div class="p-4 rounded-bottom">
                     <h4>Parsely</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
@@ -802,7 +478,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-1.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-1.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -824,7 +501,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-2.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-2.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -846,7 +524,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-3.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-3.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -868,7 +547,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-4.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-4.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -890,7 +570,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-5.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-5.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -912,7 +593,8 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/best-product-6.jpg"/>" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="<c:url value="/resource/user/img/best-product-6.jpg"/>"
+                                 class="img-fluid rounded-circle w-100" alt="">
                         </div>
                         <div class="col-6">
                             <a href="#" class="h5">Organic Tomato</a>
@@ -1067,8 +749,8 @@
                     </div>
                     <div class="d-flex align-items-center flex-nowrap">
                         <div class="bg-secondary rounded">
-                            <img src="<c:url value="/resource/user/img/testimonial-1.jpg"/> class="img-fluid rounded"
-                                 style="width: 100px; height: 100px;" alt="">
+                            <img src="<c:url value="/resource/user/img/testimonial-1.jpg"/>" class="img-fluid rounded"
+                            style="width: 100px; height: 100px;" alt=""/>
                         </div>
                         <div class="ms-4 d-block">
                             <h4 class="text-dark">Client Name</h4>
@@ -1144,5 +826,56 @@
     </div>
 </div>
 <!-- Tastimonial End -->
+<script type="text/javascript">
 
+    $(document).ready(function () {
+        <%--$.ajax({--%>
+        <%--    type: 'GET',--%>
+        <%--    url: '${pageContext.request.contextPath}/products/1.html',--%>
+        <%--    success: function (data) {--%>
+        <%--        $('.list-product').html(data);--%>
+        <%--    },--%>
+        <%--    error: function (XMLHttpResponse, textStatus, errorThrown) {--%>
+        <%--        XMLHttpResponse.toString();--%>
+        <%--    }--%>
+        <%--});--%>
+        $(document).ready(function () {
+
+            $('.nav-item a').click(function () {
+                let cateId = $(this).attr('id').split('-')[1];
+                let url = '/productbycate/' + cateId + '.html';
+
+                $.ajax({
+                    type: 'GET',
+                    url: '${pageContext.request.contextPath}' + url,
+                    success: function (data) {
+                        $('.result-ajax').html(data)
+
+                    },
+                    error: function (XMLHttpResponse, textStatus, errorThrown) {
+                        XMLHttpResponse.toString()
+                    }
+
+                })
+
+            });
+        $('.page-product button').click(function () {
+            let index = $(this).attr('id').split('-')[1];
+            let url = '/products/' + index + '.html';
+
+            $.ajax({
+                type: 'GET',
+                url: '${pageContext.request.contextPath}' + url,
+                success: function (data) {
+                    $('.list-product').html(data);
+                },
+                error: function (XMLHttpResponse, textStatus, errorThrown) {
+                    XMLHttpResponse.toString();
+                }
+            });
+        });
+    });
+
+    });
+</script>
 </body>
