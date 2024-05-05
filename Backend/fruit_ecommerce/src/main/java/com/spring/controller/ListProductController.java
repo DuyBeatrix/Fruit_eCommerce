@@ -21,18 +21,13 @@ public class ListProductController {
         ModelAndView mv = new ModelAndView();
         boolean ajaxRequest = isAjaxRequest(request);
         request.setAttribute("ajaxRequest", ajaxRequest);
-
         mv.setViewName("user/listproduct");
-
-
-//        System.out.println("index: " + index);
         if(index !=null && index > 0){
             mv.addObject("paginationProduct", productsService.paginationProduct(index));
         }
         else {
             mv.addObject("paginationProduct", productsService.paginationProduct(1));
         }
-
         return mv;
     }
     private boolean isAjaxRequest(HttpServletRequest request) {

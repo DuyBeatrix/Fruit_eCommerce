@@ -20,7 +20,7 @@ public class GetProductbyCateController {
 
     @RequestMapping(value = "/{cateId}", method = RequestMethod.GET)
     public ModelAndView getProductsByCategory(@PathVariable int cateId, HttpServletRequest request ) {
-//        List<Products> productsList =  productsService.getProductByCate(cateId);
+
         ModelAndView mv = new ModelAndView();
         boolean ajaxRequest = isAjaxRequest(request);
         request.setAttribute("ajaxRequest", ajaxRequest);
@@ -29,7 +29,6 @@ public class GetProductbyCateController {
         mv.setViewName("user/productbycategory");
         mv.addObject("probycate", productsService.getProductByCate(cateId));
         return mv;
-
     }
     private boolean isAjaxRequest(HttpServletRequest request) {
         return "XMLHttpRequest".equals(request.getHeader("X-Requested-With"));

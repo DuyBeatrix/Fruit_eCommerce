@@ -30,4 +30,14 @@ public class ProductsServiceImpl implements ProductsService{
     public List<Products> paginationProduct(int index) {
         return homeDAO.paginationProduct(index);
     }
+
+    @Override
+    public List<Products> getFreshVegetable() {
+        return homeDAO.getFreshVegetable();
+    }
+
+    @Override
+    public List<Products> getBestSeller() {
+        return homeDAO.getBestSeller();
+    }
 }
