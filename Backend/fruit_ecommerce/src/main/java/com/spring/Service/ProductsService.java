@@ -9,4 +9,6 @@ public interface ProductsService {
     public List<Products> getProductByCate(int cateId);
     public int countProduct();
     public List<Products> paginationProduct(int index);
+    public List<Products> getFreshVegetable();
+    public List<Products> getBestSeller();
 }

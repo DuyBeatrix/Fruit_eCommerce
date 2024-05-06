@@ -77,9 +77,16 @@
                                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
                                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                     </a>
-                    <a href="#" class="my-auto">
-                        <i class="fas fa-user fa-2x"></i>
-                    </a>
+                    <c:if test="${empty loginInfo}">
+                        <a href="${pageContext.request.contextPath}/login" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </c:if>
+                    <c:if test="${not empty loginInfo}">
+                        <a href="${pageContext.request.contextPath}/logout" class="my-auto">
+                            <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                        </a>
+                    </c:if>
                 </div>
             </div>
         </nav>

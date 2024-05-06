@@ -31,8 +31,9 @@ public class HomeController {
             endPage = endPage + 1;
         }
         mv.addObject("endPage", endPage);
-//        mv.addObject("productbycate", productsService.getProductByCate(cateId));
 
+        mv.addObject("listvegetable", productsService.getFreshVegetable());
+        mv.addObject("bestseller", productsService.getBestSeller());
         return mv;
     }
 }

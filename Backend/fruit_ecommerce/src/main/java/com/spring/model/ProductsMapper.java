@@ -22,6 +22,7 @@ public class ProductsMapper implements RowMapper<Products> {
         products.setCreateDate(rs.getDate("create_date"));
         products.setCateId(rs.getInt("cate_id"));
         products.setCateName(rs.getNString("cate_name"));
+        products.setSell_quantity(rs.getInt("sell_quantity"));
         return products;
     }
 }
