@@ -14,7 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class HomeController {
+public class HomeController
+{
     @Autowired
     public CategoriesServiceImpl categoriesService;
     @Autowired
@@ -38,4 +39,6 @@ public class HomeController {
         mv.addObject("bestseller", productsService.getBestSeller());
         return mv;
     }
+
+
 }
