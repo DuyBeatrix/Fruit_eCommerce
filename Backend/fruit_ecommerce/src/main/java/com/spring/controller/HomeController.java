@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class HomeController
 {
@@ -19,7 +21,7 @@ public class HomeController
     @Autowired
     public ProductsServiceImpl productsService;
     @RequestMapping(value={"/", "/home"}, method = RequestMethod.GET)
-    public ModelAndView home() {
+    public ModelAndView home(HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("user/homepage");
         mv.addObject("categories", categoriesService.getAllCategories());
@@ -31,7 +33,7 @@ public class HomeController
         if(count % 4 != 0){
             endPage = endPage + 1;
         }
-        mv.addObject("endPage", endPage);
+        request.setAttribute("endPage", endPage);
 
         mv.addObject("listvegetable", productsService.getFreshVegetable());
         mv.addObject("bestseller", productsService.getBestSeller());

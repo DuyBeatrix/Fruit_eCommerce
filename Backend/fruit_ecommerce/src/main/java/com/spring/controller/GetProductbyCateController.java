@@ -18,16 +18,29 @@ public class GetProductbyCateController {
     @Autowired
     private ProductsServiceImpl productsService;
 
-    @RequestMapping(value = "/{cateId}", method = RequestMethod.GET)
-    public ModelAndView getProductsByCategory(@PathVariable int cateId, HttpServletRequest request ) {
+    @RequestMapping(value = "/{cateId}/{index}", method = RequestMethod.GET)
+    public ModelAndView getProductsByCategory(@PathVariable int cateId,@PathVariable(required = false) Integer index, HttpServletRequest request ) {
 
         ModelAndView mv = new ModelAndView();
         boolean ajaxRequest = isAjaxRequest(request);
         request.setAttribute("ajaxRequest", ajaxRequest);
         mv.addObject("cateId", cateId);
+        if(index !=null && index > 0){
+            mv.addObject("probycate", productsService.getProductByCate(cateId, index));
+        }
+        else {
+            mv.addObject("probycate", productsService.getProductByCate(cateId, 1));
+        }
+        int count = productsService.countProductByCate(cateId);
+        mv.addObject("count", count);
+        int endPage = count/4;
+        if(count % 4 != 0){
+            endPage = endPage + 1;
+        }
+        request.setAttribute("endPageProductByCate", endPage);
         System.out.println("cateId: "+ cateId);
         mv.setViewName("user/productbycategory");
-        mv.addObject("probycate", productsService.getProductByCate(cateId));
+
         return mv;
     }
     private boolean isAjaxRequest(HttpServletRequest request) {

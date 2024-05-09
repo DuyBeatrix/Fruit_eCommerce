@@ -178,14 +178,16 @@
 <div class="col-12 page-product">
     <div class="pagination d-flex justify-content-center mt-5">
         <a href="#" class="rounded">&laquo;</a>
-        <c:forEach begin="1" end="${endPage}" var="i">
-            <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
-        </c:forEach>
-        <%--        <a href="#" class="rounded">2</a>--%>
-        <%--        <a href="#" class="rounded">3</a>--%>
-        <%--        <a href="#" class="rounded">4</a>--%>
-        <%--        <a href="#" class="rounded">5</a>--%>
-        <%--        <a href="#" class="rounded">6</a>--%>
+        <c:if test="${not empty endPage}">
+            <c:forEach begin="1" end="${endPage}" var="i">
+                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
+            </c:forEach>
+        </c:if>
+        <c:if test="${not empty endPageProductByCate}">
+            <c:forEach begin="1" end="${endPageProductByCate}" var="i">
+                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
+            </c:forEach>
+        </c:if>
         <a href="#" class="rounded">&raquo;</a>
     </div>
 </div>
@@ -258,7 +260,7 @@
                 </div>
                 <div class="p-4 rounded-bottom">
                     <h4>${list.productName}</h4>
-                    <p>${list.shortDesc}t</p>
+<%--                    <p>${list.shortDesc}t</p>--%>
                     <div class="d-flex justify-content-between flex-lg-wrap">
                         <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
@@ -485,6 +487,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+
         $.ajax({
             type: 'GET',
             url: '${pageContext.request.contextPath}/products/1.html',
@@ -495,27 +498,57 @@
                 XMLHttpResponse.toString();
             }
         });
+    });
+    $(document).ready(function () {
+
+        $('.nav-item a').click(function () {
+            let cateId = $(this).attr('id').split('-')[1];
+            let url = '/productbycate/' + cateId +'/1'+ '.html';
+
+            $.ajax({
+                type: 'GET',
+                url: '${pageContext.request.contextPath}' + url,
+                success: function (data) {
+                    $('.result-ajax').html(data)
+
+
+                },
+                error: function (XMLHttpResponse, textStatus, errorThrown) {
+                    XMLHttpResponse.toString()
+                },
+
+            });
+
+
+
+
+
+        });
+    });
         $(document).ready(function () {
 
             $('.nav-item a').click(function () {
                 let cateId = $(this).attr('id').split('-')[1];
-                let url = '/productbycate/' + cateId + '.html';
+                let index = $(this).attr('id').split('-')[1];
+                let url = '/productbycate/' + cateId + '/'+index+ '.html';
 
-                $.ajax({
-                    type: 'GET',
-                    url: '${pageContext.request.contextPath}' + url,
-                    success: function (data) {
-                        $('.result-ajax').html(data)
-                        console.log(data)
+                    $.ajax({
+                        type: 'GET',
+                        url: '${pageContext.request.contextPath}' + url,
+                        success: function (data) {
+                            $('.result-ajax').html(data)
 
-                    },
-                    error: function (XMLHttpResponse, textStatus, errorThrown) {
-                        XMLHttpResponse.toString()
-                    },
-                    passive: true
 
-                });
-                return false;
+                        },
+                        error: function (XMLHttpResponse, textStatus, errorThrown) {
+                            XMLHttpResponse.toString()
+                        },
+
+                    });
+
+
+
+
 
             });
             $('.page-product button').click(function () {
@@ -535,6 +568,6 @@
             });
         });
 
-    });
+    // });
 </script>
 </body>

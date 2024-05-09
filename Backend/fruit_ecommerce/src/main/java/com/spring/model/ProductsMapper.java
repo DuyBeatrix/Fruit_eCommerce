@@ -12,7 +12,7 @@ public class ProductsMapper implements RowMapper<Products> {
         products.setProductId(rs.getInt("id"));
         products.setProductName(rs.getNString("product_name"));
         products.setProductDesc(rs.getNString("product_desc"));
-        products.setShortDesc(rs.getNString("short_desc"));
+       // products.setShortDesc(rs.getNString("short_desc"));
         products.setproductPrice(rs.getDouble("product_price"));
         products.setQuantity(rs.getInt("quantity"));
         products.setSale(rs.getDouble("product_sales"));

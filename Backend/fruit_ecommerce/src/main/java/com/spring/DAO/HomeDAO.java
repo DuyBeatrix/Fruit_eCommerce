@@ -32,11 +32,17 @@ public class HomeDAO {
 
         return productsList;
     }
-    public List<Products> getProductByCate(int cateId) {
+    public int countProductByCate(int cateId){
+        String sql = "select count(*) from product where cate_id=?";
+        int count = jdbcTemplate.queryForObject(sql, new Object[]{cateId}, Integer.class);
+        return count;
+    }
+    public List<Products> getProductByCate(int cateId, int index) {
         List<Products> products = new ArrayList<Products>();
         //String sql = "SELECT p.product_name, p.product_img, p.product_price, p.short_desc, c.cate_name FROM product p INNER JOIN category c ON p.cate_id = c.cate_id WHERE c.cate_id = ?";
-        String sql = "select p.*, c.cate_name from product p inner join category c on p.cate_id = c.cate_id where c.cate_id=?";
-        products =   jdbcTemplate.query(sql, new Object[]{cateId}, new ProductsMapper());
+        String sql = "select p.*, c.cate_name from product p inner join category c on p.cate_id = c.cate_id where c.cate_id=? LIMIT 4 OFFSET ?";
+        int page = (index-1) * 4;
+        products =   jdbcTemplate.query(sql, new Object[]{cateId, index}, new ProductsMapper());
         return  products;
     }
     public int countProduct(){
@@ -65,6 +71,7 @@ public class HomeDAO {
         products = jdbcTemplate.query(sql, new ProductsMapper());
         return products;
     }
+
 //    public static void main(String[] args) {
 //        ApplicationContext context = new AnnotationConfigApplicationContext(Products.class);
 //        //HomeDAO homeDAO = new HomeDAO();
@@ -74,5 +81,6 @@ public class HomeDAO {
 //            System.out.println(products);
 //        }
 //    }
+
 
 }

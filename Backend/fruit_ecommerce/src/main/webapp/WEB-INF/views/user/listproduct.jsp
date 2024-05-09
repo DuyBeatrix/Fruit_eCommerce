@@ -22,7 +22,7 @@
                                         </div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                             <h4>${product.productName}</h4>
-                                            <p>${product.shortDesc}</p>
+<%--                                            <p>${product.shortDesc}</p>--%>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0">${product.productPrice} / kg</p>
                                                 <a href="#"
@@ -34,5 +34,14 @@
                                     </div>
                                 </div>
                                 </c:forEach>
+<%--                                <div class="col-12 page-product">--%>
+<%--                                    <div class="pagination d-flex justify-content-center mt-5">--%>
+<%--                                        <a href="#" class="rounded">&laquo;</a>--%>
+<%--                                        <c:forEach begin="1" end="${endPage}" var="i">--%>
+<%--                                            <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>--%>
+<%--                                        </c:forEach>--%>
+<%--                                        <a href="#" class="rounded">&raquo;</a>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
 
 </body>
