@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +23,7 @@ public class HomeDAO {
         categoriesList = jdbcTemplate.query(sql, new CategoriesMapper());
         return categoriesList;
     }
+
 
     public List<Products> getAllProducts() {
         List<Products> productsList  = new ArrayList<Products>();
@@ -74,4 +74,5 @@ public class HomeDAO {
 //            System.out.println(products);
 //        }
 //    }
+
 }

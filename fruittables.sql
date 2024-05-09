@@ -125,3 +125,4 @@ drop table orders;
 drop table order_detail;
 drop table supplier;
 drop database fruittables;
+

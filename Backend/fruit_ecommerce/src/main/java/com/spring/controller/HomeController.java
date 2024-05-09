@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+public class HomeController
+{
     @Autowired
     public CategoriesServiceImpl categoriesService;
     @Autowired
@@ -36,4 +37,6 @@ public class HomeController {
         mv.addObject("bestseller", productsService.getBestSeller());
         return mv;
     }
+
+
 }
