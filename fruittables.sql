@@ -23,6 +23,7 @@ create table product
 	id int auto_increment not null primary key,
     product_name varchar(255) not null,
     product_desc text not null,
+    short_desc text not null,
     product_price double not null,
     quantity int not null,
     product_sales int null,
@@ -117,4 +118,11 @@ create table blog_detail
     customer_id int,
     foreign key (blog_id) references blog_type(id),
     foreign key (customer_id) references customer(id)
-)
+);
+drop table product;
+drop table feedback;
+drop table orders;
+drop table order_detail;
+drop table supplier;
+drop database fruittables;
+

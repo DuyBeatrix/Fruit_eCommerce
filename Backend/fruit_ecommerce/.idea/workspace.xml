@@ -9,17 +9,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e7c271-b957-4e8b-b9db-5c601087e04a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/HomeDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Categories.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/CategoriesMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/AuthDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/ProductsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/ProductsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/ForgotPasswordControlelr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/GetProductbyCateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/ListProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/CodeVerify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/Products.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/ProductsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/categories/ca.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/categories/hoa-qua.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/categories/rau-cu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/categories/thit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/products/ca-dieu-hong-fillet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/products/orange-small.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/products/raumuong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/products/thitthanbo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/suppliers/gioi-thieu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/forgotPassword.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/verifyAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/login-register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/listproduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/productbycategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/abc.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/CategoriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/CategoriesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/model/CategoriesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/CategoriesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/application-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/application-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/abc.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fruittables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../fruittables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,14 +74,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="viducthien" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -63,25 +115,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.New_Sale_Controller.executor": "Run",
-    "Application.New_Sale_DAO.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Smart Tomcat.TomCat.executor": "Run",
     "Tomcat Server.Tomcat 9.0.85.executor": "Run",
-    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/HAUI_VI/DACN_2024/Fruittables/Fruit_eCommerce/Backend/fruit_ecommerce",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "http.proxy",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,19 +132,20 @@
       <recent name="D:\HAUI_VI\DACN_2024\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF\resource\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF\views" />
       <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF\views\user" />
+      <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF\views\ajax" />
       <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp" />
       <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF" />
-      <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.85">
-    <configuration name="NewSaleController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spring.controller.NewSaleController" />
+    <configuration name="HomeDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spring.DAO.HomeDAO" />
       <module name="fruit_ecommerce" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.spring.controller.*" />
+          <option name="PATTERN" value="com.spring.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,8 +153,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewSaleDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spring.DAO.NewSaleDAO" />
+    <configuration name="TestEmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spring.DAO.TestEmail" />
       <module name="fruit_ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -211,15 +253,38 @@
         </option>
       </method>
     </configuration>
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\ANPHATPC\.SmartTomcat\fruit_ecommerce\fruit_ecommerce" />
+      <option name="contextPath" value="/fruit_ecommerce" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.87 (2)" />
+          <option name="path" value="$PROJECT_DIR$/../apache-tomcat-9.0.87" />
+          <option name="version" value="9.0.87.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="fruit_ecommerce" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.NewSaleController" />
-      <item itemvalue="Application.NewSaleDAO" />
+      <item itemvalue="Application.HomeDAO" />
+      <item itemvalue="Application.TestEmail" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NewSaleController" />
-        <item itemvalue="Application.NewSaleDAO" />
+        <item itemvalue="Application.HomeDAO" />
+        <item itemvalue="Application.TestEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -287,34 +352,67 @@
       <workItem from="1715100045066" duration="1076000" />
       <workItem from="1715240118101" duration="48000" />
       <workItem from="1715242712892" duration="2185000" />
+      <workItem from="1713021497292" duration="3260000" />
+      <workItem from="1713069075226" duration="17418000" />
+      <workItem from="1713275365484" duration="3725000" />
+      <workItem from="1713281107336" duration="4803000" />
+      <workItem from="1713312743971" duration="2494000" />
+      <workItem from="1713421057255" duration="14789000" />
+      <workItem from="1713519137086" duration="4570000" />
+      <workItem from="1713536767321" duration="2862000" />
+      <workItem from="1713591149703" duration="925000" />
+      <workItem from="1713592280178" duration="4724000" />
+      <workItem from="1713621307499" duration="5533000" />
+      <workItem from="1713683325962" duration="8077000" />
+      <workItem from="1713691461199" duration="8131000" />
+      <workItem from="1713712949315" duration="1696000" />
+      <workItem from="1713758904534" duration="3040000" />
+      <workItem from="1713770093791" duration="10984000" />
+      <workItem from="1713793672788" duration="1903000" />
+      <workItem from="1713796484017" duration="592000" />
+      <workItem from="1713798916112" duration="5543000" />
+      <workItem from="1713954947998" duration="1205000" />
+      <workItem from="1714290428044" duration="6217000" />
+      <workItem from="1714375033148" duration="4791000" />
+      <workItem from="1714401440793" duration="2063000" />
+      <workItem from="1714464915815" duration="6706000" />
+      <workItem from="1714574253288" duration="3906000" />
+      <workItem from="1714620449091" duration="5872000" />
+      <workItem from="1714664574212" duration="5048000" />
+      <workItem from="1714706810335" duration="6815000" />
+      <workItem from="1714745406623" duration="8738000" />
+      <workItem from="1714790641153" duration="27431000" />
+      <workItem from="1714876776146" duration="19177000" />
     </task>
+    <task id="LOCAL-00001" summary="update product by category and pagination list product">
+      <option name="closed" value="true" />
+      <created>1713712278295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713712278295</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update product by category and pagination list product">
+      <option name="closed" value="true" />
+      <created>1713713053488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713713053488</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update product by category and pagination list product">
+      <option name="closed" value="true" />
+      <created>1713713445303</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713713445303</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="buihuuduy" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
