@@ -12,8 +12,8 @@ public class CategoriesMapper implements RowMapper<Categories>
         Categories categories = new Categories();
         categories.setCateId(rs.getInt("cate_id"));
         categories.setCateName(rs.getString("cate_name"));
-        categories.setCateImg(rs.getString("cate_img"));
-        categories.setEnable(rs.getBoolean("enable"));
+        categories.setCateImg(rs.getString("cate_image"));
+        categories.setEnable(rs.getBoolean("cate_enable"));
         return categories;
     }
 }

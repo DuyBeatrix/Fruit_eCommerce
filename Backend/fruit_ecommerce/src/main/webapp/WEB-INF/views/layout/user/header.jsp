@@ -61,18 +61,25 @@
                         class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
                         data-bs-toggle="modal" data-bs-target="#searchModal"><i
                             class="fas fa-search text-primary"></i></button> -->
-                    <div class="position-relative me-3">
-                        <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text"
-                               placeholder="Search">
-                        <button type="submit"
-                                class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"
-                                style="top: 0; right: 0;"></button>
-                    </div>
-                    <a href="cart.html" class="position-relative me-4 my-auto">
+<%--                    <div class="position-relative me-3">--%>
+<%--                        <input id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">--%>
+<%--                        <button id="searchButton" type="submit"--%>
+<%--                                class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;">--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+
+                    <form id="searchForm" action="${pageContext.request.contextPath}/search/${freeText}" method="GET">
+                        <div class="position-relative me-3">
+                            <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">
+                            <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>
+                        </div>
+                    </form>
+
+                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
                         <i class="fa fa-shopping-bag fa-2x"></i>
                         <span
                                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${cart.size()}</span>
                     </a>
                     <a href="#" class="my-auto">
                         <i class="fas fa-user fa-2x"></i>
@@ -104,3 +111,18 @@
     </div>
 </div>
 <!-- Modal Search End -->
+
+<%--<script>--%>
+<%--    document.getElementById("searchButton").addEventListener("click", function() {--%>
+<%--        window.location.href = "${pageContext.request.contextPath}/search";--%>
+<%--    });--%>
+<%--</script>--%>
+
+<script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của form
+        var searchText = document.getElementById("searchInput").value;
+        window.location.href = "${pageContext.request.contextPath}/search/" + searchText;
+    });
+</script>
+
