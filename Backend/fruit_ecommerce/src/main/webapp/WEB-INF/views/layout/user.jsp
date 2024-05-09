@@ -13,6 +13,10 @@
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <html>
 <head>
+    <c:choose>
+        <c:when test="${empty requestScope.ajaxRequest || !requestScope.ajaxRequest}">
+
+
     <meta charset="utf-8">
     <title><decorator:title default="Master-layout"/></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -40,6 +44,8 @@
 
     <!-- Template Stylesheet -->
     <link href="<c:url value="/resource/user/css/style.css"/>" rel="stylesheet">
+        </c:when>
+    </c:choose>
 </head>
 <body>
 <c:choose>
@@ -59,6 +65,8 @@
         <%@include file="/WEB-INF/views/layout/user/footer.jsp" %>
     </c:when>
 </c:choose>
+<c:choose>
+    <c:when test="${empty requestScope.ajaxRequest || !requestScope.ajaxRequest}">
 <!-- JavaScript Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -70,5 +78,8 @@
 <!-- Template Javascript -->
 <script src="<c:url value="/resource/user/js/main.js"/>"></script>
 <decorator:getProperty property="page.script"/>
+    </c:when>
+</c:choose>
+
 </body>
 </html>

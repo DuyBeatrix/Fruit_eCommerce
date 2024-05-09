@@ -6,7 +6,7 @@ public class Products {
     private int productId;
     private String productName;
     private String productDesc;
-    private String shortDesc;
+    //private String shortDesc;
     private double productPrice;
     private int quantity;
     private double sale;
@@ -42,13 +42,13 @@ public class Products {
         this.productDesc = productDesc;
     }
 
-    public String getShortDesc() {
-        return shortDesc;
-    }
-
-    public void setShortDesc(String shortDesc) {
-        this.shortDesc = shortDesc;
-    }
+//    public String getShortDesc() {
+//        return shortDesc;
+//    }
+//
+//    public void setShortDesc(String shortDesc) {
+//        this.shortDesc = shortDesc;
+//    }
 
     public double getproductPrice() {
         return productPrice;
@@ -141,11 +141,11 @@ public class Products {
     public Products() {
     }
 
-    public Products(int productId, String productName, String productDesc, String shortDesc, double productPrice, int quantity, double sale, boolean hot, Date expDate, Date createDate, String productImg, int cateId, String cateName, int sell_quantity) {
+    public Products(int productId, String productName, String productDesc, double productPrice, int quantity, double sale, boolean hot, Date expDate, Date createDate, String productImg, int cateId, String cateName, int sell_quantity) {
         this.productId = productId;
         this.productName = productName;
         this.productDesc = productDesc;
-        this.shortDesc = shortDesc;
+        //this.shortDesc = shortDesc;
         this.productPrice = productPrice;
         this.quantity = quantity;
         this.sale = sale;

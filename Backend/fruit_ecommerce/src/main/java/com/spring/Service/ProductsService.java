@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface ProductsService {
     public List<Products> getAllProducts();
-    public List<Products> getProductByCate(int cateId);
+    public int countProductByCate(int cateId);
+    public List<Products> getProductByCate(int cateId, int index);
     public int countProduct();
     public List<Products> paginationProduct(int index);
     public List<Products> getFreshVegetable();

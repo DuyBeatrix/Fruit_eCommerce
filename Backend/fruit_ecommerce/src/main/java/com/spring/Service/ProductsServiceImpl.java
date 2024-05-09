@@ -17,8 +17,13 @@ public class ProductsServiceImpl implements ProductsService{
     }
 
     @Override
-    public List<Products> getProductByCate(int cateId) {
-        return homeDAO.getProductByCate(cateId);
+    public int countProductByCate(int cateId) {
+        return homeDAO.countProductByCate(cateId);
+    }
+
+    @Override
+    public List<Products> getProductByCate(int cateId, int index) {
+        return homeDAO.getProductByCate(cateId, index);
     }
 
     @Override
