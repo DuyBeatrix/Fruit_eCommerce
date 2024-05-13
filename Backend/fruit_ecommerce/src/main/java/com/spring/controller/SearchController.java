@@ -19,26 +19,6 @@ public class SearchController
 {
     @Autowired
     private SearchServiceImpl searchService = new SearchServiceImpl();
-
-//    @RequestMapping(value = "/search")
-//    public ModelAndView search(){
-//        ModelAndView mv = new ModelAndView("user/search");
-//        return mv;
-//    }
-
-//    @RequestMapping(value = "/search")
-//    public String search(HttpSession session, Model model, @RequestParam("freeText") String freeText)
-//    {
-//        int id = (Integer)session.getAttribute("id");
-//        model.addAttribute("search", searchService.findAllProducts(id, freeText));
-//        return "user/search";
-//    }
-
-//        @RequestMapping(value = "/search", method = RequestMethod.GET)
-//        public String search(@RequestParam("freeText") String freeText, HttpSession session, Model model) {
-//            model.addAttribute("search", searchService.findAllProducts(freeText));
-//            return "user/search";
-//        }
     @RequestMapping(value = "/search/{freeText}", method = RequestMethod.GET)
     public ModelAndView search(@PathVariable String freeText, HttpSession session, Model model) {
         ModelAndView mv = new ModelAndView();

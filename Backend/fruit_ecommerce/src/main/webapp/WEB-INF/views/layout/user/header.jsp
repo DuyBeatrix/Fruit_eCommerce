@@ -81,13 +81,7 @@
 
                     <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
 
-                    <div class="position-relative me-3">
-                        <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text"
-                               placeholder="Tìm kiếm">
-                        <button type="submit"
-                                class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"
-                                style="top: 0; right: 0;"></button>
-                    </div>
+
                     <a href="cart.html" class="position-relative me-4 my-auto">
 
                         <i class="fa fa-shopping-bag fa-2x"></i>
@@ -101,7 +95,7 @@
                         </a>
                     </c:if>
                     <c:if test="${not empty loginInfo}">
-                        <a href="${pageContext.request.contextPath}/logout" class="my-auto">
+                        <a href="#" class="my-auto" onclick="logout()">
                             <i class="fa-solid fa-right-from-bracket fa-2x"></i>
                         </a>
                     </c:if>
@@ -140,10 +134,12 @@
 <%--</script>--%>
 
 <script>
-    document.getElementById("searchForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Ngăn chặn hành động mặc định của form
-        var searchText = document.getElementById("searchInput").value;
-        window.location.href = "${pageContext.request.contextPath}/search/" + searchText;
-    });
+function logout() {
+    let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
+    if(ans){
+        window.location = "${pageContext.request.contextPath}/logout";
+    }
+
+}
 </script>
 

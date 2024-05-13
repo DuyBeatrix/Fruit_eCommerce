@@ -2,6 +2,7 @@ package com.spring.Service;
 
 import com.spring.DAO.AuthDao;
 import com.spring.model.User;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +12,19 @@ public class AuthServiceImpl implements AuthService{
     private AuthDao authDao;
     @Override
     public User login(User user) {
-
+        String password = user.getPassword();
         user = authDao.login(user);
         if(user != null) {
-            return user;
+            if(BCrypt.checkpw(password,user.getPassword())){
+                return user;
+            }
         }
         return  null;
     }
 
     @Override
     public int register(User user) {
+        user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt(12)));
         return authDao.register(user);
     }
 
