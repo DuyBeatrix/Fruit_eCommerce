@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -19,15 +20,15 @@ public class SearchController
 {
     @Autowired
     private SearchServiceImpl searchService = new SearchServiceImpl();
-    @RequestMapping(value = "/search/{freeText}", method = RequestMethod.GET)
-    public ModelAndView search(@PathVariable String freeText, HttpSession session, Model model) {
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
+    public ModelAndView search(@RequestParam("freeText") String freeText) {
         ModelAndView mv = new ModelAndView();
         mv.addObject("freeText", freeText);
-//        if(freeText == null || freeText.equals("")) {
-//            mv.setViewName("user/search");
-//        }
+        System.out.println("freeText: " + freeText);
         mv.setViewName("user/search");
         mv.addObject("searchResult", searchService.findAllProducts(freeText));
         return mv;
     }
+
+
 }
