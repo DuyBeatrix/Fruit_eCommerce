@@ -140,4 +140,5 @@ public class Product
     public void setCateName(String cateName) {
         this.cateName = cateName;
     }
+
 }

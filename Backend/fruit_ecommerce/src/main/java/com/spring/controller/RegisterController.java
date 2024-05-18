@@ -32,7 +32,7 @@ public class RegisterController {
     }
     @RequestMapping(value = "/sendEmail", method = RequestMethod.POST)
     public String sendEmail(HttpServletRequest request, HttpSession session,@ModelAttribute("user") User user, Model model){
-        String rePassword = null;
+        String rePassword = request.getParameter("rePassword");
         CodeVerify randomNumber = new CodeVerify((int) (Math.random() * 10000));
         String code = String.valueOf(randomNumber);
         session.setAttribute("randomNumber", randomNumber.getNumber());

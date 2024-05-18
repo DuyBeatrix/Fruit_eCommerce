@@ -22,7 +22,13 @@ public class ListProductController {
         boolean ajaxRequest = isAjaxRequest(request);
         request.setAttribute("ajaxRequest", ajaxRequest);
         mv.setViewName("user/listproduct");
-
+        int count = productsService.countProduct();
+        mv.addObject("count", count);
+        int endPage = count/4;
+        if(count % 4 != 0){
+            endPage = endPage + 1;
+        }
+        request.setAttribute("endPage", endPage);
         if(index !=null && index > 0){
             mv.addObject("paginationProduct", productsService.paginationProduct(index));
         }
