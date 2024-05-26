@@ -12,4 +12,7 @@ public interface ProductsService {
     public List<Products> paginationProduct(int index);
     public List<Products> getFreshVegetable();
     public List<Products> getBestSeller();
+    public List<Products> paginationProductShop(int index);
+    public List<Products> hotProduct(int limit);
+    public int countHotProduct();
 }

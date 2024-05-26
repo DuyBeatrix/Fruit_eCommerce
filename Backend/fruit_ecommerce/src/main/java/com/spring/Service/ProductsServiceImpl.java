@@ -1,6 +1,7 @@
 package com.spring.Service;
 
 import com.spring.DAO.HomeDAO;
+import com.spring.DAO.ShopDAO;
 import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,9 @@ import java.util.List;
 public class ProductsServiceImpl implements ProductsService{
     @Autowired
     private HomeDAO homeDAO = new HomeDAO();
+
+    @Autowired
+    private ShopDAO shopDAO;
     @Override
     public List<Products> getAllProducts() {
         return homeDAO.getAllProducts();
@@ -44,5 +48,20 @@ public class ProductsServiceImpl implements ProductsService{
     @Override
     public List<Products> getBestSeller() {
         return homeDAO.getBestSeller();
+    }
+
+    @Override
+    public List<Products> paginationProductShop(int index) {
+        return shopDAO.paginationProductShop(index);
+    }
+
+    @Override
+    public List<Products> hotProduct(int limit) {
+        return shopDAO.hotProduct(limit);
+    }
+
+    @Override
+    public int countHotProduct() {
+        return shopDAO.countHotProduct();
     }
 }

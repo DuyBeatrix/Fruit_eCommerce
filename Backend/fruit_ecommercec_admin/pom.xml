@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.spring</groupId>
-  <artifactId>fruit_ecommerce</artifactId>
+  <groupId>com.spring</groupId>
+  <artifactId>fruit_ecommercec_admin</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>fruit_ecommerce Maven Webapp</name>
+  <name>fruit_ecommercec_admin Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <!-- Generic properties -->
@@ -33,7 +33,6 @@
     <!-- Test -->
     <junit.version>4.11</junit.version>
   </properties>
-
   <dependencies>
     <!-- Spring MVC -->
     <dependency>
@@ -174,6 +173,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>fruit_ecommerce</finalName>
+    <finalName>fruit_ecommercec_admin</finalName>
   </build>
 </project>
