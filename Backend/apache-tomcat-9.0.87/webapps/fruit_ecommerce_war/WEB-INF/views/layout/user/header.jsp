@@ -7,12 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<div id="spinner"--%>
-<%--     class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">--%>
-<%--    <div class="spinner-grow text-primary" role="status"></div>--%>
-<%--</div>--%>
-<%--<!-- Spinner End -->--%>
-
 
 <!-- Navbar start -->
 <div class="container-fluid fixed-top">
@@ -20,9 +14,9 @@
         <div class="d-flex justify-content-between">
             <div class="top-info ps-2">
                 <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#"
-                                                                                                 class="text-white">123 Street, New York</a></small>
+                                                                                                 class="text-white">Bac Tu Liem</a></small>
                 <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                                                                          class="text-white">Email@Example.com</a></small>
+                                                                                          class="text-white">N16@Example.com</a></small>
             </div>
             <div class="top-link pe-2">
                 <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
@@ -33,7 +27,7 @@
     </div>
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
-            <a href="index.html" class="navbar-brand">
+            <a href="<c:url value="/"/>" class="navbar-brand">
                 <h1 class="text-primary display-6">Fruitables</h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
@@ -42,48 +36,59 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="shop.html" class="nav-item nav-link">Shop</a>
-                    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                    <a href="<c:url value="/"/>" class="nav-item nav-link active"><b>Home</b></a>
+                    <a href="shop.html" class="nav-item nav-link"><b>Shop</b></a>
+                    <a href="shop-detail.html" class="nav-item nav-link"><b>Blogs</b></a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Categories</b></a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="cart.html" class="dropdown-item">Cart</a>
-                            <a href="chackout.html" class="dropdown-item">Chackout</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
+                            <c:forEach var="cate" items="${categories}">
+                                <a href="cart.html" class="dropdown-item">${cate.cateName}</a>
+                            </c:forEach>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="${pageContext.request.contextPath}/newsale" class="nav-item nav-link"><b>New & Sale</b></a>
+                    <a href="" class="nav-item nav-link"><b>Contact</b></a>
+                    <a href="" class="nav-item nav-link"><b>Supplier</b></a>
                 </div>
                 <div class="d-flex m-3 me-0">
-                    <!-- <button
-                        class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
-                        data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                            class="fas fa-search text-primary"></i></button> -->
-                    <div class="position-relative me-3">
-                        <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text"
-                               placeholder="Search">
-                        <button type="submit"
-                                class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"
-                                style="top: 0; right: 0;"></button>
+
+                    <div>
+                        <form class="position-relative me-3" id="searchForm" action="${pageContext.request.contextPath}/search/${freeText}" method="GET">
+                            <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">
+                            <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>
+                       </form>
                     </div>
+
+<%--                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">--%>
+
+<%--                    <div class="position-relative me-3">--%>
+<%--                        <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">--%>
+<%--                        <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>--%>
+<%--                    </div>--%>
+
                     <a href="cart.html" class="position-relative me-4 my-auto">
                         <i class="fa fa-shopping-bag fa-2x"></i>
-                        <span
-                                class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${cart.size()}
+                        </span>
                     </a>
-                    <a href="#" class="my-auto">
-                        <i class="fas fa-user fa-2x"></i>
-                    </a>
+
+                    <c:if test="${empty loginInfo}">
+                        <a href="${pageContext.request.contextPath}/login" class="my-auto">
+                            <i class="fas fa-user fa-2x"></i>
+                        </a>
+                    </c:if>
+                    <c:if test="${not empty loginInfo}">
+                        <a href="${pageContext.request.contextPath}/setup_user" class="my-auto">
+                            <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                        </a>
+                    </c:if>
                 </div>
             </div>
         </nav>
     </div>
 </div>
 <!-- Navbar End -->
-
 
 <!-- Modal Search Start -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -95,8 +100,7 @@
             </div>
             <div class="modal-body d-flex align-items-center">
                 <div class="input-group w-75 mx-auto d-flex">
-                    <input type="search" class="form-control p-3" placeholder="keywords"
-                           aria-describedby="search-icon-1">
+                    <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
                     <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                 </div>
             </div>
@@ -104,3 +108,23 @@
     </div>
 </div>
 <!-- Modal Search End -->
+
+<script>
+    function InfoUser() {
+        window.location = "${pageContext.request.contextPath}/setup_user";
+    }
+    function logout() {
+        let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
+        if(ans){
+            window.location.href = "${pageContext.request.contextPath}/logout";
+        }
+    }
+</script>
+<script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default action from web
+        const searchText = document.getElementById("searchInput").value;// var
+        window.location.href = "${pageContext.request.contextPath}/search/" + searchText;
+    });
+</script>
+

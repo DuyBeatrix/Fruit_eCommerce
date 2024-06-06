@@ -15,14 +15,20 @@ public class NewSaleDAO
     JdbcTemplate jdbcTemplate;
 
     // getProduct By New and Sale
-    public List<Product> getProduct()
+    public List<Product> getSellingProduct()
     {
         List<Product> productList = new ArrayList<Product>();
-        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id";
+        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id where product.product_hot = 1";
         productList = jdbcTemplate.query(sql, new ProductMapper());
         return productList;
     }
-
+    public List<Product> getDiscountProduct()
+    {
+        List<Product> productList = new ArrayList<>();
+        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id where product.product_sales IS NOT NULL";
+        productList = jdbcTemplate.query(sql, new ProductMapper());
+        return productList;
+    }
     public int countProduct()
     {
         String sql = "select count(*) from product";

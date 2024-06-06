@@ -10,7 +10,7 @@ import java.util.List;
 public interface New_Sale_Service
 {
     // By New and sale
-    public List<Product> getAllProduct();
-
+    public List<Product> getSellingProduct();
+    public List<Product> getDiscountProduct();
     public int countProduct();
 }

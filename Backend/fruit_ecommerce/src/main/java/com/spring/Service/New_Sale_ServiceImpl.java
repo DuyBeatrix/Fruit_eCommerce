@@ -14,11 +14,12 @@ public class New_Sale_ServiceImpl implements New_Sale_Service
     private NewSaleDAO new_sale_DAO = new NewSaleDAO();
 
     @Override
-    public List<Product> getAllProduct()
-    {
-        return new_sale_DAO.getProduct();
+    public List<Product> getSellingProduct() {
+        return new_sale_DAO.getSellingProduct();
     }
-
+    public List<Product> getDiscountProduct() {
+        return new_sale_DAO.getDiscountProduct();
+    }
     @Override
     public int countProduct() {
         return new_sale_DAO.countProduct();

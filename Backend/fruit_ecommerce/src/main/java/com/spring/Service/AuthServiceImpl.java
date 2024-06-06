@@ -29,6 +29,11 @@ public class AuthServiceImpl implements AuthService{
     }
 
     @Override
+    public int setupUser(int id, User user) {
+        return 0;
+    }
+
+    @Override
     public int findAccountbyUsername(String username) {
         return authDao.findAccountbyUsername(username);
     }

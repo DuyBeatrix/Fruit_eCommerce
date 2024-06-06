@@ -5,9 +5,7 @@ import com.spring.Service.CartServiceImpl;
 import com.spring.model.Cart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,6 +23,7 @@ public class CartController
         return mv;
     }
 
+    // Add method = RequestMethod.POST, @ResponseBody
     @RequestMapping(value = "addCart/{id}")
     public String addCart(HttpServletRequest request, HttpSession session, @PathVariable int id)
     {
@@ -34,7 +33,7 @@ public class CartController
         session.setAttribute("cart", cart);
         session.setAttribute("totalPrice", cartService.totalPrice(cart));
         session.setAttribute("totalQuantity", cartService.totalQuantity(cart));
-        return "redirect:" + request.getHeader("Referer") ;
+        return "redirect:" + request.getHeader("Referer");
     }
 
     @RequestMapping(value = "editCart/{id}/{quantity}")

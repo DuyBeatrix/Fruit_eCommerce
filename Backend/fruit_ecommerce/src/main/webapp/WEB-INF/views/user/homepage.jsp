@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<title>Trang chủ</title>
+<title>HomePage</title>
 <body>
 <!-- Hero Start -->
 <div class="container-fluid py-5 mb-5 hero-header">
@@ -126,24 +126,21 @@
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill"
                                href="#tab-1">
-                                <span class="text-dark" style="width: 130px;">Tất cả sản phẩm</span>
+                                <span class="text-dark" style="width: 130px;">All Products</span>
                             </a>
                         </li>
-                            <c:forEach var="cate" items="${categories}">
-                                <li class="nav-item">
-                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
-                                       href="#tab-${cate.cateId + 1}" id="cate-${cate.cateId}">
+                        <c:forEach var="cate" items="${categories}">
+                            <li class="nav-item">
+                                <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill"
+                                   href="#tab-${cate.cateId + 1}" id="cate-${cate.cateId}">
 
-                                        <span class="text-dark" style="width: 130px;">${cate.cateName}</span>
-                                    </a>
-
-                                </li>
-                            </c:forEach>
+                                    <span class="text-dark" style="width: 130px;">${cate.cateName}</span>
+                                </a>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
-
-
         </div>
         <div class="tab-content">
             <div id="tab-1" class="tab-pane fade show p-0 active">
@@ -155,19 +152,19 @@
                     </div>
                 </div>
             </div>
-                <c:forEach var="cate" items="${categories}">
-                <div id="tab-${cate.cateId + 1}" class="tab-pane fade show p-0">
+            <c:forEach var="cate" items="${categories}">
+            <div id="tab-${cate.cateId + 1}" class="tab-pane fade show p-0">
 
-                    </c:forEach>
-                    <div class="row g-4">
-                        <div class="col-lg-12">
-                            <div class="row g-4 result-ajax">
+                </c:forEach>
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="row g-4 result-ajax">
 
-                            </div>
                         </div>
                     </div>
-
                 </div>
+
+            </div>
 
         </div>
 
@@ -175,6 +172,22 @@
 </div>
 <!-- Fruits Shop End-->
 
+<div class="col-12 page-product">
+    <div class="pagination d-flex justify-content-center mt-5">
+        <a href="#" class="rounded">&laquo;</a>
+        <c:if test="${not empty endPage}">
+            <c:forEach begin="1" end="${endPage}" var="i">
+                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
+            </c:forEach>
+        </c:if>
+        <c:if test="${not empty endPageProductByCate}">
+            <c:forEach begin="1" end="${endPageProductByCate}" var="i">
+                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
+            </c:forEach>
+        </c:if>
+        <a href="#" class="rounded">&raquo;</a>
+    </div>
+</div>
 
 <!-- Featurs Start -->
 <div class="container-fluid service py-5">
@@ -234,24 +247,24 @@
         <h1 class="mb-0">Fresh Organic Vegetables</h1>
         <div class="owl-carousel vegetable-carousel justify-content-center">
             <c:forEach var="list" items="${listvegetable}">
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="<c:url value="/resource/user/img/products/${list.productImg}"/>"
-                             class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                         style="top: 10px; right: 10px;">${list.cateName}
-                    </div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>${list.productName}</h4>
-                            <%--                    <p>${list.shortDesc}t</p>--%>
-                        <div class="d-flex justify-content-between flex-lg-wrap">
-                            <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="<c:url value="/resource/user/img/products/${list.productImg}"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                     style="top: 10px; right: 10px;">${list.cateName}
+                </div>
+                <div class="p-4 rounded-bottom">
+                    <h4>${list.productName}</h4>
+<%--                    <p>${list.shortDesc}t</p>--%>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
                 </div>
+            </div>
             </c:forEach>
         </div>
     </div>
@@ -302,29 +315,29 @@
         </div>
         <div class="row g-4">
             <c:forEach var="seller" items="${bestseller}">
-                <div class="col-lg-6 col-xl-4">
-                    <div class="p-4 rounded bg-light">
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                                <img src="<c:url value="/resource/user/img/products/${seller.productImg}"/>"
-                                     class="img-fluid rounded-circle w-100" alt=""/>
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="<c:url value="/resource/user/img/products/${seller.productImg}"/>"
+                                 class="img-fluid rounded-circle w-100" alt=""/>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">${seller.productName}</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            <div class="col-6">
-                                <a href="#" class="h5">${seller.productName}</a>
-                                <div class="d-flex my-3">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">${seller.productPrice}</h4>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
+                            <h4 class="mb-3">${seller.productPrice}</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>
+            </div>
             </c:forEach>
         </div>
     </div>
@@ -341,28 +354,28 @@
                     <div class="counter bg-white rounded p-5">
                         <i class="fa fa-users text-secondary"></i>
                         <h4>satisfied customers</h4>
-                        <h1>${satisfiedCustomers}</h1>
+                        <h1>1963</h1>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="counter bg-white rounded p-5">
                         <i class="fa fa-users text-secondary"></i>
                         <h4>quality of service</h4>
-                        <h1>${quantityService}%</h1>
+                        <h1>99%</h1>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="counter bg-white rounded p-5">
                         <i class="fa fa-users text-secondary"></i>
                         <h4>quality certificates</h4>
-                        <h1>${quantityCertificate}</h1>
+                        <h1>33</h1>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="counter bg-white rounded p-5">
                         <i class="fa fa-users text-secondary"></i>
                         <h4>Available Products</h4>
-                        <h1>${availableProducts}</h1>
+                        <h1>789</h1>
                     </div>
                 </div>
             </div>
@@ -380,13 +393,13 @@
             <h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
-            <c:forEach var="fb" items="${feedback}">
             <div class="testimonial-item img-border-radius bg-light rounded p-4">
                 <div class="position-relative">
                     <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
                        style="bottom: 30px; right: 0;"></i>
                     <div class="mb-4 pb-4 border-bottom border-secondary">
-                        <p class="mb-0">${fb.content}
+                        <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
                         </p>
                     </div>
                     <div class="d-flex align-items-center flex-nowrap">
@@ -395,58 +408,75 @@
                                  style="width: 100px; height: 100px;" alt=""/>
                         </div>
                         <div class="ms-4 d-block">
-                            <h4 class="text-dark">${fb.cusName}</h4>
-                            <p class="m-0 pb-3">Customer</p>
-                            <c:if test="${fb.rate == 5}">
-                                <div class="d-flex pe-5">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                </div>
-                            </c:if>
-                            <c:if test="${fb.rate == 4}">
-                                <div class="d-flex pe-5">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </c:if>
-                            <c:if test="${fb.rate == 3}">
-                                <div class="d-flex pe-5">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </c:if>
-                            <c:if test="${fb.rate == 2}">
-                                <div class="d-flex pe-5">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </c:if>
-                            <c:if test="${fb.rate == 1}">
-                                <div class="d-flex pe-5">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </c:if>
+                            <h4 class="text-dark">Client Name</h4>
+                            <p class="m-0 pb-3">Profession</p>
+                            <div class="d-flex pe-5">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </c:forEach>
+            <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                <div class="position-relative">
+                    <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                       style="bottom: 30px; right: 0;"></i>
+                    <div class="mb-4 pb-4 border-bottom border-secondary">
+                        <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap">
+                        <div class="bg-secondary rounded">
+                            <img src="<c:url value="/resource/user/img/testimonial-1.jpg"/>" class="img-fluid rounded"
+                                 style="width: 100px; height: 100px;" alt="">
+                        </div>
+                        <div class="ms-4 d-block">
+                            <h4 class="text-dark">Client Name</h4>
+                            <p class="m-0 pb-3">Profession</p>
+                            <div class="d-flex pe-5">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                <div class="position-relative">
+                    <i class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                       style="bottom: 30px; right: 0;"></i>
+                    <div class="mb-4 pb-4 border-bottom border-secondary">
+                        <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap">
+                        <div class="bg-secondary rounded">
+                            <img src="<c:url value="/resource/user/img/testimonial-1.jpg"/>" class="img-fluid rounded"
+                                 style="width: 100px; height: 100px;" alt="">
+                        </div>
+                        <div class="ms-4 d-block">
+                            <h4 class="text-dark">Client Name</h4>
+                            <p class="m-0 pb-3">Profession</p>
+                            <div class="d-flex pe-5">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -467,28 +497,63 @@
         });
     });
     $(document).ready(function () {
-        let debounceTimer;
         $('.nav-item a').click(function () {
-            if (debounceTimer) {
-                clearTimeout(debounceTimer);
-            }
             let cateId = $(this).attr('id').split('-')[1];
-            let url = '/productbycate/' + cateId + '/1.html';
-            debounceTimer = setTimeout(function () {
-                $.ajax({
-                    type: 'GET',
-                    url: '${pageContext.request.contextPath}' + url,
-                    success: function (data) {
-                        $('.result-ajax').html(data);
-                    },
-                    error: function (XMLHttpResponse, textStatus, errorThrown) {
-                        XMLHttpResponse.toString();
-                    }
-                });
-            }, 300);
+            let url = '/productbycate/' + cateId +'/1'+ '.html';
+
+            $.ajax({
+                type: 'GET',
+                url: '${pageContext.request.contextPath}' + url,
+                success: function (data) {
+                    $('.result-ajax').html(data)
+
+
+                },
+                error: function (XMLHttpResponse, textStatus, errorThrown) {
+                    XMLHttpResponse.toString()
+                },
+
+            });
         });
     });
 
+    $(document).ready(function () {
 
+        $('.nav-item a').click(function () {
+            let cateId = $(this).attr('id').split('-')[1];
+            let index = $(this).attr('id').split('-')[1];
+            let url = '/productbycate/' + cateId + '/'+index+ '.html';
+
+            $.ajax({
+                type: 'GET',
+                url: '${pageContext.request.contextPath}' + url,
+                success: function (data) {
+                    $('.result-ajax').html(data)
+
+
+                },
+                error: function (XMLHttpResponse, textStatus, errorThrown) {
+                    XMLHttpResponse.toString()
+                },
+
+            });
+
+        });
+        $('.page-product button').click(function () {
+            let index = $(this).attr('id').split('-')[1];
+            let url = '/products/' + index + '.html';
+
+            $.ajax({
+                type: 'GET',
+                url: '${pageContext.request.contextPath}' + url,
+                success: function (data) {
+                    $('.list-product').html(data);
+                },
+                error: function (XMLHttpResponse, textStatus, errorThrown) {
+                    XMLHttpResponse.toString();
+                }
+            });
+        });
+    });
 </script>
 </body>

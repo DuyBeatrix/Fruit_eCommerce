@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Objects;
-
 
 @Controller
 public class RegisterController {
@@ -50,10 +48,10 @@ public class RegisterController {
             model.addAttribute("message", "Email đã tồn tại!");
             return "auth/register";
         }
-        if(!Objects.equals(password, rePassword)){
-            model.addAttribute("message", "Mật khẩu nhập lại không đúng!");
-            return "auth/register";
-        }
+//        if(!password.equals(rePassword)){
+//            model.addAttribute("message", "Mật khẩu nhập lại không đúng!");
+//            return "auth/register";
+//        }
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/application-config.xml");
         MailSender mailSender = (MailSender) context.getBean("mailSender2");
         System.out.println("Sending text...");

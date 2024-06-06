@@ -73,9 +73,8 @@
                         </div>
                     </form>
                     <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
-
-
-                        <a href="cart.html" class="position-relative me-4 my-auto">
+                        
+                    <a href="cart.html" class="position-relative me-4 my-auto">
 
                             <i class="fa fa-shopping-bag fa-2x"></i>
                             <span
