@@ -66,6 +66,170 @@
       <change beforePath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/order-detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fruittables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../fruittables.sql" afterDir="false" />
     </list>
+    <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="add shop">
+      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/bin/log.out" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/bin/log.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/classes/spring/application-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/classes/spring/application-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/bootstrap-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/bootstrap-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/elegant-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/elegant-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/jquery-ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/jquery-ui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/nice-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/nice-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/slicknav.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/slicknav.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/fonts/ElegantIcons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/fonts/ElegantIcons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery.nice-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery.nice-select.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery.slicknav.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/jquery.slicknav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/mixitup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/mixitup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog-details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog-details.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog-sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog-sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_blog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_breadcrumb.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_checkout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_checkout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_home-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_home-page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shop-details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shop-details.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shop-grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shop-grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shoping-cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_shoping-cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/_variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/spring_hibernate_login_example_war/WEB-INF/resource/user/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/img/testimonial-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/img/testimonial-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/img/testimonial-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/img/testimonial-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/img/user.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/img/user.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/chart/chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/chart/chart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/easing/easing.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/easing/easing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/easing/easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/easing/easing.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.theme.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.theme.default.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.theme.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.theme.green.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/assets/owl.video.play.png" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/owl.carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/owlcarousel/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/js/moment-timezone.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/js/moment-timezone.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/js/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/js/moment.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/waypoints/links.php" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/waypoints/links.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/lib/waypoints/waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_accordion.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_button-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_close.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_close.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_containers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_containers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_helpers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_images.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_images.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_offcanvas.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_popover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_root.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_spinners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_toasts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_transitions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_type.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_type.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/bootstrap-utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_floating-labels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_form-check.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_form-control.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_form-range.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_form-select.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_form-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_input-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_labels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/forms/_validation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_colored-links.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_position.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_ratio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_stretched-link.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_text-truncation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/helpers/_visually-hidden.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_alert.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_caret.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_color-scheme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_container.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_deprecate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_resize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_table-variants.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/mixins/_visually-hidden.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/utilities/_api.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/admin/assets/scss/bootstrap/scss/vendor/_rfs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/resource/admin/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/resources/spring/application-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/resources/spring/application-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FrontEnd/dashmin-1.0.0/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../FrontEnd/dashmin-1.0.0/assets/css/bootstrap.min.css" afterDir="false" />
+>>>>>>> fa0445fce97cc93ac6cfc6dd9ac81e9303bd7b42
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,8 +238,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -83,7 +247,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="viducthien" />
+        <entry key="$PROJECT_DIR$/../.." value="viducthien_1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -127,8 +291,27 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.Tomcat.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.85.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "thienvd",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/DoAnChuyenNganh/Fruit_eCommerce/Fruit_eCommerce/Backend/fruit_ecommercec_admin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> fa0445fce97cc93ac6cfc6dd9ac81e9303bd7b42
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\HAUI_VI\DACN_2024\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF\resource\admin" />
@@ -265,6 +448,9 @@
       <option name="catalinaBase" value="C:\Users\ANPHATPC\.SmartTomcat\fruit_ecommerce\fruit_ecommerce" />
       <option name="contextPath" value="/fruit_ecommerce" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -286,6 +472,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HomeDAO" />
+        <item itemvalue="Application.TestEmail" />
         <item itemvalue="Application.HomeDAO" />
         <item itemvalue="Application.TestEmail" />
       </list>
@@ -393,6 +581,25 @@
       <workItem from="1715587473936" duration="5451000" />
       <workItem from="1715610660720" duration="4292000" />
       <workItem from="1717680203898" duration="639000" />
+      <workItem from="1715610660720" duration="4835000" />
+      <workItem from="1715696062577" duration="172000" />
+      <workItem from="1715701534484" duration="4478000" />
+      <workItem from="1715731645889" duration="672000" />
+      <workItem from="1715996386705" duration="1896000" />
+      <workItem from="1715999481042" duration="961000" />
+      <workItem from="1716041949621" duration="887000" />
+      <workItem from="1716043302091" duration="744000" />
+      <workItem from="1716049972713" duration="942000" />
+      <workItem from="1716051267076" duration="780000" />
+      <workItem from="1716087565791" duration="76000" />
+      <workItem from="1716087670733" duration="2252000" />
+      <workItem from="1716181890727" duration="2653000" />
+      <workItem from="1716218238121" duration="723000" />
+      <workItem from="1716302096088" duration="7040000" />
+      <workItem from="1716344810942" duration="5437000" />
+      <workItem from="1716541692148" duration="2058000" />
+      <workItem from="1716544694910" duration="679000" />
+      <workItem from="1716627759474" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />
@@ -418,7 +625,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713713445303</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sua loi dang ky, ma hoa mat khau, pagiation san phan theo danh muc, fix bug ajax bi lag">
+      <option name="closed" value="true" />
+      <created>1715615125328</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715615125328</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update and hoan thien homepage">
+      <option name="closed" value="true" />
+      <created>1715615154888</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715615154888</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update and hoan thien homepage">
+      <option name="closed" value="true" />
+      <created>1715705121786</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715705121786</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add shop">
+      <option name="closed" value="true" />
+      <created>1716350237786</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716350237786</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +676,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update chuc nang signin, signup, logout, forgot password" />
-    <option name="LAST_COMMIT_MESSAGE" value="update chuc nang signin, signup, logout, forgot password" />
+    <MESSAGE value="sua loi dang ky, ma hoa mat khau, pagiation san phan theo danh muc, fix bug ajax bi lag" />
+    <MESSAGE value="update and hoan thien homepage" />
+    <MESSAGE value="add shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="add shop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,11 +688,6 @@
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.3.6.RELEASE/spring-jdbc-4.3.6.RELEASE.jar!/org/springframework/jdbc/core/RowMapper.class</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/DAO/SearchDAO.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
