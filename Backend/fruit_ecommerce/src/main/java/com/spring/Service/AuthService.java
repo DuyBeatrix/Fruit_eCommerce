@@ -9,6 +9,7 @@ public interface AuthService {
     @Autowired
     public User login(User user);
     public int register(User user);
+    public int setupUser(int id, User user);
     public int findAccountbyUsername(String username);
     public int findAccountByEmail(String email);
     public void changePassword(String email, String newPassword);

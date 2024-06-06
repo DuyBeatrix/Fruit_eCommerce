@@ -1,6 +1,5 @@
 create database fruittables;
 use fruittables;
-
 create table category 
 (
 	cate_id int AUTO_INCREMENT not null primary key,
@@ -8,46 +7,24 @@ create table category
     cate_enable bit not null,
     cate_image text not null
 );
-
 create table supplier
 (
-	id int auto_increment not null primary key,
+	supplier_id int auto_increment not null primary key,
     sup_name text not null,
     sup_address text not null,
     awards text not null,
     sup_img text not null
 );
-
-create table product 
-(
-	id int auto_increment not null primary key,
-    product_name varchar(255) not null,
-    product_desc text not null,
-    short_desc text not null,
-    product_price double not null,
-    quantity int not null,
-    product_sales int null,
-	product_hot bit null,
-    exp_date date not null,
-    create_date date not null,
-    product_img text not null,
-    supplier_id int,
-    FOREIGN KEY (supplier_id) REFERENCES supplier(id),
-    cate_id int,
-    foreign key (cate_id) references category(cate_id)
-);
-
 create table roles
 (
 	id int auto_increment not null primary key,
     roles text not null
 );
-
 create table customer
 (
 	id int auto_increment not null primary key,
     cus_name varchar(255) null,
-    usename text not null,
+    username text not null,
     password text not null,
     cus_phone text null,
     cus_email text null,
@@ -56,7 +33,29 @@ create table customer
     role_id int,
     foreign key (role_id) references roles(id)
 );
-
+create table product (
+    id int auto_increment not null primary key,
+    product_name varchar(255) not null,
+    product_desc text not null,
+    product_price double not null,
+    quantity int not null,
+    product_sales int null,
+    product_hot bit null,
+    exp_date date not null,
+    create_date date not null,
+    product_img text not null,
+    sell_quantity int not null,
+    supplier_id int,
+    FOREIGN KEY (supplier_id) REFERENCES supplier(supplier_id),
+    cate_id int,
+    FOREIGN KEY (cate_id) REFERENCES category(cate_id)
+);
+drop table order_detail;
+drop table orders;
+drop table product;
+drop table feedback;
+drop table customer;
+drop table blog_detail;
 create table orders
 (
 	id int auto_increment not null primary key,
@@ -73,7 +72,6 @@ create table orders
     foreign key (product_id) references product(id),
     foreign key (customer_id) references customer(id)
 );
-
 create table order_detail
 (
 	id int auto_increment not null primary key,
@@ -85,13 +83,15 @@ create table order_detail
 
 create table feedback 
 (
-	id int auto_increment not null primary key,
+	fb_id int auto_increment not null primary key,
     content text not null,
+    rate int not null,
     product_id int,
-    customer_id int,
+    id int,
     foreign key (product_id) references product(id),
-    foreign key (customer_id) references customer(id)
+    foreign key (id) references customer(id)
 );
+
 
 create table contact 
 (
@@ -118,11 +118,3 @@ create table blog_detail
     customer_id int,
     foreign key (blog_id) references blog_type(id),
     foreign key (customer_id) references customer(id)
-);
-drop table product;
-drop table feedback;
-drop table orders;
-drop table order_detail;
-drop table supplier;
-drop database fruittables;
-

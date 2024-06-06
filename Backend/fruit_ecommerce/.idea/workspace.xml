@@ -10,22 +10,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="update chuc nang signin, signup, logout, forgot password">
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/HomeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/HomeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/CategoriesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Categories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/CategoriesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/CategoriesMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/spring/application-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/spring/application-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/decorators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/best-product-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/best-product-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/best-product-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/best-product-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/fruite-item-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/AuthDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/AuthDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/SearchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/SearchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/GetProductbyCateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/GetProductbyCateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/ListProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/ListProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/New_Sale_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/New_Sale_Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/New_Sale_ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/New_Sale_ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/NewSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/NewSaleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/best-product-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/best-product-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/best-product-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/best-product-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/resource/user/img/fruite-item-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/listproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/productbycategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/productbycategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/newsale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/newsale.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../FrontEnd/fruitables-1.0.0/order-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fruittables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../fruittables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +87,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/spring/DAO/HomeDAO.java" root0="FORCE_HIGHLIGHTING" />
@@ -81,7 +119,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Smart Tomcat.Tomcat.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.Tomcat 9.0.85.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;viducthien__1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;buihuuduy&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -104,7 +142,7 @@
       <recent name="D:\DoAnChuyenNganh\Fruit_eCommerce\Fruit_eCommerce\Backend\fruit_ecommerce\src\main\webapp\WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Tomcat">
+  <component name="RunManager" selected="Application.HomeDAO">
     <configuration name="HomeDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spring.DAO.HomeDAO" />
       <module name="fruit_ecommerce" />
@@ -244,7 +282,6 @@
     <list>
       <item itemvalue="Application.HomeDAO" />
       <item itemvalue="Application.TestEmail" />
-      <item itemvalue="Smart Tomcat.Tomcat" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.85" />
     </list>
     <recent_temporary>
@@ -257,7 +294,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -354,6 +392,7 @@
       <workItem from="1715519995922" duration="8755000" />
       <workItem from="1715587473936" duration="5451000" />
       <workItem from="1715610660720" duration="4292000" />
+      <workItem from="1717680203898" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />

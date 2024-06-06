@@ -20,6 +20,11 @@ public class AuthDao {
         int result = jdbcTemplate.update(sql,user.getCusEmail(), user.getUserName(),user.getPassword());
         return result;
     }
+    public int setupUser(int id, User user) {
+        String sql = "Update customer SET cus_name = ?, cus_phone = ?, cus_address = ? where id = ?";
+        int result = jdbcTemplate.update(sql, user.getCusName(), user.getCusPhone(),user.getCusAddress(), id);
+        return result;
+    }
     public int findAccountbyUsername(String username) {
         String sql = "SELECT COUNT(*) FROM customer WHERE username=?";
         int result = jdbcTemplate.queryForObject(sql, Integer.class, username);

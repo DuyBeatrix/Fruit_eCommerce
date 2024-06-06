@@ -5,9 +5,7 @@ package com.spring.model;
 public class User {
     private int id;
     private String cusName;
-
     private String userName;
-
     private String password;
     private String cusPhone;
     private String cusAddress;
