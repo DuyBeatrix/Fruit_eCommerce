@@ -25,6 +25,10 @@
                                         <form:input type="text" id="form2Example17" class="form-control form-control-lg" path="cusName"/>
                                     </div>
                                     <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example17">Email</label>
+                                        <form:input type="text" id="form2Example17" class="form-control form-control-lg" path="cusEmail"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example27">Phone Number</label>
                                         <form:input type="text" id="form2Example27" class="form-control form-control-lg" path="cusPhone"/>
                                     </div>
@@ -38,7 +42,6 @@
                                         </button>
                                     </div>
                                 </form:form>
-                                <a href="${pageContext.request.contextPath}/trackorder">OrderDetail</a>
                             </div>
                         </div>
                     </div>

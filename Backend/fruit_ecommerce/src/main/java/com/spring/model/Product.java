@@ -18,7 +18,6 @@ public class Product
     private int cateId;
     private String cateName;
 
-
     public Product() {}
 
     public Product(int id, String productName, String productDesc, double productPrice, int quantity, int productSale, boolean productHot, Date expDate, Date createDate, String productImage, int supplierId, int cateId, String cateName) {

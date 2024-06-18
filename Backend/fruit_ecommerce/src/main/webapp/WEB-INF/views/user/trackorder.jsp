@@ -17,7 +17,7 @@
             <th>Full Name</th>
             <th>Address</th>
             <th>Phone Number</th>
-            <th>Email</th>
+            <th>Time</th>
             <th>Total Price</th>
             <th>Status</th>
         </tr>
@@ -28,7 +28,7 @@
                 <td>${order.fullName}</td>
                 <td>${order.address}</td>
                 <td>${order.phone}</td>
-                <td>${order.email}</td>
+                <td>${order.createDay}</td>
                 <td>${order.total}</td>
                 <td>${order.status}</td>
                 <td><a href="<c:url value="/trackorderdetail/${order.checkoutid}"/> ">View order details</a></td>

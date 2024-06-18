@@ -14,8 +14,8 @@ public class CartServiceImpl implements CartService
     private CartDAO cartDAO = new CartDAO();
 
     @Override
-    public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart) {
-        return cartDAO.addCart(id, cart);
+    public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart, int quantity) {
+        return cartDAO.addCart(id, cart, quantity);
     }
 
     @Override

@@ -190,7 +190,7 @@
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">${item.cateName}</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>${item.productName}</h4>
+                                            <h4><a href="${pageContext.request.contextPath}/shop-detail/${item.id}">${item.productName}</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0">${item.productPrice} VND/KG</p>
@@ -201,22 +201,6 @@
                                 </div>
                             </c:forEach>
 
-<<<<<<< Updated upstream
-
-
-                            <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5">
-                                    <a href="#" class="rounded">&laquo;</a>
-                                    <a href="#" class="active rounded">1</a>
-                                    <a href="#" class="rounded">2</a>
-                                    <a href="#" class="rounded">3</a>
-                                    <a href="#" class="rounded">4</a>
-                                    <a href="#" class="rounded">5</a>
-                                    <a href="#" class="rounded">6</a>
-                                    <a href="#" class="rounded">&raquo;</a>
-                                </div>
-                            </div>
-=======
 <%--                            <div class="col-12">--%>
 <%--                                <div class="pagination d-flex justify-content-center mt-5">--%>
 <%--                                    <a href="#" class="rounded">&laquo;</a>--%>
@@ -229,7 +213,6 @@
 <%--                                    <a href="#" class="rounded">&raquo;</a>--%>
 <%--                                </div>--%>
 <%--                            </div>--%>
->>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>

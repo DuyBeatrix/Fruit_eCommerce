@@ -82,7 +82,9 @@
         </div>
 
         <div class="row g-4 justify-content-end">
-            <div class="col-8"></div>
+            <div class="col-8">
+                <img style="width:700px; height:auto; margin-left:0; display: block" src="<c:url value="/resource/user/img/cartdecor.jpg"/>">;
+            </div>
             <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                 <div class="bg-light rounded">
                     <div class="p-4">
@@ -103,7 +105,15 @@
                         <h5 class="mb-0 ps-4 me-4">Total</h5>
                         <p class="mb-0 pe-4">$99.00</p>
                     </div>
-                    <button id="CheckoutButton" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" onclick="redirectToCheckout()">Proceed Checkout</button>
+
+                    <c:if test="${empty loginInfo}">
+                        <button id="CheckoutButton" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" onclick="redirectToCheckout(false)">Proceed Checkout</button>
+                    </c:if>
+                    <c:if test="${ not empty loginInfo}">
+                        <button id="CheckoutButton" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" onclick="redirectToCheckout(true)">Proceed Checkout</button>
+                    </c:if>
+
+                    <%--<button id="CheckoutButton" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" type="button" onclick="redirectToCheckout()">Proceed Checkout</button>--%>
                 </div>
             </div>
         </div>
@@ -124,13 +134,16 @@
 </content>
 
 <script>
-    function redirectToCheckout()
-    {
-        const cartItems = document.getElementById('cart-items').children.length;
-        if(cartItems === 0) alert('Your cart is empty');
-        else window.location.href = "${pageContext.request.contextPath}/checkout";
+    function redirectToCheckout(isLoggedIn) {
+        if (isLoggedIn) {
+            const cartItems = document.getElementById('cart-items').children.length;
+            if(cartItems === 0) alert('Your cart is empty');
+            else window.location.href = "${pageContext.request.contextPath}/checkout";
+        } else {
+            alert('Bạn cần đăng nhập để tiếp tục.');
+            window.location.href = '${pageContext.request.contextPath}/login';
+        }
     }
 </script>
 
 </body>
-
