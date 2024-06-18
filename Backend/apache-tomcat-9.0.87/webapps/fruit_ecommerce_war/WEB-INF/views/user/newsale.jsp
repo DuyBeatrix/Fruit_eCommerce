@@ -28,7 +28,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                     <p class="text-dark fs-5 fw-bold">${item.productPrice} VND/KG</p>
-                                    <a href="${pageContext.request.contextPath}/addCart/${item.id}" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    <a href="${pageContext.request.contextPath}/addCart/${item.id}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                         <p class="text-dark fs-5 fw-bold ml-2">${item.productPrice - (item.productPrice * item.productSale / 100)} VND/KG</p>
                                     </div>
                                 </div>
-                                <div class="w-100"><a href="${pageContext.request.contextPath}/addCart/${item.id}" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a></div>
+                                <div class="w-100"><a href="${pageContext.request.contextPath}/addCart/${item.id}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a></div>
                                 <!-- CHUYEN RA GIUA -->
                             </div>
                         </div>

@@ -1,6 +1,5 @@
 package com.spring.Service;
 
-import com.spring.model.CategoryProductCount;
 import com.spring.model.Products;
 
 import java.util.List;

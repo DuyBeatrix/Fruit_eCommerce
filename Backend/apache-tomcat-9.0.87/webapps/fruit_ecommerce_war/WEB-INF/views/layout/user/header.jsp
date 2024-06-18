@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- Navbar start -->
 <div class="container-fluid fixed-top">
@@ -14,9 +14,9 @@
         <div class="d-flex justify-content-between">
             <div class="top-info ps-2">
                 <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#"
-                                                                                                 class="text-white">Bac Tu Liem</a></small>
+                                                                                                 class="text-white">Bac Tu Liem, Ha Noi</a></small>
                 <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                                                                          class="text-white">N16@Example.com</a></small>
+                                                                                          class="text-white">N16@gmail.com</a></small>
             </div>
             <div class="top-link pe-2">
                 <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
@@ -36,53 +36,66 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="<c:url value="/"/>" class="nav-item nav-link active"><b>Home</b></a>
-                    <a href="shop.html" class="nav-item nav-link"><b>Shop</b></a>
-                    <a href="shop-detail.html" class="nav-item nav-link"><b>Blogs</b></a>
+                    <a href="<c:url value="/"/>" class="nav-item nav-link active">Home</a>
+                    <a href="${pageContext.request.contextPath}/shop/1" class="nav-item nav-link">Shop</a>
+                    <a href="${pageContext.request.contextPath}/blog/1" class="nav-item nav-link">Blogs</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><b>Categories</b></a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <c:forEach var="cate" items="${categories}">
-                                <a href="cart.html" class="dropdown-item">${cate.cateName}</a>
+                                <a href="${pageContext.request.contextPath}/productbycatepage/${cate.cateId}/1" class="dropdown-item">${cate.cateName}</a>
                             </c:forEach>
                         </div>
                     </div>
                     <a href="${pageContext.request.contextPath}/newsale" class="nav-item nav-link"><b>New & Sale</b></a>
-                    <a href="" class="nav-item nav-link"><b>Contact</b></a>
-                    <a href="" class="nav-item nav-link"><b>Supplier</b></a>
+                    <a href="${pageContext.request.contextPath}/contact" class="nav-item nav-link">Contact</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/trackorder', ${empty loginInfo})">My Order</a>
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/setup_user', ${empty loginInfo})">My Information</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="d-flex m-3 me-0">
+                <div class="d-flex m-3 me-0 ">
+
+<%--                    <form action="${pageContext.request.contextPath}/search" method="GET" class="pt-3">--%>
+<%--                        <div class="position-relative me-3">--%>
+<%--                            <input id="searchInput"--%>
+<%--                                   class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill"--%>
+<%--                                   type="text" placeholder="Search" name="freeText"/>--%>
+<%--                            <button id="searchButton" type="submit"--%>
+<%--                                    class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"--%>
+<%--                                    style="top: 0; right: 0;">--%>
+<%--                            </button>--%>
+<%--                        </div>--%>
+<%--                    </form>  FORM SEARCH --%>
 
                     <div>
                         <form class="position-relative me-3" id="searchForm" action="${pageContext.request.contextPath}/search/${freeText}" method="GET">
                             <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">
                             <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>
-                       </form>
+                        </form>
                     </div>
-
 <%--                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">--%>
 
-<%--                    <div class="position-relative me-3">--%>
-<%--                        <input class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">--%>
-<%--                        <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>--%>
-<%--                    </div>--%>
-
-                    <a href="cart.html" class="position-relative me-4 my-auto">
+                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
                         <i class="fa fa-shopping-bag fa-2x"></i>
-                        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${cart.size()}
-                        </span>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
+                                    style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${cart.size()}</span>
                     </a>
-
-                    <c:if test="${empty loginInfo}">
+                        <c:if test="${empty loginInfo}">
                         <a href="${pageContext.request.contextPath}/login" class="my-auto">
                             <i class="fas fa-user fa-2x"></i>
                         </a>
-                    </c:if>
-                    <c:if test="${not empty loginInfo}">
-                        <a href="${pageContext.request.contextPath}/setup_user" class="my-auto">
+                        </c:if>
+                        <c:if test="${not empty loginInfo}">
+                        <a href="#" class="my-auto" onclick="logout()">
                             <i class="fa-solid fa-right-from-bracket fa-2x"></i>
                         </a>
-                    </c:if>
+                        </c:if>
                 </div>
             </div>
         </nav>
@@ -100,7 +113,8 @@
             </div>
             <div class="modal-body d-flex align-items-center">
                 <div class="input-group w-75 mx-auto d-flex">
-                    <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                    <input type="search" class="form-control p-3" placeholder="keywords"
+                           aria-describedby="search-icon-1">
                     <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                 </div>
             </div>
@@ -110,17 +124,22 @@
 <!-- Modal Search End -->
 
 <script>
-    function InfoUser() {
-        window.location = "${pageContext.request.contextPath}/setup_user";
-    }
-    function logout() {
-        let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
-        if(ans){
-            window.location.href = "${pageContext.request.contextPath}/logout";
+    function redirectToPage(targetUrl, isNotLoggedIn) {
+        if (!isNotLoggedIn) {
+            window.location.href = targetUrl;
+        } else {
+            alert('You need to login to continue');
+            window.location.href = '${pageContext.request.contextPath}/login?redirect=' + encodeURIComponent(targetUrl);
         }
     }
-</script>
-<script>
+
+    function logout() {
+        let ans = confirm("Do you want to logout?");
+        if (ans) {
+            window.location = "${pageContext.request.contextPath}/logout";
+        }
+    }
+
     document.getElementById("searchForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default action from web
         const searchText = document.getElementById("searchInput").value;// var

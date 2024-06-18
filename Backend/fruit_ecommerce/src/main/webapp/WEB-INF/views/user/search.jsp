@@ -190,7 +190,7 @@
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">${item.cateName}</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4>${item.productName}</h4>
+                                            <h4><a href="${pageContext.request.contextPath}/shop-detail/${item.id}">${item.productName}</a></h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0">${item.productPrice} VND/KG</p>

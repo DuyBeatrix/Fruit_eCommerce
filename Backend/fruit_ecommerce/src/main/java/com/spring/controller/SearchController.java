@@ -22,7 +22,15 @@ public class SearchController
     private SearchServiceImpl searchService = new SearchServiceImpl();
 
     @RequestMapping(value = "/search/{freeText}", method = RequestMethod.GET)
-    public ModelAndView search(@PathVariable String freeText) {
+//    public ModelAndView search(@PathVariable String freeText) {
+//        ModelAndView mv = new ModelAndView();
+//        mv.addObject("freeText", freeText);
+//        mv.setViewName("user/search");
+//        mv.addObject("searchResult", searchService.findAllProducts(freeText));
+//        return mv;
+//    }
+
+    public ModelAndView search(@PathVariable String freeText, HttpSession session, Model model) {
         ModelAndView mv = new ModelAndView();
         mv.addObject("freeText", freeText);
         mv.setViewName("user/search");

@@ -12,11 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/product")
 @Controller
-public class ProductController {
+public class ProductController
+{
     @Autowired
     public ProductServiceImpl productService;
     @Autowired
     public CategoryServiceImpl categoryService;
+
     @GetMapping(value = "/{index}")
     public ModelAndView product(@PathVariable(required = false) Integer index, HttpServletRequest request){
         ModelAndView mv = new ModelAndView();

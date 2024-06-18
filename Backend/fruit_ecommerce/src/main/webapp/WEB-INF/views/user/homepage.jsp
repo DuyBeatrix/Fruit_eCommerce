@@ -154,7 +154,6 @@
             </div>
             <c:forEach var="cate" items="${categories}">
             <div id="tab-${cate.cateId + 1}" class="tab-pane fade show p-0">
-
                 </c:forEach>
                 <div class="row g-4">
                     <div class="col-lg-12">
@@ -163,29 +162,27 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </div>
 <!-- Fruits Shop End-->
 
 <div class="col-12 page-product">
     <div class="pagination d-flex justify-content-center mt-5">
-        <a href="#" class="rounded">&laquo;</a>
+<%--        <a href="#" class="rounded">&laquo;</a>--%>
         <c:if test="${not empty endPage}">
             <c:forEach begin="1" end="${endPage}" var="i">
                 <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
             </c:forEach>
         </c:if>
-        <c:if test="${not empty endPageProductByCate}">
-            <c:forEach begin="1" end="${endPageProductByCate}" var="i">
-                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
-            </c:forEach>
-        </c:if>
-        <a href="#" class="rounded">&raquo;</a>
+<%--        THUA MOT PHAN TRANG--%>
+<%--        <c:if test="${not empty endPageProductByCate}">--%>
+<%--            <c:forEach begin="1" end="${endPageProductByCate}" var="i">--%>
+<%--                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>--%>
+<%--            </c:forEach>--%>
+<%--        </c:if>--%>
+<%--        <a href="#" class="rounded">&raquo;</a>--%>
     </div>
 </div>
 

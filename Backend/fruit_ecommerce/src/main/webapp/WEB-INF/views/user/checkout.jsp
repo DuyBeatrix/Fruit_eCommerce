@@ -26,35 +26,26 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <h1 class="mb-4">Billing details</h1>
-        <form:form action="checkout" method="post" modelAttribute="checkout">
+        <form:form action="checkout" method="post" modelAttribute="checkout" id="checkoutForm">
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-6">
                     <div class="form-item">
                         <label class="form-label my-3"><b>Full Name </b><sup>*</sup></label>
-                        <form:input type="text" class="form-control" path="fullName"/>
+                        <form:input type="text" class="form-control" path="fullName" id="fullName"/>
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3"><b>Address</b> <sup>*</sup></label>
-                        <form:input type="text" class="form-control" placeholder="House Number Street Name" path="address"/>
+                        <form:input type="text" class="form-control" placeholder="House Number Street Name" path="address" id="address"/>
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3"><b>Phone number</b> <sup>*</sup></label>
-                        <form:input type="text" class="form-control" path="phone"/>
-<%--                        before type tel--%>
+                        <form:input type="text" class="form-control" path="phone" id="phone"/>
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3"><b>Email Address</b> <sup>*</sup></label>
-                        <form:input type="email" class="form-control" path="email"/>
+                        <form:input type="email" class="form-control" path="email" id="email"/>
                     </div>
-                    <div class="form-check my-3">
-                        <input type="checkbox" class="form-check-input" id="Account-1" name="Accounts" value="Accounts">
-                        <label class="form-check-label" for="Account-1">Create an account?</label>
-                    </div>
-                    <hr>
-                    <div class="form-check my-3">
-                        <input class="form-check-input" type="checkbox" id="Address-1" name="Address" value="Address">
-                        <label class="form-check-label" for="Address-1">Ship to a different address?</label>
-                    </div>
+                    <br>
                     <div class="form-item">
                         <form:textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Oreder Notes (Optional)" path="desc_order"/>
                     </div>
@@ -156,13 +147,13 @@
                         </div>
                     </div>
                     <div class="row g-4 text-center align-items-center justify-content-center pt-4">
-                        <c:if test="${empty loginInfo}">
-                            <a href="${pageContext.request.contextPath}/login" style="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</a>
-                        </c:if>
-                        <c:if test="${ not empty loginInfo}">
-                            <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>
-                        </c:if>
-
+<%--                        <c:if test="${empty loginInfo}">--%>
+<%--                            <a href="${pageContext.request.contextPath}/login" style="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</a>--%>
+<%--                        </c:if>--%>
+<%--                        <c:if test="${ not empty loginInfo}">--%>
+<%--                            <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>--%>
+<%--                        </c:if> KT DANG NHAP KHI MUA--%>
+                        <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -175,12 +166,49 @@
     function redirectToPlaceOrder() {
         window.location.href = "${pageContext.request.contextPath}/placeorder";
     }
+
     function placeorder() {
         let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
         if(ans){
             window.location.href = "${pageContext.request.contextPath}/logout";
         }
     }
+
+    document.getElementById('checkoutForm').addEventListener('submit', function(event)
+    {
+        let fullName = document.getElementById('fullName').value.trim();
+        let address = document.getElementById('address').value.trim();
+        let phone = document.getElementById('phone').value.trim();
+        let email = document.getElementById('email').value.trim();
+        let isValid = true;
+
+        if (fullName === '') {
+            isValid = false;
+            alert('Full Name is required.');
+        }
+        if (address === '') {
+            isValid = false;
+            alert('Address is required.');
+        }
+        if (phone === '') {
+            isValid = false;
+            alert('Phone number is required.');
+        } else if (!/^[0-9]{10}$/.test(phone)) {
+            isValid = false;
+            alert('Phone number should be exactly 10 digits.');
+        }
+        if (email === '') {
+            isValid = false;
+            alert('Email is required.');
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            isValid = false;
+            alert('Email should be valid.');
+        }
+        if (!isValid) {
+            event.preventDefault();
+        }
+        else alert("Purchase successful!")
+    });
 </script>
 
 </body>

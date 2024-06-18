@@ -14,7 +14,6 @@ public class SearchServiceImpl implements SearchService
     @Autowired
     private SearchDAO searchDAO = new SearchDAO();
 
-
     @Override
     public List<Product> findAllProducts(String text) {
         return searchDAO.findAllProduct(text);
