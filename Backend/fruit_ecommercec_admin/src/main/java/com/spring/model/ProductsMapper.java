@@ -13,17 +13,17 @@ public class ProductsMapper implements RowMapper<Products> {
         products.setProductId(rs.getInt("id"));
         products.setProductName(rs.getNString("product_name"));
         products.setProductDesc(rs.getNString("product_desc"));
-        // products.setShortDesc(rs.getNString("short_desc"));
+//         products.setShortDesc(rs.getNString("short_desc"));
         products.setProductPrice(rs.getDouble("product_price"));
         products.setQuantity(rs.getInt("quantity"));
         products.setSale(rs.getDouble("product_sales"));
-        products.setHot(rs.getInt("product_hot"));
+        products.setHot(rs.getBoolean("product_hot"));
         products.setProductImg(rs.getString("product_img"));
-        products.setExpDate(rs.getDate("exp_date"));
-        products.setCreateDate(rs.getDate("create_date"));
+        products.setExpDate(rs.getString("exp_date"));
+        products.setCreateDate(rs.getString("create_date"));
         products.setCateId(rs.getInt("cate_id"));
         products.setCateName(rs.getNString("cate_name"));
-        products.setSellQuantity(rs.getInt("sell_quantity"));
+        products.setSell_quantity(rs.getInt("sell_quantity"));
         return products;
     }
 }

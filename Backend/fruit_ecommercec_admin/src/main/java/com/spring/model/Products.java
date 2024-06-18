@@ -10,13 +10,13 @@ public class Products {
     private double productPrice;
     private int quantity;
     private double sale;
-    private int hot;
-    private Date expDate;
-    private Date createDate;
+    private boolean hot;
+    private String expDate;
+    private String createDate;
     private String productImg;
     private int cateId;
     private String cateName;
-    private int sellQuantity;
+    private int sell_quantity;
 
     public int getProductId() {
         return productId;
@@ -42,13 +42,14 @@ public class Products {
         this.productDesc = productDesc;
     }
 
-    public double getProductPrice() {
-        return productPrice;
-    }
+//    public String getShortDesc() {
+//        return shortDesc;
+//    }
+//
+//    public void setShortDesc(String shortDesc) {
+//        this.shortDesc = shortDesc;
+//    }
 
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
-    }
 
     public int getQuantity() {
         return quantity;
@@ -66,27 +67,27 @@ public class Products {
         this.sale = sale;
     }
 
-    public int getHot() {
+    public boolean isHot() {
         return hot;
     }
 
-    public void setHot(int hot) {
+    public void setHot(boolean hot) {
         this.hot = hot;
     }
 
-    public Date getExpDate() {
+    public String getExpDate() {
         return expDate;
     }
 
-    public void setExpDate(Date expDate) {
+    public void setExpDate(String expDate) {
         this.expDate = expDate;
     }
 
-    public Date getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(String createDate) {
         this.createDate = createDate;
     }
 
@@ -114,21 +115,30 @@ public class Products {
         this.cateName = cateName;
     }
 
-    public int getSellQuantity() {
-        return sellQuantity;
+    public double getProductPrice() {
+        return productPrice;
     }
 
-    public void setSellQuantity(int sellQuantity) {
-        this.sellQuantity = sellQuantity;
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public int getSell_quantity() {
+        return sell_quantity;
+    }
+
+    public void setSell_quantity(int sell_quantity) {
+        this.sell_quantity = sell_quantity;
     }
 
     public Products() {
     }
 
-    public Products(int productId, String productName, String productDesc, double productPrice, int quantity, double sale, int hot, Date expDate, Date createDate, String productImg, int cateId, String cateName, int sellQuantity) {
+    public Products(int productId, String productName, String productDesc, double productPrice, int quantity, double sale, boolean hot, String expDate, String createDate, String productImg, int cateId, String cateName, int sell_quantity) {
         this.productId = productId;
         this.productName = productName;
         this.productDesc = productDesc;
+        //this.shortDesc = shortDesc;
         this.productPrice = productPrice;
         this.quantity = quantity;
         this.sale = sale;
@@ -138,6 +148,6 @@ public class Products {
         this.productImg = productImg;
         this.cateId = cateId;
         this.cateName = cateName;
-        this.sellQuantity = sellQuantity;
+        this.sell_quantity = sell_quantity;
     }
 }
