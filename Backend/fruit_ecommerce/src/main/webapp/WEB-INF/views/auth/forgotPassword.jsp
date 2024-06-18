@@ -90,24 +90,6 @@
 
         document.getElementById('forgotForm').submit();
     }
-    // function startCountdown() {
-    //     // Lấy thời gian hiện tại
-    //     let currentTime = 60;
-    //
-    //     // Thay đổi nút gửi mã thành số 60
-    //     document.getElementById('sendButton').innerHTML = currentTime;
-    //
-    //     // Bắt đầu đếm ngược
-    //     let countdown = setInterval(function() {
-    //         currentTime--;
-    //         document.getElementById('sendButton').innerHTML = currentTime;
-    //         // Kiểm tra nếu đếm ngược về 0 thì hiển thị lại nút gửi mã
-    //         if (currentTime == 0) {
-    //             clearInterval(countdown);
-    //             document.getElementById('sendButton').innerHTML = "Gửi lại mã";
-    //         }
-    //     }, 1000);
-    // }
 </script>
 
 </body>

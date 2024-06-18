@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -33,27 +35,42 @@ public class ProductsDao {
         product = jdbcTemplate.queryForObject(sql, new ProductsMapper(), new Object[]{id});
         return product;
     }
-    public void addProduct(Products product){
-        boolean check = false;
-        String sql = "INSERT INTO product (product_name, product_desc, product_price, quantity, product_sales, product_hot, exp_date, create_date, sell_quantity, cate_id) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?)";
-        int row = jdbcTemplate.update(sql,
+    public void addProduct(Products product) {
+        String sql = "INSERT INTO product (product_name, product_desc, product_price, quantity, product_sales, product_hot, exp_date, create_date, product_img,sell_quantity, cate_id) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        jdbcTemplate.update(sql, product.getProductName(),
+                product.getProductDesc(),
+                product.getProductPrice(),
+                product.getQuantity(),
+                product.getSale(),
+                product.isHot(),
+                product.getExpDate(),
+                product.getCreateDate(),
+                product.getProductImg(),
+                product.getSell_quantity(),
+
+                product.getCateId());
+    }
+
+    public void updateProduct(Products product) {
+        String sql = "UPDATE product SET product_name = ?, product_desc = ?, product_price = ?, quantity = ?, product_sales = ?,product_hot = ?,exp_date = ?,create_date = ?,product_img = ?,sell_quantity = ?, cate_id = ? WHERE id = ?";
+        jdbcTemplate.update(sql,
                 product.getProductName(),
                 product.getProductDesc(),
                 product.getProductPrice(),
                 product.getQuantity(),
                 product.getSale(),
-                product.getHot(),
-                new java.sql.Date(product.getExpDate().getTime()),
-                new java.sql.Date(product.getCreateDate().getTime()),
-//                product.getProductImg(),
-                product.getSellQuantity(),
-//                product.getSupplierId(),
-                product.getCateId());
-
+                product.isHot(),
+                product.getExpDate(),
+                product.getCreateDate(),
+                product.getProductImg(),
+                product.getSell_quantity(),
+                product.getCateId(),
+                product.getProductId());
     }
     public void deleteProduct(int id){
         String sql = "delete from product where id=?";
         jdbcTemplate.update(sql,id);
     }
-
 }
