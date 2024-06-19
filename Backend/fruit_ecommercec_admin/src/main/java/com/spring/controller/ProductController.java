@@ -4,6 +4,7 @@ import com.spring.model.Products;
 import com.spring.service.CategoryServiceImpl;
 import com.spring.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -49,8 +50,13 @@ public class ProductController
     @GetMapping(value = "/delete/{id}")
     public ModelAndView deleteProduct(@PathVariable(required = false) Integer id){
         ModelAndView mv = new ModelAndView();
-        productService.deleteProduct(id);
-        mv.setViewName("redirect:/product/1");
+        try {
+            productService.deleteProduct(id);
+            mv.setViewName("redirect:/product/1");
+        } catch (DataIntegrityViolationException e) {
+            mv.addObject("msg", "Cannot delete product with id " + id + " because it has related data in other tables.");
+            mv.setViewName("forward:/product/1");
+        }
         return mv;
     }
     @GetMapping(value = "/addproduct")
