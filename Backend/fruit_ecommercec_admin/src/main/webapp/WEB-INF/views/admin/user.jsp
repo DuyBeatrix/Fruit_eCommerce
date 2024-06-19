@@ -39,10 +39,10 @@
                     <td>${user.cusEmail}</td>
                     <td>
                         <c:choose>
-                            <c:when test="${user.gender eq '0'}">
+                            <c:when test="${user.gender eq 'true'}">
                                 <p>Nam</p>
                             </c:when>
-                            <c:when test="${user.gender eq '1'}">
+                            <c:when test="${user.gender eq 'false'}">
                                 <p>Nữ</p>
                             </c:when>
                             <c:otherwise>
