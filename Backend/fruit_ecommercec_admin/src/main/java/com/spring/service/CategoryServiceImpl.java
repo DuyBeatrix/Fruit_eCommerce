@@ -14,4 +14,23 @@ public class CategoryServiceImpl implements CategoryService{
     public List<Categories> getCategories() {
         return categoryDao.getCategories();
     }
+    public int countCategory (){
+       return  categoryDao.countCategory();
+    }
+
+    @Override
+    public List<Categories> paginationCategory(int index) {
+        return categoryDao.paginationCategory(index);
+    }
+
+    @Override
+    public Categories getCategoryById(int id) {
+        return categoryDao.getCategoryById(id);
+    }
+
+    @Override
+    public void addCategory(Categories categories) {
+        categoryDao.addCategory(categories);
+    }
+
 }

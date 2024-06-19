@@ -22,4 +22,27 @@ public class CategoryDao {
         return categoriesList;
 
     }
+    public int countCategory(){
+        String sql = "select count(*) from category";
+        int count = jdbcTemplate.queryForObject(sql, new Object[]{}, Integer.class);
+        return count;
+    }
+    public List<Categories> paginationCategory(int index){
+        List<Categories> ategories = new ArrayList<Categories>();
+        String sql = "SELECT * from category LIMIT 10 OFFSET ?";
+        int page = (index-1) * 10;
+        Object[] params = new Object[]{page};
+        ategories = jdbcTemplate.query(sql,params, new CategoriesMapper());
+        return  ategories;
+    }
+    public Categories getCategoryById(int id){
+        Categories categories = new Categories();
+        String sql = "SELECT p.*, c.cate_name FROM category p INNER JOIN category c ON p.cate_id = c.cate_id where id=?";
+        categories = jdbcTemplate.queryForObject(sql, new CategoriesMapper(), new Object[]{id});
+        return categories;
+    }
+    public void addCategory(Categories categories) {
+        String sql = "INSERT INTO category (cate_name, cate_enable, cate_image) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, categories.getCateName(), categories.isEnable(), categories.getCateImg());
+    }
 }

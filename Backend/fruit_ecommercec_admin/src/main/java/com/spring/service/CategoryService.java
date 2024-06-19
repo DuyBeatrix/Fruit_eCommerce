@@ -8,4 +8,8 @@ import java.util.List;
 @Service
 public interface CategoryService {
     public List<Categories> getCategories();
+    public int countCategory ();
+    public List<Categories> paginationCategory(int index);
+    public Categories getCategoryById(int id);
+    public void addCategory (Categories categories);
 }
