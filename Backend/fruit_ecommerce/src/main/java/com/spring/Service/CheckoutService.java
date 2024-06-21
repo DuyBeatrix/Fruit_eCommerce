@@ -17,4 +17,5 @@ public interface CheckoutService
     public List<Checkout> getOrder(int userID);
     public List<OrderDetail> getOrderDetail(int checkoutid);
     public OrderDetail getOneOrderDetail(int checkoutid);
+    public void cancelOrder(int checkoutid);
 }
