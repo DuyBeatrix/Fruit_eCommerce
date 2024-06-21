@@ -52,4 +52,22 @@ public class CheckoutServiceImpl implements CheckoutService
     public OrderDetail getOneOrderDetail(int checkoutid) {
         return checkoutDAO.getOneOrderDetail(checkoutid);
     }
+
+    @Override
+    public void cancelOrder(int checkoutid)
+    {
+        Checkout order = checkoutDAO.findById(checkoutid);
+        if (order != null && "Prepairing".equals(order.getStatus())) {
+            // Lấy danh sách chi tiết đơn hàng
+            List<CheckoutDetail> checkoutDetails = checkoutDAO.getCheckoutDetails(checkoutid);
+            for (CheckoutDetail detail : checkoutDetails) {
+                // Cập nhật lại số lượng sản phẩm trong kho
+                checkoutDAO.updateQuantityOnCancel(detail.getProductID(), detail.getQuantity());
+            }
+            // Xóa chi tiết đơn hàng
+            checkoutDAO.deleteCheckoutDetails(checkoutid);
+            // Cập nhật trạng thái đơn hàng
+            checkoutDAO.updateOrderStatus(checkoutid, "Rejected");
+        }
+    }
 }

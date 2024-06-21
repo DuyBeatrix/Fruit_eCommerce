@@ -1,11 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: DELL
-  Date: 6/4/2024
-  Time: 12:27 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <title>Product</title>
@@ -33,11 +26,11 @@
                     <th scope="row">${product.productId}</th>
                     <td>${product.productName}</td>
                     <td>${product.productPrice}</td>
-                    <td>${product.sellQuantity}</td>
+                    <td>${product.sell_quantity}</td>
                     <td>${product.quantity}</td>
                     <td>${product.cateName}</td>
                     <td>
-                        <a href="#" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="updateProduct?productId=${product.productId}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
                         <a href="#"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteProduct('${product.productId}')"></i></a>
                     </td>
                 </tr>

@@ -158,7 +158,6 @@
                 <div class="row g-4">
                     <div class="col-lg-12">
                         <div class="row g-4 result-ajax">
-
                         </div>
                     </div>
                 </div>
@@ -257,7 +256,7 @@
 <%--                    <p>${list.shortDesc}t</p>--%>
                     <div class="d-flex justify-content-between flex-lg-wrap">
                         <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                        <a href="${pageContext.request.contextPath}/addCart/${list.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                 class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
                 </div>
@@ -329,7 +328,7 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <h4 class="mb-3">${seller.productPrice}</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                            <a href="${pageContext.request.contextPath}/addCart/${seller.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
@@ -380,7 +379,6 @@
     </div>
 </div>
 <!-- Fact Start -->
-
 
 <!-- Tastimonial Start -->
 <div class="container-fluid testimonial py-5">
@@ -526,8 +524,6 @@
                 url: '${pageContext.request.contextPath}' + url,
                 success: function (data) {
                     $('.result-ajax').html(data)
-
-
                 },
                 error: function (XMLHttpResponse, textStatus, errorThrown) {
                     XMLHttpResponse.toString()
