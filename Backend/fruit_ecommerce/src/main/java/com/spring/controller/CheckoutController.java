@@ -30,40 +30,46 @@ public class CheckoutController
         ModelAndView mv = new ModelAndView();
         mv.setViewName("user/checkout");
         Checkout checkout = new Checkout();
-        loginInfo = (User) session.getAttribute("loginInfo");
-        if(loginInfo != null)
-        {
-            checkout.setAddress(loginInfo.getCusAddress());
-            checkout.setFullName(loginInfo.getCusName());
-            checkout.setPhone(loginInfo.getCusPhone());
-            checkout.setEmail(loginInfo.getCusEmail());
-            checkout.setUserid(loginInfo.getId());
-        }
+//        loginInfo = (User) session.getAttribute("loginInfo");
+//        if(loginInfo != null)
+//        {
+//            checkout.setAddress(loginInfo.getCusAddress());
+//            checkout.setFullName(loginInfo.getCusName());
+//            checkout.setPhone(loginInfo.getCusPhone());
+//            checkout.setEmail(loginInfo.getCusEmail());
+//            checkout.setUserid(loginInfo.getId());
+//
+//        }
         mv.addObject("checkout", checkout);
+
         return mv;
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.POST)
     public String checkoutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("checkout") Checkout checkout, RedirectAttributes redirectAttributes)
     {
-        String fullName = checkout.getFullName();
         loginInfo = (User) session.getAttribute("loginInfo");
-        if(loginInfo != null)
-        {
-            checkout.setAddress(checkout.getAddress());
-            checkout.setFullName(checkout.getFullName());
-            checkout.setPhone(checkout.getPhone());
-            checkout.setEmail(checkout.getEmail());
-            checkout.setUserid(loginInfo.getId());
-        }
+
         checkout.setQuantity((Integer) session.getAttribute("totalQuantity"));
         checkout.setTotal((Double) session.getAttribute("totalPrice"));
-        if(checkoutService.addCheckout(checkout) > 0)
+        String paymentMethod = checkout.getPaymentMethod();
+        System.out.println("paymentMethod: "+ paymentMethod);
+        if(checkoutService.addCheckout(checkout) > 0 && paymentMethod.equals("COD"))
         {
             HashMap<Integer, Cart> carts = (HashMap<Integer, Cart>) session.getAttribute("cart");
             checkoutService.addCheckoutDetail(carts);
+            session.removeAttribute("cart");
         }
-        session.removeAttribute("cart");
+        return "redirect:/cart";
+    }
+    @RequestMapping(value = "/saveData", method = RequestMethod.POST)
+    public String saveData(HttpServletRequest request, HttpSession session, @ModelAttribute("checkout") Checkout checkout, RedirectAttributes redirectAttributes)
+    {
+        loginInfo = (User) session.getAttribute("loginInfo");
+
+        checkout.setQuantity((Integer) session.getAttribute("totalQuantity"));
+        checkout.setTotal((Double) session.getAttribute("totalPrice"));
+        session.setAttribute("checkoutdata", checkout);
         return "redirect:/cart";
     }
 }

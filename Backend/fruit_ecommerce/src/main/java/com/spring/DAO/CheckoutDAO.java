@@ -16,21 +16,21 @@ public class CheckoutDAO
 
     public int addCheckout(Checkout checkout)
     {
-        String sql = "INSERT INTO checkout \n" +
-                "(fullname, total_price, total_product, address, desc_order, email, customer_id, phone) \n" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-        return jdbcTemplate.update(sql, checkout.getFullName(), checkout.getTotal(), checkout.getQuantity(), checkout.getAddress(), checkout.getDesc_order(), checkout.getEmail(), checkout.getUserid(), checkout.getPhone());
+        String sql = "INSERT INTO orders \n" +
+                "(fullname, total_price, total_product, address, desc_order, email, customer_id, phone, payment_method,status_payment) \n" +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        return jdbcTemplate.update(sql, checkout.getFullName(), checkout.getTotal(), checkout.getQuantity(), checkout.getAddress(), checkout.getDesc_order(), checkout.getEmail(), checkout.getUserid(), checkout.getPhone(), checkout.getPaymentMethod(), checkout.getStatusPayment());
     }
 
     public int getIDLastBill(){
-        String sql = "select max(id) from checkout";
+        String sql = "select max(id) from orders";
         int checkoutid = jdbcTemplate.queryForObject(sql,new Object[]{},Integer.class );
         return checkoutid;
     }
 
     public int addCheckoutDetail(CheckoutDetail checkoutDetail)
     {
-       String sql = "insert into checkoutdetail (product_id, order_id, quantity, total_piad) values(?,?,?,?)";
+       String sql = "insert into order_detail (product_id, order_id, quantity, total_piad) values(?,?,?,?)";
         return jdbcTemplate.update(sql, checkoutDetail.getProductID(), checkoutDetail.getCheckoutID(), checkoutDetail.getQuantity(), checkoutDetail.getTotal());
     }
 
@@ -48,24 +48,24 @@ public class CheckoutDAO
     public List<Checkout> getOrder(int userID)
     {
         List<Checkout> list = new ArrayList<Checkout>();
-        String sql = "select * from checkout where customer_id=?";
+        String sql = "select * from orders where customer_id=?";
         list = jdbcTemplate.query(sql, new Object[]{userID}, new CheckoutMapper());
         return list;
     }
 
     public List<OrderDetail> getOrderDetail(int checkoutid) {
-        String sql = "select fullname, product_img, product_name, product_price,  checkoutdetail.quantity, total_price, checkout.status, checkout.id from checkoutdetail \n" +
-                "inner join product on checkoutdetail.product_id = product.id\n" +
-                "inner join checkout on checkoutdetail.order_id = checkout.id\n" +
-                "where checkout.id = ?";
+        String sql = "select fullname, product_img, product_name, product_price,  order_detail.quantity, total_price, orders.status, orders.id from order_detail \n" +
+                "inner join product on order_detail.product_id = product.id\n" +
+                "inner join orders on order_detail.order_id = orders.id\n" +
+                "where orders.id = ?";
         return jdbcTemplate.query(sql, new Object[]{checkoutid}, new OrderDetailMapper());
     }
     public OrderDetail getOneOrderDetail(int checkoutid)
     {
-        String sql = "select fullname, product_img, product_name, product_price,  checkoutdetail.quantity, total_price, checkout.status, checkout.id from checkoutdetail \n" +
-                "inner join product on checkoutdetail.product_id = product.id\n" +
-                "inner join checkout on checkoutdetail.order_id = checkout.id\n" +
-                "where checkout.id = ? limit 1";
+        String sql = "select fullname, product_img, product_name, product_price,  order_detail.quantity, total_price, orders.status, orders.id from order_detail \n" +
+                "inner join product on order_detail.product_id = product.id\n" +
+                "inner join orders on order_detail.order_id = orders.id\n" +
+                "where orders.id = ? limit 1";
         return jdbcTemplate.queryForObject(sql, new Object[]{checkoutid}, new OrderDetailMapper());
     }
 }

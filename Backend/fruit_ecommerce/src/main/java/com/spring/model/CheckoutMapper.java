@@ -21,6 +21,8 @@ public class CheckoutMapper implements RowMapper<Checkout>
         checkout.setUserid(rs.getInt("customer_id"));
         checkout.setStatus(rs.getString("status"));
         checkout.setCreateDay(rs.getDate("createDay"));
+        checkout.setPaymentMethod(rs.getString("payment_method"));
+        checkout.setStatusPayment(rs.getString("status_payment"));
         return checkout;
     }
 }
