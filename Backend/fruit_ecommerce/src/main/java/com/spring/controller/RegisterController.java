@@ -37,7 +37,6 @@ public class RegisterController {
         session.setAttribute("userdata", user);
         String cusEmail = user.getCusEmail();
         String username = user.getUserName();
-        String password = user.getPassword();
         int checkUsername = authService.findAccountbyUsername(username);
         int checkEmail = authService.findAccountByEmail(cusEmail);
         if(checkUsername > 0) {

@@ -18,19 +18,26 @@ public class LoginController {
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public ModelAndView login() {
         ModelAndView mv = new ModelAndView("auth/login");
-        mv.addObject("user", new User());
+        User user = new User();
+        mv.addObject("user", user);
         return mv;
     }
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public ModelAndView login(HttpSession session, @ModelAttribute("user") User user){
         ModelAndView mv = new ModelAndView();
         user = authService.login(user);
-        if(user != null){
+        String username = user.getUserName();
+        int check  = authService.findAccountbyUsername(username);
+
+        if(user != null ){
             mv.setViewName("redirect:/home");
             session.setAttribute("loginInfo", user);
         } else {
+            if(check == 0){
+                mv.addObject("statuslogin","Tài khoản không tồn tại");
+            }
             mv.addObject("statuslogin","Tài khoản hoặc mật khẩu không đúng");
-            mv.setViewName("redirect:/login");
+            mv.setViewName("auth/login");
         }
         return mv;
     }
