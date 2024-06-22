@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="update payment online bang order them 2 truong payment_method and status_payment trong csdl">
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetailMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/layout/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/layout/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fruittables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../fruittables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +246,7 @@
       <workItem from="1718883145193" duration="19944000" />
       <workItem from="1718952948124" duration="1153000" />
       <workItem from="1719020384941" duration="1946000" />
-      <workItem from="1719062750117" duration="1697000" />
+      <workItem from="1719062750117" duration="2527000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />
