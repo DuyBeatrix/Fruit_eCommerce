@@ -18,20 +18,20 @@ public class OrderDao {
     private JdbcTemplate jdbcTemplate;
 
     public int countOrder(){
-        String sql = "select count(*) from order_detail";
+        String sql = "select count(*) from checkoutdetail";
         int count = jdbcTemplate.queryForObject(sql, new Object[]{},Integer.class);
         return count;
     }
     public List<OrderDetail> getAllOrder(int index){
         List<OrderDetail> list = new ArrayList<OrderDetail>();
-        String sql = "SELECT * FROM order_detail od JOIN orders o ON od.order_id = o.id limit 10 offset ?";
+        String sql = "SELECT * FROM checkoutdetail od JOIN checkout o ON od.order_id = o.id limit 10 offset ?";
         int page = (index-1) * 10;
         Object[] params = new Object[]{page};
         list = jdbcTemplate.query(sql,params,new OrderDetailMapper());
         return list;
     }
     public void updateDeliveryStatus(int orderDetailId, String deliveryStatus) {
-        String sql = "UPDATE order_detail SET delivery_status = ? WHERE id = ?";
+        String sql = "UPDATE checkoutdetail SET status = ? WHERE id = ?";
         jdbcTemplate.update(sql, deliveryStatus, orderDetailId);
     }
 }

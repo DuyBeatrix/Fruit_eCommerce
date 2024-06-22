@@ -15,7 +15,25 @@ public class Checkout
     private int userid;
     private String status;
     private Date createDay;
+    private String paymentMethod;
+    private String statusPayment;
     public Checkout() {}
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public String getStatusPayment() {
+        return statusPayment;
+    }
+
+    public void setStatusPayment(String statusPayment) {
+        this.statusPayment = statusPayment;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
 
     public Date getCreateDay() {
         return createDay;

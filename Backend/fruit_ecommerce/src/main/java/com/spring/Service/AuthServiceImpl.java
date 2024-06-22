@@ -45,7 +45,8 @@ public class AuthServiceImpl implements AuthService{
 
     @Override
     public void changePassword(String email, String newPassword){
-        authDao.changePassword(email, newPassword);
+        String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt(12));
+        authDao.changePassword(email, hashedPassword);
     }
 
 }

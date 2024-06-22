@@ -3,6 +3,7 @@ package com.spring.service;
 import com.spring.dao.ProductsDao;
 import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +29,11 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void deleteProduct(int id) {
-        proDao.deleteProduct(id);
+        try {
+            proDao.deleteProduct(id);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityViolationException("Cannot delete product with id " + id + " because it has related data in other tables.");
+        }
     }
 
     @Override
