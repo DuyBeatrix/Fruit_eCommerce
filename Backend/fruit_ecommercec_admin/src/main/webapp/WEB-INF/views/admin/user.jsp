@@ -17,9 +17,13 @@
             <h6 class="mb-0">Quản Lý Người Dùng</h6>
             <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/user/add">Thêm Người Dùng</a></td>
         </div>
+        <p class="text-success">${addMessageSuccess}</p>
+        <p class="text-danger">${addMessageFail}</p>
+        <p class="text-success">${updateMessageSuccess}</p>
+        <p class="text-danger">${updateMessageFail}</p>
+        <p class="text-success">${deteleMessageSuccess}</p>
+        <p class="text-danger">${deteleMessageFail}</p>
         <div class="table-responsive">
-            <p class="text-success">${deteleMessageSuccess}</p>
-            <p class="text-danger">${deteleMessageFail}</p>
             <table class="table text-start align-middle table table-hover table-striped mb-0">
                 <thead>
                 <tr class="text-dark">
@@ -31,7 +35,9 @@
                     <th scope="col">Địa chỉ</th>
                     <th scope="col">Giới tính</th>
                     <th scope="col">ID quyền</th>
+                    <th scope="col">Trạng Thái</th>
                     <th scope="col">Hành động</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -46,7 +52,20 @@
                         <td>${user.gender ? 'Male' : 'Female'}</td>
                         <td>${user.roleId}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/user/edit/${user.id}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
+                            <form action="${pageContext.request.contextPath}/user/updateUserStatus" method="post">
+                                <input type="hidden" name="userId" value="${user.id}" />
+                                <select class="form-select" aria-label="Default select example" name="userStatus" onchange="this.form.submit()">
+                                    <option selected>${user.cusEnable}</option>
+                                    <c:if test="${user.cusEnable != 'Kích hoạt'}">
+                                        <option value="Kích hoạt">Kích hoạt</option>
+                                    </c:if>
+                                    <c:if test="${user.cusEnable != 'Vô hiệu hóa'}">
+                                        <option value="Vô hiệu hóa">Vô hiệu hóa</option>
+                                    </c:if>
+                                </select>
+                            </form>
+                        </td>
+                        <td>
                             <a href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px"></i></a>
 <%--                            <a class="btn btn-sm btn-warning" href="${pageContext.request.contextPath}/user/edit/${user.id}">Edit</a>--%>
 <%--                            <a class="btn btn-sm btn-danger" href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')">Delete</a>--%>

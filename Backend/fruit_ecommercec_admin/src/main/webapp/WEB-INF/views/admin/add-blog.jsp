@@ -34,13 +34,13 @@
             <div class="mb-3">
                 <label for="blogId" class="form-label">Thuộc tính</label>
                 <form:select path="blogId" id="blogId" class="form-control" required="true">
-                    <form:options items="${blogTypes}" itemValue="id" itemLabel="id"/>
+                    <form:options items="${blogTypes}" itemValue="id" itemLabel="typeName"/>
                 </form:select>
             </div>
             <div class="mb-3">
                 <label for="customerId" class="form-label">ID Người dùng</label>
                 <form:select path="customerId" id="customerId" class="form-control" required="true">
-                    <form:options items="${customers}" itemValue="id" itemLabel="id"/>
+                    <form:options items="${customers}" itemValue="id" itemLabel="username"/>
                 </form:select>
             </div>
             <a href="${pageContext.request.contextPath}/blogdetails/1" class="btn btn-secondary">Trở lại</a>
