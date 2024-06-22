@@ -27,10 +27,14 @@
             <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="${pageContext.request.contextPath}/order/1" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Order</a>
             <a href="${pageContext.request.contextPath}/product/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Products</a>
-            <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Category</a>
-            <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Blog</a>
+            <a href="${pageContext.request.contextPath}/category/1" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Category</a>
+            <a href="${pageContext.request.contextPath}/blogdetails/1" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Blog</a>
+                <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>User</a>
+
+
+
             <a href="${pageContext.request.contextPath}/feedback/1" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Feedback</a>
-            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User</a>
+<%--            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User</a>--%>
         </div>
     </nav>
 </div>
