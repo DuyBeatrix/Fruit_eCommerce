@@ -11,13 +11,11 @@ public class OrderDetailMapper implements RowMapper<OrderDetail> {
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setId(rs.getInt("id"));
         orderDetail.setTotalPiad(rs.getDouble("total_piad"));
-        orderDetail.setDeliveryStatus(rs.getString("delivery_status"));
         orderDetail.setOrderID(rs.getInt("order_id"));
-
-        // Assuming that OrdersMapper is another RowMapper for the Orders class
         OrderMapper ordersMapper = new OrderMapper();
         Orders order = ordersMapper.mapRow(rs, i);
         orderDetail.setOrder(order);
+        orderDetail.setProductId(rs.getInt("product_id"));
         return orderDetail;
     }
 }
