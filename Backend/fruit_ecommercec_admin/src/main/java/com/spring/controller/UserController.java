@@ -1,42 +1,79 @@
 package com.spring.controller;
 
-import com.spring.service.UserServiceIpml;
+import com.spring.model.Users;
+import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+
 @RequestMapping("/user")
 @Controller
 public class UserController {
+
     @Autowired
-    private UserServiceIpml serviceIpml;
+    private UserService userService;
+
     @GetMapping(value = "/{index}")
-    public ModelAndView user(@PathVariable(required = false) Integer index, HttpServletRequest request){
+    public ModelAndView user(@PathVariable(required = false) Integer index, HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("admin/user");
-        int count = serviceIpml.countUser();
-        int endPage = count/10;
-        if(count % 10 != 0) {
+        mv.setViewName("admin/user"); // Change to your actual view name for users
+        int count = userService.countUsers();
+        int endPage = count / 10;
+        if (count % 10 != 0) {
             endPage = endPage + 1;
         }
         request.setAttribute("endPage", endPage);
-        if(index !=null && index > 0){
-            mv.addObject("allUser", serviceIpml.getAllUser(index));
-        }
-        else {
-            mv.addObject("allUser", serviceIpml.getAllUser(1));
+        if (index != null && index > 0) {
+            mv.addObject("paginationUsers", userService.paginationUsers(index));
+        } else {
+            mv.addObject("paginationUsers", userService.paginationUsers(1));
         }
         return mv;
     }
-    @GetMapping(value = "/delete/{id}")
-    public ModelAndView deleteProduct(@PathVariable(required = false) Integer id){
-        ModelAndView mv = new ModelAndView();
-        serviceIpml.deleteUser(id);
-        mv.setViewName("redirect:/user/1");
-        return mv;
+    @GetMapping("/add")
+    public String showAddForm(Model model) {
+        model.addAttribute("user", new Users());
+        model.addAttribute("roles", userService.getAllRoles());// Initialize a new Users object
+        return "admin/add-user"; // Change to your actual view name for adding users
+    }
+
+    @PostMapping("/add")
+    public String addUser(@ModelAttribute Users user) {
+        userService.addUser(user);
+        return "redirect:/user/1"; // Redirect to the first page after adding
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showEditForm(@PathVariable int id, HttpServletRequest request, Model model) {
+        Users user = userService.getUserById(id);
+        request.setAttribute("user", user);
+        model.addAttribute("roles", userService.getAllRoles());
+        return "admin/edit-user"; // Change to your actual view name for editing users
+    }
+
+    @PostMapping("/edit/{id}")
+    public String updateUser(@PathVariable int id, @ModelAttribute Users user) {
+
+        user.setId(id);
+        userService.updateUser(user);
+        return "redirect:/user/1"; // Redirect to the first page after updating
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable int id, Model model) {
+        try {
+            userService.deleteUser(id);
+            model.addAttribute("deteleMessageSuccess","Xóa thành công");
+            return "forward:/user/1"; // Redirect to the first page after deleting
+        }catch (DataIntegrityViolationException e){
+            model.addAttribute("deteleMessageFail","Không thể xóa");
+            return "forward:/user/1";
+        }
+
     }
 }
