@@ -96,7 +96,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between">
-                                        <p class="text-muted mb-0">Order Date : 22 Dec,2019</p>
+                                        <p class="text-muted mb-0">Order Date : ${date}</p>
 
 
                                     </div>
@@ -105,7 +105,7 @@
 
                                     </div>
                                     <div class="d-flex justify-content-between mb-5">
-                                        <p class="text-muted mb-0">Address: ${phone}</p>
+                                        <p class="text-muted mb-0">Address: ${address}</p>
                                         <p class="text-muted mb-0"><span class="fw-bold me-4">Delivery
                                                     Charges</span> Free</p>
                                     </div>
@@ -120,7 +120,7 @@
                                     <h5
                                             class="d-flex align-items-center justify-content-end text-white text-uppercase mb-0">
                                         Total
-                                        paid: <span class="h2 mb-0 ms-2">400.000 VND</span></h5>
+                                        paid: <span class="h2 mb-0 ms-2">${totalPrice}</span></h5>
                                 </div>
                             </div>
                         </div>
