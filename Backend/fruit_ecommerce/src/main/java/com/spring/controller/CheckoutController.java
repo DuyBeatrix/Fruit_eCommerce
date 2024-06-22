@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -42,7 +44,7 @@ public class CheckoutController
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.POST)
-    public String checkoutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("checkout") Checkout checkout)
+    public String checkoutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("checkout") Checkout checkout, RedirectAttributes redirectAttributes)
     {
         String fullName = checkout.getFullName();
         loginInfo = (User) session.getAttribute("loginInfo");

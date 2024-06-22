@@ -4,7 +4,9 @@ import com.spring.model.BlogDetail;
 import com.spring.service.BlogDetailService;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -80,23 +82,33 @@ public class BlogDetailController {
         return mv;
     }
 
-    @GetMapping(value = "/edit/{id}")
-    public ModelAndView editBlogDetailForm(@PathVariable("id") int id) {
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("admin/edit-blog");
-        mv.addObject("blogDetail", blogDetailService.getBlogDetailById(id));
-        return mv;
+    @GetMapping("/edit/{id}")
+    public String editBlogDetailForm(@PathVariable int id, Model model) {
+        BlogDetail blogDetail = blogDetailService.getBlogDetailById(id);
+        model.addAttribute("blogDetail", blogDetail);
+
+        return "admin/edit-blog";
     }
 
-    @PostMapping(value = "/edit")
-    public String editBlogDetail(@ModelAttribute BlogDetail blogDetail) {
+    @PostMapping("/edit/{id}")
+    public String editBlogDetail(@PathVariable int id, @ModelAttribute BlogDetail blogDetail) {
+        blogDetail.setId(id); // Sửa thành setId thay vì setBlogId
         blogDetailService.updateBlogDetail(blogDetail);
         return "redirect:/blogdetails/1";
     }
 
     @GetMapping(value = "/delete/{id}")
-    public String deleteBlogDetail(@PathVariable("id") int id) {
-        blogDetailService.deleteBlogDetail(id);
-        return "redirect:/blogdetails/1";
+    public String deleteBlogDetail(@PathVariable("id") int id, Model model) {
+//        blogDetailService.deleteBlogDetail(id);
+//        return "redirect:/blogdetails/1";
+
+        try {
+            blogDetailService.deleteBlogDetail(id);
+            model.addAttribute("message","Xóa thành công");
+            return "redirect:/blogdetails/1"; // Redirect to the first page after deleting
+        }catch (DataIntegrityViolationException e){
+            model.addAttribute("message","Không thể xóa");
+            return "forward:/blogdetails/1";
+        }
     }
 }

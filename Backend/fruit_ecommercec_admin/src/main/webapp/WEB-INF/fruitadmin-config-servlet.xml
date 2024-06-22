@@ -23,7 +23,7 @@
         <property name="targetMethod" value="getExternalImgPath" />
     </bean>
     <bean id="appConfig" class="com.spring.config.AppConfig" />
-    <mvc:resources mapping="/external/img/**" location="#{externalImgPath}"/>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
         <property name="prefix" value="/WEB-INF/views/" />

@@ -1,5 +1,7 @@
 package com.spring.model;
 
+import java.sql.Date;
+
 public class Checkout
 {
     private int checkoutid;
@@ -12,8 +14,15 @@ public class Checkout
     private double total;
     private int userid;
     private String status;
+    private Date createDay;
     public Checkout() {}
 
+    public Date getCreateDay() {
+        return createDay;
+    }
+    public void setCreateDay(Date createDay) {
+        this.createDay = createDay;
+    }
     public String getStatus() {
         return status;
     }

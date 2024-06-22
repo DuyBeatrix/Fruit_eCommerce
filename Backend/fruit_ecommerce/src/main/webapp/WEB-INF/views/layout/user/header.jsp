@@ -7,12 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<div id="spinner"--%>
-<%--     class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">--%>
-<%--    <div class="spinner-grow text-primary" role="status"></div>--%>
-<%--</div>--%>
-<%--<!-- Spinner End -->--%>
-
 
 <!-- Navbar start -->
 <div class="container-fluid fixed-top">
@@ -20,10 +14,9 @@
         <div class="d-flex justify-content-between">
             <div class="top-info ps-2">
                 <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#"
-                                                                                                 class="text-white">123
-                    Street, New York</a></small>
+                                                                                                 class="text-white">Bac Tu Liem, Ha Noi</a></small>
                 <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#"
-                                                                                          class="text-white">Email@Example.com</a></small>
+                                                                                          class="text-white">N16@gmail.com</a></small>
             </div>
             <div class="top-link pe-2">
                 <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
@@ -43,44 +36,56 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="<c:url value="/"/>" class="nav-item nav-link active">Trang chủ</a>
-                    <a href="${pageContext.request.contextPath}/shop/1" class="nav-item nav-link">Cửa hàng</a>
-                    <a href="shop-detail.html" class="nav-item nav-link">Bài viết</a>
+                    <a href="<c:url value="/"/>" class="nav-item nav-link active">Home</a>
+                    <a href="${pageContext.request.contextPath}/shop/1" class="nav-item nav-link">Shop</a>
+                    <a href="${pageContext.request.contextPath}/blog/1" class="nav-item nav-link">Blogs</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục sản phẩm</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <c:forEach var="cate" items="${categories}">
-                                <a href="cart.html" class="dropdown-item">${cate.cateName}</a>
+                                <a href="${pageContext.request.contextPath}/productbycatepage/${cate.cateId}/1" class="dropdown-item">${cate.cateName}</a>
                             </c:forEach>
-                            <%--                            <a href="chackout.html" class="dropdown-item">Chackout</a>--%>
-                            <%--                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>--%>
-                            <%--                            <a href="404.html" class="dropdown-item">404 Page</a>--%>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
-                    <a href="contact.html" class="nav-item nav-link">Nhà cung cấp</a>
+                    <a href="${pageContext.request.contextPath}/newsale" class="nav-item nav-link"><b>New & Sale</b></a>
+                    <a href="${pageContext.request.contextPath}/contact" class="nav-item nav-link">Contact</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/trackorder', ${empty loginInfo})">My Order</a>
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/setup_user', ${empty loginInfo})">My Information</a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="d-flex m-3 me-0 ">
-                    <form action="${pageContext.request.contextPath}/search" method="GET" class="pt-3">
-                        <div class="position-relative me-3">
-                            <input id="searchInput"
-                                   class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill"
-                                   type="text" placeholder="Search" name="freeText"/>
-                            <button id="searchButton" type="submit"
-                                    class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"
-                                    style="top: 0; right: 0;">
-                            </button>
-                        </div>
-                    </form>
-                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
-                        
-                    <a href="cart.html" class="position-relative me-4 my-auto">
 
-                            <i class="fa fa-shopping-bag fa-2x"></i>
-                            <span
-                                    class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
+<%--                    <form action="${pageContext.request.contextPath}/search" method="GET" class="pt-3">--%>
+<%--                        <div class="position-relative me-3">--%>
+<%--                            <input id="searchInput"--%>
+<%--                                   class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill"--%>
+<%--                                   type="text" placeholder="Search" name="freeText"/>--%>
+<%--                            <button id="searchButton" type="submit"--%>
+<%--                                    class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search"--%>
+<%--                                    style="top: 0; right: 0;">--%>
+<%--                            </button>--%>
+<%--                        </div>--%>
+<%--                    </form>  FORM SEARCH --%>
+
+                    <div>
+                        <form class="position-relative me-3" id="searchForm" action="${pageContext.request.contextPath}/search/${freeText}" method="GET">
+                            <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">
+                            <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>
+                        </form>
+                    </div>
+<%--                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">--%>
+
+                    <a href="${pageContext.request.contextPath}/cart" class="position-relative me-4 my-auto">
+                        <i class="fa fa-shopping-bag fa-2x"></i>
+                            <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
                                     style="top: -5px; left: 15px; height: 20px; min-width: 20px;">${cart.size()}</span>
-                        </a>
+                    </a>
                         <c:if test="${empty loginInfo}">
                         <a href="${pageContext.request.contextPath}/login" class="my-auto">
                             <i class="fas fa-user fa-2x"></i>
@@ -97,7 +102,6 @@
     </div>
 </div>
 <!-- Navbar End -->
-
 
 <!-- Modal Search Start -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,14 +123,27 @@
 </div>
 <!-- Modal Search End -->
 
-
 <script>
+    function redirectToPage(targetUrl, isNotLoggedIn) {
+        if (!isNotLoggedIn) {
+            window.location.href = targetUrl;
+        } else {
+            alert('You need to login to continue');
+            window.location.href = '${pageContext.request.contextPath}/login?redirect=' + encodeURIComponent(targetUrl);
+        }
+    }
+
     function logout() {
-        let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
+        let ans = confirm("Do you want to logout?");
         if (ans) {
             window.location = "${pageContext.request.contextPath}/logout";
         }
-
     }
+
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default action from web
+        const searchText = document.getElementById("searchInput").value;// var
+        window.location.href = "${pageContext.request.contextPath}/search/" + searchText;
+    });
 </script>
 

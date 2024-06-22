@@ -24,12 +24,12 @@ public class CartController
     }
 
     // Add method = RequestMethod.POST, @ResponseBody
-    @RequestMapping(value = "addCart/{id}")
-    public String addCart(HttpServletRequest request, HttpSession session, @PathVariable int id)
+    @RequestMapping(value = "addCart/{id}/{quantity}")
+    public String addCart(HttpServletRequest request, HttpSession session, @PathVariable int id, @PathVariable int quantity)
     {
         HashMap<Integer, Cart> cart = (HashMap<Integer, Cart>) session.getAttribute("cart");
         if(cart == null) cart = new HashMap<Integer, Cart>();
-        cart = cartService.addCart(id, cart);
+        cart = cartService.addCart(id, cart,quantity);
         session.setAttribute("cart", cart);
         session.setAttribute("totalPrice", cartService.totalPrice(cart));
         session.setAttribute("totalQuantity", cartService.totalQuantity(cart));

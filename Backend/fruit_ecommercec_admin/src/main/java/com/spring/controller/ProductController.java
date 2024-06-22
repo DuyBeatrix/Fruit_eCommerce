@@ -7,16 +7,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @RequestMapping("/product")
 @Controller
-public class ProductController {
+public class ProductController
+{
     @Autowired
     public ProductServiceImpl productService;
     @Autowired
     public CategoryServiceImpl categoryService;
+
     @GetMapping(value = "/{index}")
     public ModelAndView product(@PathVariable(required = false) Integer index, HttpServletRequest request){
         ModelAndView mv = new ModelAndView();
@@ -45,18 +56,29 @@ public class ProductController {
     @GetMapping(value = "/addproduct")
     public ModelAndView addProduct(){
         ModelAndView mv = new ModelAndView();
-
+        Products product = new Products();
         mv.setViewName("admin/addproduct");
-        mv.addObject("product", new Products());
+        mv.addObject("product", product);
         mv.addObject("category", categoryService.getCategories());
         return mv;
     }
     @PostMapping(value = "/addproduct")
     public ModelAndView addProduct(@ModelAttribute("product") Products product) {
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("category", categoryService.getCategories());
         productService.addProduct(product);
-        mv.setViewName("redirect:/product/1");
-        return mv;
+        return new ModelAndView("redirect:/product/1");
+    }
+@GetMapping(value = "/updateProduct")
+public ModelAndView update(@RequestParam("productId") int productId) {
+    ModelAndView mv = new ModelAndView();
+    Products product = productService.getProductById(productId);
+    mv.setViewName("admin/updateproduct");
+    mv.addObject("product", product);
+    mv.addObject("category", categoryService.getCategories());
+    return mv;
+}
+    @PostMapping(value = "/updateProduct")
+    public ModelAndView updateProduct(@ModelAttribute("product") Products product) {
+        productService.updateProduct(product);
+        return new ModelAndView("redirect:/product/1");
     }
 }

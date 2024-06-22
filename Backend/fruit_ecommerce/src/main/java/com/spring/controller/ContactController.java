@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ContactController {
+public class ContactController
+{
     @Autowired
     public ContactService contactService;
 
@@ -17,7 +18,6 @@ public class ContactController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("user/contact");
         mv.addObject("contacts", contactService.getContact());
-
         return mv;
     }
 }

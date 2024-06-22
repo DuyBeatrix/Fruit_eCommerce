@@ -9,25 +9,26 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>Manage BlogDetails</title>
+    <title>Quản Lý Bài Viết</title>
 </head>
 <body>
 <!-- BlogDetails Management Start -->
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">BlogDetail Management</h6>
-            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/blogdetails/add">Add New BlogDetail</a></td>
+            <h6 class="mb-0">Quản Lý Bài Viết</h6>
+            <p class="text-danger">${message}</p>
+            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/blogdetails/add">Thêm Bài Viết</a></td>
         </div>
         <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
                 <thead>
                 <tr class="text-dark">
                     <th scope="col">ID</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Blog Image</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Tiêu đề</th>
+                    <th scope="col">Miêu tả</th>
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Hành động</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -75,7 +76,7 @@
 </div>
 <script>
     function deleteBlogDetail(id) {
-        let ans = confirm("Are you sure you want to delete this BlogDetail?");
+        let ans = confirm("Bạn có chắc chắn muốn xóa bài viết này?");
         if(ans){
             window.location = "${pageContext.request.contextPath}/blogdetails/delete/"+id;
         }

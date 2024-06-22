@@ -15,7 +15,7 @@ public class ShopDetailDAO {
 
     public List<Products> getSimilarProductsByCate (int cateId){
         List<Products> products = new ArrayList<Products>();
-        String sql = "SELECT * FROM product WHERE cate_id = ? ORDER BY RAND() LIMIT 5;";
+        String sql = "SELECT p.*, c.cate_name FROM product p inner join category c on p.cate_id = c.cate_id WHERE c.cate_id = ? ORDER BY RAND() LIMIT 5";
         Object[] params = new Object[]{cateId};
         products =   jdbcTemplate.query(sql,params, new ProductsMapper());
         return  products;
@@ -28,14 +28,14 @@ public class ShopDetailDAO {
 //    }
     public List<Products> getProductSales(){
         List<Products> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product_sales > 0 ORDER BY RAND() LIMIT 5;";
+        String sql = "SELECT p.*, c.cate_name FROM product p inner join category c on p.cate_id = c.cate_id WHERE product_sales > 0 ORDER BY RAND() LIMIT 5;";
         products =   jdbcTemplate.query(sql, new ProductsMapper());
         return  products;
 
     }
     public List<Products> getProductById (int id){
         List<Products> products = new ArrayList<>();
-        String sql = "SELECT * FROM product p WHERE id = ?";
+        String sql = "SELECT p.*, c.cate_name FROM product p inner join category c on p.cate_id = c.cate_id WHERE id = ?";
         products =   jdbcTemplate.query(sql, new Object[]{id}, new ProductsMapper());
         return  products;
     }

@@ -1,6 +1,8 @@
 package com.spring.service;
 
+import com.spring.dao.RolesDao;
 import com.spring.dao.UserDao;
+import com.spring.model.Roles;
 import com.spring.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private RolesDao rolesDao;
 
     @Override
     public List<Users> getUsers() {
@@ -50,5 +55,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public void deleteUser(int id) {
         userDao.deleteUser(id);
+    }
+
+    @Override
+    public List<Roles> getAllRoles() {
+        return rolesDao.getAllRoles();
     }
 }

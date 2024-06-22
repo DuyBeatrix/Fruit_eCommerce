@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class ShopDAO {
+public class ShopDAO
+{
     @Autowired
     JdbcTemplate jdbcTemplate;
     public List<Products> paginationProductShop(int index){

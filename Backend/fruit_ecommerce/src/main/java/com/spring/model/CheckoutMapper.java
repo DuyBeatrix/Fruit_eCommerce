@@ -20,6 +20,7 @@ public class CheckoutMapper implements RowMapper<Checkout>
         checkout.setEmail(rs.getString("email"));
         checkout.setUserid(rs.getInt("customer_id"));
         checkout.setStatus(rs.getString("status"));
+        checkout.setCreateDay(rs.getDate("createDay"));
         return checkout;
     }
 }

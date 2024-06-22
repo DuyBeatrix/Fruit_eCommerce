@@ -35,4 +35,9 @@ public class ProductServiceImpl implements ProductService{
     public void addProduct(Products product) {
         proDao.addProduct(product);
     }
+
+    @Override
+    public void updateProduct(Products product) {
+        proDao.updateProduct(product);
+    }
 }

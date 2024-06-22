@@ -15,4 +15,5 @@ public interface ProductsService {
     public List<Products> paginationProductShop(int index);
     public List<Products> hotProduct(int limit);
     public int countHotProduct();
+    public List<Products> paginationProductByCatePage(int cateId, int index);
 }

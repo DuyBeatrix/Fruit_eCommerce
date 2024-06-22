@@ -1,6 +1,7 @@
 package com.spring.controller;
 
 import com.spring.Service.BlogDetailService;
+import com.spring.Service.CategoriesServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,12 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class BlogController {
     @Autowired
     public BlogDetailService blogDetailService;
-
-
-
+    @Autowired
+    CategoriesServiceImpl categoriesService;
     @RequestMapping(value = "blog/{index}")
-    public ModelAndView paginationProduct(@PathVariable(required = false) Integer index) {
-
+    public ModelAndView paginationProduct(@PathVariable(required = false) Integer index)
+    {
         int count = blogDetailService.countBlog();
         int endPage = count / 6;
         if (count % 6 != 0) {
@@ -26,6 +26,7 @@ public class BlogController {
 
         mv.setViewName("user/blog");
 
+        mv.addObject("categories", categoriesService.getAllCategories());
         mv.addObject("blogdetails", blogDetailService.getAllBlogDetails());
         mv.addObject("blogdetailsnew", blogDetailService.getAllBlogDetailsNew());
         mv.addObject("blogTypes", blogDetailService.getAllBlogTypes());
@@ -49,6 +50,7 @@ public class BlogController {
         }
         ModelAndView mv = new ModelAndView("user/blog-type");
 
+        mv.addObject("categories", categoriesService.getAllCategories());
         mv.addObject("blogdetails", blogDetailService.getAllBlogDetails());
         mv.addObject("blogdetailsnew", blogDetailService.getAllBlogDetailsNew());
         mv.addObject("blogTypes", blogDetailService.getAllBlogTypes());

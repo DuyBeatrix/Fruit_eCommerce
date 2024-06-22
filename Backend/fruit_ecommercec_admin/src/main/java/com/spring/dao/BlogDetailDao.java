@@ -45,8 +45,8 @@ public class BlogDetailDao {
     }
 
     public void updateBlogDetail(BlogDetail blogDetail) {
-        String sql = "UPDATE blog_detail SET title = ?, content = ?, description = ?, blog_img = ?, create_at = ?, blog_id = ?, customer_id = ? WHERE id = ?";
-        jdbcTemplate.update(sql, blogDetail.getTitle(), blogDetail.getContent(), blogDetail.getDescription(), blogDetail.getBlogImg(), blogDetail.getCreateAt(), blogDetail.getBlogId(), blogDetail.getCustomerId(), blogDetail.getId());
+        String sql = "UPDATE blog_detail SET title = ?, content = ?, description = ?, blog_img = ? WHERE id = ?";
+        jdbcTemplate.update(sql, blogDetail.getTitle(), blogDetail.getContent(), blogDetail.getDescription(), blogDetail.getBlogImg(), blogDetail.getId());
     }
 
     public void deleteBlogDetail(int id) {

@@ -8,28 +8,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<title>Manage Users</title>
+<title>Quản Lý Người Dùng</title>
 <body>
 <!-- Recent Users Start -->
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">User Management</h6>
-            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/user/add">Add New User</a></td>
+            <h6 class="mb-0">Quản Lý Người Dùng</h6>
+            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/user/add">Thêm Người Dùng</a></td>
         </div>
         <div class="table-responsive">
-            <table class="table text-start align-middle table-bordered table-hover mb-0">
+            <p class="text-success">${deteleMessageSuccess}</p>
+            <p class="text-danger">${deteleMessageFail}</p>
+            <table class="table text-start align-middle table table-hover table-striped mb-0">
                 <thead>
                 <tr class="text-dark">
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Username</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Tên tài khoản</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Role ID</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">ID quyền</th>
+                    <th scope="col">Hành động</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -45,7 +47,7 @@
                         <td>${user.roleId}</td>
                         <td>
                             <a href="${pageContext.request.contextPath}/user/edit/${user.id}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
-                            <a href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteProduct('${product.productId}')"></i></a>
+                            <a href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px"></i></a>
 <%--                            <a class="btn btn-sm btn-warning" href="${pageContext.request.contextPath}/user/edit/${user.id}">Edit</a>--%>
 <%--                            <a class="btn btn-sm btn-danger" href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')">Delete</a>--%>
                         </td>

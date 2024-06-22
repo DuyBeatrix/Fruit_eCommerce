@@ -39,24 +39,19 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17">Email</label>
                                         <form:input type="email" id="form2Example17" class="form-control form-control-lg" path="cusEmail" required="true"/>
-
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="username">Username</label>
                                         <form:input type="text" id="username" class="form-control form-control-lg" path="userName" required="true"/>
-
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="password">Password</label>
-                                        <form:input type="password" id="password"
-                                               class="form-control form-control-lg" path="password" required="true"/>
-
+                                        <form:input type="password" id="password" class="form-control form-control-lg" path="password" required="true" minlength="5"/>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="rePassword">Enter the password again</label>
-                                        <input type="password" id="rePassword"
-                                               class="form-control form-control-lg" name="rePassword" required/>
+                                        <input type="password" id="rePassword" class="form-control form-control-lg" name="rePassword" required/>
                                     </div>
 
                                     <div class="pt-1 mb-4">
@@ -77,5 +72,23 @@
     </div>
 </section>
 
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+        let password = document.getElementById('password').value.trim();
+        let rePassword = document.getElementById('rePassword').value.trim();
+        let isValid = true;
+        if (password.length < 5) {
+            isValid = false;
+            alert('Password should be at least 5 characters long.');
+        }
+        if (password !== rePassword) {
+            isValid = false;
+            alert('Passwords do not match.');
+        }
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+</script>
 
 </body>

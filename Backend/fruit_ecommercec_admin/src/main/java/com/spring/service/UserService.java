@@ -1,5 +1,6 @@
 package com.spring.service;
 
+import com.spring.model.Roles;
 import com.spring.model.Users;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +16,5 @@ public interface UserService {
     public void addUser(Users user);
     public void updateUser(Users user);
     public void deleteUser(int id);
+    public List<Roles> getAllRoles ();
 }

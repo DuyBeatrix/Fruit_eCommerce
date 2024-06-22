@@ -3,7 +3,9 @@ package com.spring.controller;
 import com.spring.model.Users;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -34,7 +36,9 @@ public class UserController {
         return mv;
     }
     @GetMapping("/add")
-    public String showAddForm() {
+    public String showAddForm(Model model) {
+        model.addAttribute("user", new Users());
+        model.addAttribute("roles", userService.getAllRoles());// Initialize a new Users object
         return "admin/add-user"; // Change to your actual view name for adding users
     }
 
@@ -45,22 +49,31 @@ public class UserController {
     }
 
     @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable int id, HttpServletRequest request) {
+    public String showEditForm(@PathVariable int id, HttpServletRequest request, Model model) {
         Users user = userService.getUserById(id);
         request.setAttribute("user", user);
+        model.addAttribute("roles", userService.getAllRoles());
         return "admin/edit-user"; // Change to your actual view name for editing users
     }
 
     @PostMapping("/edit/{id}")
     public String updateUser(@PathVariable int id, @ModelAttribute Users user) {
+
         user.setId(id);
         userService.updateUser(user);
         return "redirect:/user/1"; // Redirect to the first page after updating
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable int id) {
-        userService.deleteUser(id);
-        return "redirect:/user/1"; // Redirect to the first page after deleting
+    public String deleteUser(@PathVariable int id, Model model) {
+        try {
+            userService.deleteUser(id);
+            model.addAttribute("deteleMessageSuccess","Xóa thành công");
+            return "forward:/user/1"; // Redirect to the first page after deleting
+        }catch (DataIntegrityViolationException e){
+            model.addAttribute("deteleMessageFail","Không thể xóa");
+            return "forward:/user/1";
+        }
+
     }
 }

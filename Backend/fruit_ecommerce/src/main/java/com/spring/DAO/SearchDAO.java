@@ -17,6 +17,10 @@ public class SearchDAO
     public List<Product> findAllProduct(String text)
     {
         List<Product> productList = new ArrayList<Product>();
+//        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id WHERE product_name like ?";
+//        productList = jdbcTemplate.query(sql, new Object[]{"%" + text + "%"}, new ProductMapper());
+//        return productList;
+
         String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id WHERE product_name like ?";
         productList = jdbcTemplate.query(sql, new Object[]{"%" + text + "%"}, new ProductMapper());
         return productList;

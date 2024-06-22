@@ -1,7 +1,6 @@
 package com.spring.Service;
 
 import com.spring.DAO.ShopDetailDAO;
-import com.spring.model.CategoryProductCount;
 import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

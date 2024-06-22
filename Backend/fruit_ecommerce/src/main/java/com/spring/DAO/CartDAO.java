@@ -18,20 +18,20 @@ public class CartDAO
     ProductDetailDAO productDAO = new ProductDetailDAO();
 
     // ITEM IN CART
-    public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart)
+    public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart, int quantity)
     {
         Cart itemCart = new Cart();
         Product product = productDAO.FindProductByID(id);
         if(product != null && cart.containsKey(id))
         {
             itemCart = cart.get(id);
-            itemCart.setQuantity(itemCart.getQuantity() + 1);
+            itemCart.setQuantity(itemCart.getQuantity() + quantity);
             itemCart.setTotalPrice(itemCart.getProduct().getProductPrice() * itemCart.getQuantity());
         }
         else
         {
             itemCart.setProduct(product);
-            itemCart.setQuantity(1);
+            itemCart.setQuantity(quantity);
             itemCart.setTotalPrice(product.getProductPrice());
         }
         cart.put(id, itemCart);
