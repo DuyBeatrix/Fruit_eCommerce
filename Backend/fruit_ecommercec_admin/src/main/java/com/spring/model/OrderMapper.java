@@ -10,17 +10,26 @@ public class OrderMapper implements RowMapper<Orders> {
     @Override
     public Orders mapRow(ResultSet rs, int i) throws SQLException {
         Orders orders = new Orders();
-        orders.setId(rs.getInt("id"));
-        orders.setOrderDate(rs.getDate("createDay "));
-        orders.setTotalPrice(rs.getDouble("total_price"));
-        orders.setTotalProduct(rs.getDouble("total_product"));
+// <<<<<<< buihuuduy
+//         orders.setId(rs.getInt("id"));
+//         orders.setOrderDate(rs.getDate("createDay "));
+//         orders.setTotalPrice(rs.getDouble("total_price"));
+//         orders.setTotalProduct(rs.getDouble("total_product"));
+// =======
+        orders.setOrderId(rs.getInt("id"));
+        orders.setFullName(rs.getString("fullname"));
+        orders.setTotal(rs.getDouble("total_price"));
+        orders.setQuantity(rs.getInt("total_product"));
+        orders.setCreateDay(rs.getDate("createDay"));
         orders.setAddress(rs.getString("address"));
-        orders.setDescOrder(rs.getString("desc_order"));
+        orders.setDesc_order(rs.getString("desc_order"));
         orders.setPhone(rs.getString("phone"));
         orders.setEmail(rs.getString("email"));
-        orders.setCusId(rs.getInt("customer_id"));
-        orders.setDelivery(rs.getDouble("delivery"));
-        orders.setProductId(rs.getInt("product_id"));
+        orders.setUserid(rs.getInt("customer_id"));
+        orders.setStatus(rs.getString("status"));
+        orders.setCreateDay(rs.getDate("createDay"));
+        orders.setPaymentMethod(rs.getString("payment_method"));
+        orders.setStatusPayment(rs.getString("status_payment"));
         return orders;
     }
 }

@@ -18,50 +18,50 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Order Date</th>
-                <th scope="col">Total Price</th>
-                <th scope="col">Total Product</th>
-                <th scope="col">Address</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-
-                <th scope="col">Delivery</th>
+                <th scope="col">Ngày đặt</th>
+                <th scope="col">Tổng giá</th>
+                <th scope="col">Số lượng sản phẩm</th>
+                <th scope="col">Trạng thái</th>
+                <th scope="col">Phương thức thanh toán</th>
+                <th scope="col">Trạng thái thanh toán</th>
+                <th scope="col">Mã người dùng</th>
                 <th></th>
             </tr>
             </thead>
             <tbody>
             <c:forEach var="item" items="${listOrder}">
                 <tr>
-                    <th scope="row">${item.id}</th>
-                    <td>${item.order.orderDate}</td>
-                    <td>${item.order.totalPrice}</td>
-                    <td>${item.order.cusId}</td>
-                    <td>${item.order.productId}</td>
-                    <td>${item.order.delivery}</td>
-                    <td>${item.totalPiad}</td>
+                    <th scope="row">${item.orderId}</th>
+                    <td>${item.createDay}</td>
+                    <td>${item.total}</td>
+                    <td>${item.quantity}</td>
                     <td>
                         <form action="updateDeliveryStatus" method="post">
-                            <input type="hidden" name="orderDetailId" value="${item.id}" />
-                            <select class="form-select" aria-label="Default select example" name="deliveryStatus" onchange="this.form.submit()">
-                                <option selected>${item.deliveryStatus}</option>
-                                <c:if test="${item.deliveryStatus != 'Delivering'}">
+                            <input type="hidden" name="orderId" value="${item.orderId}" />
+                            <select class="form-select" aria-label="Default select example" name="status" onchange="this.form.submit()">
+                                <option selected>${item.status}</option>
+                                <c:if test="${item.status != 'Delivering'}">
                                     <option value="Delivering">Delivering</option>
                                 </c:if>
-                                <c:if test="${item.deliveryStatus != 'Preparing'}">
+                                <c:if test="${item.status != 'Preparing'}">
                                     <option value="Preparing">Preparing</option>
                                 </c:if>
-                                <c:if test="${item.deliveryStatus != 'Fulfilled'}">
+                                <c:if test="${item.status != 'Fulfilled'}">
                                     <option value="Fulfilled">Fulfilled</option>
                                 </c:if>
-                                <c:if test="${item.deliveryStatus != 'Rejected'}">
+                                <c:if test="${item.status != 'Rejected'}">
                                     <option value="Rejected">Rejected</option>
                                 </c:if>
                             </select>
                         </form>
                     </td>
+                    <td>${item.paymentMethod}</td>
+                    <td>${item.statusPayment}</td>
+                    <td>${item.userid}</td>
+
                     <td>
-                        <a href="#" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteOrder('${item.id}')"></i></a>
+                        <a href="orderDetail?orderId=${item.orderId}" class="me-4">Chi tiết đơn hàng</a>
+
                     </td>
                 </tr>
             </c:forEach>

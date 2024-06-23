@@ -15,7 +15,8 @@
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
-                <img class="rounded-circle" src="<c:url value="/resource/admin/img/user.jpg"/>" alt="" style="width: 40px; height: 40px;">
+                <img class="rounded-circle" src="<c:url value="/resource/admin/img/user.jpg"/>" alt=""
+                     style="width: 40px; height: 40px;">
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-3">
@@ -24,13 +25,15 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="${pageContext.request.contextPath}/order/1" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Order</a>
-            <a href="${pageContext.request.contextPath}/product/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Products</a>
-            <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Category</a>
-            <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Blog</a>
-            <a href="${pageContext.request.contextPath}/feedback/1" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Feedback</a>
-            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User</a>
+            <a href="${pageContext.request.contextPath}/" class="nav-item nav-link active"><i class="fa-solid fa-chart-simple me-2"></i>Thống kê</a>
+            <a href="${pageContext.request.contextPath}/order/1" class="nav-item nav-link"><i class="fa-solid fa-cart-shopping me-2"></i>Đơn hàng</a>
+            <a href="${pageContext.request.contextPath}/product/1" class="nav-item nav-link"><i class="fa-brands fa-product-hunt me-2"></i>Sản phẩm</a>
+            <a href="${pageContext.request.contextPath}/category/1" class="nav-item nav-link"><i
+                    class="fa fa-keyboard me-2"></i>Danh mục SP</a>
+            <a href="${pageContext.request.contextPath}/blogdetails/1" class="nav-item nav-link"><i class="fa-solid fa-paper-plane me-2"></i>Bài viết</a>
+            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa-solid fa-user me-2"></i>Người dùng</a>
+            <a href="${pageContext.request.contextPath}/feedback/1" class="nav-item nav-link"><i class="fa-solid fa-comment me-2"></i>Đánh giá</a>
+            <%--            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User</a>--%>
         </div>
     </nav>
 </div>
