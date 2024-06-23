@@ -49,8 +49,29 @@
                         <td>${user.cusEmail}</td>
                         <td>${user.cusPhone}</td>
                         <td>${user.cusAddress}</td>
-                        <td>${user.gender ? 'Male' : 'Female'}</td>
-                        <td>${user.roleId}</td>
+                        <td>${user.gender ? 'Nam' : 'Nữ'}</td>
+
+                        <td>
+                            <form action="${pageContext.request.contextPath}/user/updateRole" method="post">
+                                <input type="hidden" name="userId" value="${user.id}" />
+                                <select class="form-select" aria-label="Default select example" name="roleId" onchange="this.form.submit()">
+                                    <c:if test="${user.roleId == 2}">
+                                        <option value="2" selected>Khách hàng</option>
+                                    </c:if>
+                                    <c:if test="${user.roleId == 1}">
+                                        <option value="1"  selected>Quản trị viên</option>
+                                    </c:if>
+                                    <c:forEach var="item" items="${listRole}">
+                                        <c:if test="${item.id == 2}">
+                                            <option value="2" >Khách hàng</option>
+                                        </c:if>
+                                        <c:if test="${item.id == 1}">
+                                            <option value="1" >Quản trị viên</option>
+                                        </c:if>
+                                    </c:forEach>
+
+                                </select>
+                            </form></td>
                         <td>
                             <form action="${pageContext.request.contextPath}/user/updateUserStatus" method="post">
                                 <input type="hidden" name="userId" value="${user.id}" />

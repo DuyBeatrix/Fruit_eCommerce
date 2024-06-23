@@ -1,20 +1,11 @@
-
-<%--
-  Created by IntelliJ IDEA.
-  User: ANPHATPC
-  Date: 24/05/2024
-  Time: 16:23 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
-<html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Đăng nhập</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -36,23 +27,26 @@
     <link href="<c:url value="/resource/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"/>" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-<%--    <link href="<c:url value="/resource/admin/css/bootstrap.min.css"/>" rel="stylesheet">--%>
+    <%--    <link href="<c:url value="/resource/admin/css/bootstrap.min.css"/>" rel="stylesheet">--%>
     <link href="<c:url value="/resource/admin/css/bootstrap.min.css"/>" rel="stylesheet"/>
     <!-- Template Stylesheet -->
     <link href="<c:url value="/resource/admin/css/style.css"/>" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
+
 <body>
 <div class="container-xxl position-relative bg-white d-flex p-0">
-    <%@include file="/WEB-INF/views/layout/admin/sidebar.jsp"%>
-    <div class="content">
-        <%@include file="/WEB-INF/views/layout/admin/header.jsp"%>
-        <decorator:body/>
-<%--        <%@include file="/WEB-INF/views/layout/admin/footer.jsp"%>--%>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
     </div>
+    <!-- Spinner End -->
+    <decorator:body/>
 </div>
 
-
+<!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -29,7 +29,7 @@ public class CartController
     {
         HashMap<Integer, Cart> cart = (HashMap<Integer, Cart>) session.getAttribute("cart");
         if(cart == null) cart = new HashMap<Integer, Cart>();
-        cart = cartService.addCart(id, cart, quantity);
+        cart = cartService.addCart(id, cart,quantity);
         session.setAttribute("cart", cart);
         session.setAttribute("totalPrice", cartService.totalPrice(cart));
         session.setAttribute("totalQuantity", cartService.totalQuantity(cart));

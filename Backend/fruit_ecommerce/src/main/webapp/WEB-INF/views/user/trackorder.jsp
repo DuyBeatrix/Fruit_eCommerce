@@ -7,14 +7,14 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Họ tên</th>
-            <th>Địa chỉ</th>
-            <th>Số điện thoại</th>
-            <th>Thời gian</th>
-            <th>Tổng giá</th>
-            <th>Trạng thái</th>
-            <th>Chi tiết đơn hàng</th>
-            <th>Hủy</th>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Time</th>
+            <th>Total Price</th>
+            <th>Status</th>
+            <th>Actions</th>
+            <th>Cancel</th>
         </tr>
         </thead>
         <tbody>

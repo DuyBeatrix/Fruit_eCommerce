@@ -1,6 +1,14 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: FPT
+  Date: 5/4/2024
+  Time: 1:56 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <body>
 <!-- Single Page Header start -->
 <div class="container-fluid page-header py-5">
@@ -18,7 +26,7 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <h1 class="mb-4">Billing details</h1>
-        <form:form action="checkout" method="post" modelAttribute="checkout" id="checkoutForm" accept-charset="UTF-8">
+        <form:form action="checkout" method="post" modelAttribute="checkout" id="checkoutForm">
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-6">
                     <div class="form-item">
@@ -27,8 +35,7 @@
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3"><b>Address</b> <sup>*</sup></label>
-                        <form:input type="text" class="form-control" placeholder="House Number Street Name"
-                                    path="address" id="address"/>
+                        <form:input type="text" class="form-control" placeholder="House Number Street Name" path="address" id="address"/>
                     </div>
                     <div class="form-item">
                         <label class="form-label my-3"><b>Phone number</b> <sup>*</sup></label>
@@ -40,8 +47,7 @@
                     </div>
                     <br>
                     <div class="form-item">
-                        <form:textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11"
-                                       placeholder="Order Notes (Optional)" path="desc_order"/>
+                        <form:textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Oreder Notes (Optional)" path="desc_order"/>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6 col-xl-6">
@@ -57,13 +63,12 @@
                             </tr>
                             </thead>
                             <tbody>
+
                             <c:forEach var="item" items="${cart}">
                                 <tr>
                                     <th scope="row">
                                         <div class="d-flex align-items-center mt-2">
-                                            <img src="<c:url value='/resource/user/img/products/${item.value.product.productImage}'/>"
-                                                 class="img-fluid rounded-circle" style="width: 90px; height: 90px;"
-                                                 alt="">
+                                            <img src="<c:url value="/resource/user/img/products/${item.value.product.productImage}"/>" class="img-fluid rounded-circle" style="width: 90px; height: 90px;" alt="">
                                         </div>
                                     </th>
                                     <td class="py-5">${item.value.product.productName}</td>
@@ -74,7 +79,43 @@
                             </c:forEach>
 
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">
+                                </th>
+                                <td class="py-3"></td>
+                                <td class="py-3"></td>
+                                <td class="py-3">
+                                    <p class="mb-0 text-dark py-3"><b>Subtotal</b></p>
+                                </td>
+                                <td class="py-3">
+                                    <div class="py-3">
+                                        <p class="mb-0 text-dark">${totalPrice}</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                </th>
+                                <td class="py-3">
+                                    <p class="mb-0 text-dark py-4">Shipping</p>
+                                </td>
+                                <td colspan="3" class="py-3">
+                                    <div class="form-check text-start">
+                                        <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-1" name="Shipping-1" value="Shipping">
+                                        <label class="form-check-label" for="Shipping-1">Free Shipping</label>
+                                    </div>
+                                    <div class="form-check text-start">
+                                        <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-2" name="Shipping-1" value="Shipping">
+                                        <label class="form-check-label" for="Shipping-2">Flat rate: $15.00</label>
+                                    </div>
+                                    <div class="form-check text-start">
+                                        <input type="checkbox" class="form-check-input bg-primary border-0" id="Shipping-3" name="Shipping-1" value="Shipping">
+                                        <label class="form-check-label" for="Shipping-3">Local Pickup: $8.00</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                </th>
                                 <td class="py-3">
                                     <p class="mb-0 text-dark text-uppercase py-3"><b>TOTAL</b></p>
                                 </td>
@@ -82,35 +123,37 @@
                                 <td class="py-3"></td>
                                 <td class="py-3">
                                     <div class="py-3">
-                                        <p class="mb-0 text-dark"><b>${totalPrice} VND</b></p>
-                                        <input type="hidden" id="totalAmount" value="${totalPrice}">
+                                        <p class="mb-0 text-dark"><b>$135.00</b></p>
                                     </div>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-
                     <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
                         <div class="col-12">
                             <div class="form-check text-start my-3">
-                                    <%--                                <input type="radio" class="form-check-input bg-primary border-0" id="Delivery-1" name="Delivery" value="COD">--%>
-                                <label class="form-check-label mb-1 text-danger" for="delivery">Vui lòng chọn phương thức thanh toán*</label>
-                                <form:input path="statusPayment" id="statusPayment" cssStyle="display: none"/>
-                                <select class="form-select" id="delivery" aria-label="Default select example">
-                                    <option value="COD" selected>Thanh toán khi nhận hàng</option>
-                                    <option value="Online" >Thanh toán online</option>
-                                </select>
-                                 <form:input path="paymentMethod" id="paymentMethod"  cssStyle="display: none" />
-                                <form:input path="userid" cssStyle="display: none" value="${loginInfo.id}"/>
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Payments-1" name="Payments" value="Payments">
+                                <label class="form-check-label" for="Payments-1">Check Payments</label>
                             </div>
                         </div>
                     </div>
-
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <div class="form-check text-start my-3">
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Delivery-1" name="Delivery" value="Delivery">
+                                <label class="form-check-label" for="Delivery-1">Cash On Delivery</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row g-4 text-center align-items-center justify-content-center pt-4">
-                        <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">
-                            Place Order
-                        </button>
+<%--                        <c:if test="${empty loginInfo}">--%>
+<%--                            <a href="${pageContext.request.contextPath}/login" style="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</a>--%>
+<%--                        </c:if>--%>
+<%--                        <c:if test="${ not empty loginInfo}">--%>
+<%--                            <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>--%>
+<%--                        </c:if> KT DANG NHAP KHI MUA--%>
+                        <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Place Order</button>
                     </div>
                 </div>
             </div>
@@ -120,20 +163,25 @@
 <!-- Checkout Page End -->
 
 <script>
-    document.getElementById('checkoutForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    function redirectToPlaceOrder() {
+        window.location.href = "${pageContext.request.contextPath}/placeorder";
+    }
+
+    function placeorder() {
+        let ans = confirm("Bạn chắc chắn muốn đăng xuất?");
+        if(ans){
+            window.location.href = "${pageContext.request.contextPath}/logout";
+        }
+    }
+
+    document.getElementById('checkoutForm').addEventListener('submit', function(event)
+    {
         let fullName = document.getElementById('fullName').value.trim();
         let address = document.getElementById('address').value.trim();
         let phone = document.getElementById('phone').value.trim();
         let email = document.getElementById('email').value.trim();
-        let totalAmount = document.getElementById('totalAmount').value.trim();
-        let paymentMethod = document.getElementById('delivery').value;
         let isValid = true;
-        if (paymentMethod === 'COD') {
-            this.action = 'checkout';
-        } else if (paymentMethod === 'Online') {
-            this.action = 'saveData';
-        }
+
         if (fullName === '') {
             isValid = false;
             alert('Full Name is required.');
@@ -158,31 +206,9 @@
         }
         if (!isValid) {
             event.preventDefault();
-            return;
         }
-        if (paymentMethod === 'COD') {
-            alert("Đặt hàng thành công!");
-            document.getElementById('statusPayment').value = 'Chưa thanh toán';
-            document.getElementById('paymentMethod').value = 'COD';
-            this.submit();
-        } else if (paymentMethod === 'Online') {
-            document.getElementById('statusPayment').value= 'Đã thanh toán';
-            document.getElementById('paymentMethod').value = 'Online';
-            this.submit();
-            fetch('${pageContext.request.contextPath}/api/payment/create_payment?amount=' + totalAmount)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.code === '00') {
-                        window.location.href = data.data;
-                    } else {
-                        alert('Error: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while processing your payment.');
-                });
-        }
+        else alert("Purchase successful!")
     });
 </script>
+
 </body>

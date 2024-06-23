@@ -21,7 +21,7 @@ public class SupplierDao {
 
 
     public Supplier getSupplierById(int id) {
-        String sql = "SELECT * FROM supplier WHERE id = ?";
+        String sql = "SELECT * FROM supplier WHERE supplier_id = ?";
         return jdbcTemplate.queryForObject(sql, new SupplierMapper(), id);
     }
 
@@ -33,13 +33,13 @@ public class SupplierDao {
 
 
     public void updateSupplier(Supplier supplier) {
-        String sql = "UPDATE supplier SET sup_name = ?, sup_address = ?, awards = ?, sup_img = ? WHERE id = ?";
+        String sql = "UPDATE supplier SET sup_name = ?, sup_address = ?, awards = ?, sup_img = ? WHERE supplier_id = ?";
         jdbcTemplate.update(sql, supplier.getSupName(), supplier.getSupAddress(), supplier.getAwards(), supplier.getSupImg(), supplier.getId());
     }
 
 
     public void deleteSupplier(int id) {
-        String sql = "DELETE FROM supplier WHERE id = ?";
+        String sql = "DELETE FROM supplier WHERE supplier_id = ?";
         jdbcTemplate.update(sql, id);
     }
     public List<Supplier> paginationSupplier(int index) {

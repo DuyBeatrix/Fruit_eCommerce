@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface AuthService {
-    @Autowired
     public User login(User user);
     public int register(User user);
     public int setupUser(int id, User user);

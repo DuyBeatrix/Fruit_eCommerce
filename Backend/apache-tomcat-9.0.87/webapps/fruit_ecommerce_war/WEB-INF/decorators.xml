@@ -26,7 +26,4 @@
     <decorator name="login-register" page="login-register.jsp">
         <pattern>/setup_user</pattern>
     </decorator>
-    <decorator name="login-register" page="login-register.jsp">
-        <pattern>/api/payment/create_payment</pattern>
-    </decorator>
 </decorators>

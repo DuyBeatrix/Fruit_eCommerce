@@ -25,7 +25,7 @@ public class NewSaleDAO
     public List<Product> getDiscountProduct()
     {
         List<Product> productList = new ArrayList<>();
-        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id where product.product_sales > 0";
+        String sql = "select *, cate_name from product inner join category on category.cate_id = product.cate_id where product.product_sales IS NOT NULL";
         productList = jdbcTemplate.query(sql, new ProductMapper());
         return productList;
     }
