@@ -17,25 +17,25 @@
 <!-- Checkout Page Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
-        <h1 class="mb-4">Billing details</h1>
+        <h1 class="mb-4">Chi tiết đơn hàng</h1>
         <form:form action="checkout" method="post" modelAttribute="checkout" id="checkoutForm" accept-charset="UTF-8">
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-6">
                     <div class="form-item">
-                        <label class="form-label my-3"><b>Full Name </b><sup>*</sup></label>
+                        <label class="form-label my-3"><b>Họ tên </b><sup>*</sup></label>
                         <form:input type="text" class="form-control" path="fullName" id="fullName"/>
                     </div>
                     <div class="form-item">
-                        <label class="form-label my-3"><b>Address</b> <sup>*</sup></label>
+                        <label class="form-label my-3"><b>Địa chỉ </b> <sup>*</sup></label>
                         <form:input type="text" class="form-control" placeholder="House Number Street Name"
                                     path="address" id="address"/>
                     </div>
                     <div class="form-item">
-                        <label class="form-label my-3"><b>Phone number</b> <sup>*</sup></label>
+                        <label class="form-label my-3"><b>Số điện thoại </b> <sup>*</sup></label>
                         <form:input type="text" class="form-control" path="phone" id="phone"/>
                     </div>
                     <div class="form-item">
-                        <label class="form-label my-3"><b>Email Address</b> <sup>*</sup></label>
+                        <label class="form-label my-3"><b>Email </b> <sup>*</sup></label>
                         <form:input type="email" class="form-control" path="email" id="email"/>
                     </div>
                     <br>
@@ -49,11 +49,11 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">Products</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col">Tên</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Tổng giá</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -76,7 +76,7 @@
                             <tr>
                                 <th scope="row"></th>
                                 <td class="py-3">
-                                    <p class="mb-0 text-dark text-uppercase py-3"><b>TOTAL</b></p>
+                                    <p class="mb-0 text-dark text-uppercase py-3"><b>TỔNG</b></p>
                                 </td>
                                 <td class="py-3"></td>
                                 <td class="py-3"></td>

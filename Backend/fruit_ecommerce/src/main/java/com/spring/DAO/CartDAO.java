@@ -26,13 +26,25 @@ public class CartDAO
         {
             itemCart = cart.get(id);
             itemCart.setQuantity(itemCart.getQuantity() + quantity);
-            itemCart.setTotalPrice(itemCart.getProduct().getProductPrice() * itemCart.getQuantity());
+            double giaGoc = itemCart.getProduct().getProductPrice();
+            int soLuong = itemCart.getQuantity();
+            if(itemCart.getProduct().getProductSale() > 0)
+            {
+                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getProductSale() / 100)) * soLuong);
+            }
+            else itemCart.setTotalPrice(giaGoc * soLuong);
         }
         else
         {
             itemCart.setProduct(product);
             itemCart.setQuantity(quantity);
-            itemCart.setTotalPrice(product.getProductPrice());
+            double giaGoc = itemCart.getProduct().getProductPrice();
+            int soLuong = itemCart.getQuantity();
+            if(itemCart.getProduct().getProductSale() > 0)
+            {
+                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getProductSale() / 100)) * soLuong);
+            }
+            else itemCart.setTotalPrice(giaGoc * soLuong);
         }
         cart.put(id, itemCart);
         return cart;
@@ -47,7 +59,14 @@ public class CartDAO
         {
             itemCart = cart.get(id);
             itemCart.setQuantity(quantity);
-            itemCart.setTotalPrice(itemCart.getProduct().getProductPrice() * quantity);
+
+            double giaGoc = itemCart.getProduct().getProductPrice();
+            int soLuong = itemCart.getQuantity();
+            if(itemCart.getProduct().getProductSale() > 0)
+            {
+                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getProductSale() / 100)) * soLuong);
+            }
+            else itemCart.setTotalPrice(giaGoc * soLuong);
         }
         cart.put(id, itemCart);
         return cart;

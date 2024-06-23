@@ -13,7 +13,7 @@
 <div class="container-fluid py-5 mt-5">
     <div class="container py-5">
         <div class="row g-4 mb-5">
-            <h1 class="fw-bold mb-0">Selling products</h1>
+            <h1 class="fw-bold mb-0">Sản phẩm Bán chạy</h1>
             <div class="vesitable">
                 <div class="owl-carousel vegetable-carousel justify-content-center">
 
@@ -36,7 +36,7 @@
 
                 </div>
             </div>
-            <h1 class="fw-bold mb-0">Discount products</h1>
+            <h1 class="fw-bold mb-0">Sản phẩm khuyến mãi</h1>
             <div class="vesitable">
                 <div class="owl-carousel vegetable-carousel justify-content-center">
 
@@ -66,52 +66,5 @@
         </div>
     </div>
 </div>
-
-<%--<script type="text/javascript">--%>
-<%--    function addToCart(productId) {--%>
-<%--        $.ajax({--%>
-<%--            type: "POST",--%>
-<%--            url: "/addCart/" + productId,--%>
-<%--            success: function(response) {--%>
-
-<%--                if (response === "success") {--%>
-<%--                    alert('Product added to cart successfully!');--%>
-<%--                } else {--%>
-<%--                    // Xử lý trường hợp không thành công (nếu có)--%>
-<%--                    alert('Failed to add product to cart.');--%>
-<%--                }--%>
-<%--            },--%>
-<%--            error: function(xhr, status, error) {--%>
-<%--                // Xử lý lỗi nếu có--%>
-<%--                console.error(error);--%>
-<%--            }--%>
-<%--        });--%>
-<%--    }--%>
-
-<%--    $(document).ready(function () {--%>
-<%--        $('').click(function () {--%>
-<%--            let cateId = $(this).attr('id').split('-')[1];--%>
-<%--            let url = '/productbycate/' + cateId +'/1'+ '.html';--%>
-
-<%--            $.ajax({--%>
-<%--                type: "POST",--%>
-<%--                url: "/addCart/" + productId,--%>
-<%--                success: function(response) {--%>
-
-<%--                    if (response === "success") {--%>
-<%--                        alert('Product added to cart successfully!');--%>
-<%--                    } else {--%>
-<%--                        // Xử lý trường hợp không thành công (nếu có)--%>
-<%--                        alert('Failed to add product to cart.');--%>
-<%--                    }--%>
-<%--                },--%>
-<%--                error: function(xhr, status, error) {--%>
-<%--                    // Xử lý lỗi nếu có--%>
-<%--                    console.error(error);--%>
-<%--                }--%>
-<%--            });--%>
-<%--        });--%>
-<%--    });--%>
-<%--</script>--%>
 
 </body>
