@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -44,10 +45,14 @@ public class CategoryController {
     }
 
     @PostMapping("/add")
-    public ModelAndView addCategory(@ModelAttribute("category") Categories category) {
-        ModelAndView mv = new ModelAndView("redirect:/category/1");
-        categoryService.addCategory(category);
-        return mv;
+    public String  addCategory(@ModelAttribute("category") Categories category, RedirectAttributes redirectAttributes) {
+        try {
+            categoryService.addCategory(category);
+            redirectAttributes.addFlashAttribute("addMessageSuccess", "Thêm thành công");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("addMessageFail", "Thêm thất bại");
+        }
+        return "redirect:/category/1";
     }
 
     @GetMapping("/edit/{id}")
@@ -58,21 +63,26 @@ public class CategoryController {
     }
 
     @PostMapping("/edit/{id}")
-    public String updateCategory(@PathVariable int id, @ModelAttribute Categories categories) {
-        categories.setCateId(id);
-        categoryService.editCategory(categories);
-        return "redirect:/category/1"; // Redirect to the first page after updating
+    public String updateCategory(@PathVariable int id, @ModelAttribute Categories categories, RedirectAttributes redirectAttributes) {
+        try {
+            categories.setCateId(id);
+            categoryService.editCategory(categories);
+            redirectAttributes.addFlashAttribute("updateMessageSuccess", "Cập nhật thành công");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("updateMessageFail", "Cập nhật thất bại");
+        }
+        return "redirect:/category/1";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteCategory(@PathVariable int id, Model model) {
         try {
             categoryService.deleteCategory(id);
-            model.addAttribute("message","Xóa thành công");
-            return "redirect:/category/1"; // Redirect to the first page after deleting
+            model.addAttribute("deteleMessageSuccess","Xóa thành công");
+            return "forward:/category/1"; // Redirect to the first page after deleting
 
         } catch (DataIntegrityViolationException e) {
-            model.addAttribute("message", "Không thể xóa");
+            model.addAttribute("deteleMessageFail", "Không thể xóa");
             return "forward:/category/1";
         }
     }

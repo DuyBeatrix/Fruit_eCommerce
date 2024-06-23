@@ -10,6 +10,8 @@
 <html>
 <head>
   <title>Quản Lý Danh Mục</title>
+  <style>
+  </style>
 </head>
 <body>
 <!-- Category Management Start -->
@@ -17,9 +19,15 @@
   <div class="bg-light text-center rounded p-4">
     <div class="d-flex align-items-center justify-content-between mb-4">
       <h6 class="mb-0">Quản Lý Danh Mục</h6>
-      <p class="text-danger">${message}</p>
       <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/category/add">Thêm danh mục</a></td>
     </div>
+    <p class="text-success">${addMessageSuccess}</p>
+    <p class="text-danger">${addMessageFail}</p>
+      <p class="text-success">${updateMessageSuccess}</p>
+      <p class="text-danger">${updateMessageFail}</p>
+      <p class="text-success">${deteleMessageSuccess}</p>
+      <p class="text-danger">${deteleMessageFail}</p>
+
     <div class="table-responsive">
       <table class="table text-start align-middle table-bordered table-hover mb-0">
         <thead>

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
@@ -59,28 +60,38 @@ public class BlogDetailController {
 
 
     @PostMapping(value = "/add")
-    public ModelAndView addBlogDetail(@ModelAttribute("blogDetail") BlogDetail blogDetail) {
-        ModelAndView mv = new ModelAndView();
-        Date currentDate = new Date();
-        blogDetail.setCreateAt(currentDate);
-//        if (!file.isEmpty()) {
-//            try {
-//                String fileName = file.getOriginalFilename();
-//                String uploadDir = "/resource/admin/img/blog";
-//                File transferFile = new File(uploadDir, fileName);
-//                file.transferTo(transferFile);
+    public String addBlogDetail(@ModelAttribute("blogDetail") BlogDetail blogDetail, RedirectAttributes redirectAttributes) {
+        try {
+            Date currentDate = new Date();
+            blogDetail.setCreateAt(currentDate);
+            blogDetailService.addBlogDetail(blogDetail);
+            redirectAttributes.addFlashAttribute("addMessageSuccess", "Thêm thành công");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("addMessageFail", "Thêm thất bại");
+        }
+        return "redirect:/blogdetails/1";
+        }
+//        ModelAndView mv = new ModelAndView();
+//        Date currentDate = new Date();
+//        blogDetail.setCreateAt(currentDate);
+////        if (!file.isEmpty()) {
+////            try {
+////                String fileName = file.getOriginalFilename();
+////                String uploadDir = "/resource/admin/img/blog";
+////                File transferFile = new File(uploadDir, fileName);
+////                file.transferTo(transferFile);
+////
+////                // Set the image path to the blog detail
+////                blogDetail.setBlogImg(fileName);
+////            } catch (IOException e) {
+////                e.printStackTrace();
+////            }
+////        }
 //
-//                // Set the image path to the blog detail
-//                blogDetail.setBlogImg(fileName);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
+//        blogDetailService.addBlogDetail(blogDetail);
+//        mv.setViewName("redirect:/blogdetails/1");
+//        return mv;
 
-        blogDetailService.addBlogDetail(blogDetail);
-        mv.setViewName("redirect:/blogdetails/1");
-        return mv;
-    }
 
     @GetMapping("/edit/{id}")
     public String editBlogDetailForm(@PathVariable int id, Model model) {
@@ -91,9 +102,15 @@ public class BlogDetailController {
     }
 
     @PostMapping("/edit/{id}")
-    public String editBlogDetail(@PathVariable int id, @ModelAttribute BlogDetail blogDetail) {
-        blogDetail.setId(id); // Sửa thành setId thay vì setBlogId
-        blogDetailService.updateBlogDetail(blogDetail);
+    public String editBlogDetail(@PathVariable int id, @ModelAttribute BlogDetail blogDetail, RedirectAttributes redirectAttributes) {
+        try {
+            blogDetail.setId(id); // Sửa thành setId thay vì setBlogId
+            blogDetailService.updateBlogDetail(blogDetail);
+            redirectAttributes.addFlashAttribute("updateMessageSuccess", "Cập nhật thành công");
+        }catch (Exception e){
+            redirectAttributes.addFlashAttribute("updateMessageFail", "Cập nhật thất bại");
+        }
+
         return "redirect:/blogdetails/1";
     }
 
@@ -104,10 +121,10 @@ public class BlogDetailController {
 
         try {
             blogDetailService.deleteBlogDetail(id);
-            model.addAttribute("message","Xóa thành công");
-            return "redirect:/blogdetails/1"; // Redirect to the first page after deleting
+            model.addAttribute("deteleMessageSuccess","Xóa thành công");
+            return "forward:/blogdetails/1"; // Redirect to the first page after deleting
         }catch (DataIntegrityViolationException e){
-            model.addAttribute("message","Không thể xóa");
+            model.addAttribute("deteleMessageFail","Không thể xóa");
             return "forward:/blogdetails/1";
         }
     }

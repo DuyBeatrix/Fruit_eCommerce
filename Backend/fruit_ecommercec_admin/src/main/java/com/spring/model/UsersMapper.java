@@ -18,6 +18,7 @@ public class UsersMapper implements RowMapper<Users> {
         user.setCusAddress(rs.getString("cus_address"));
         user.setGender(rs.getBoolean("gender"));
         user.setRoleId(rs.getInt("role_id"));
+        user.setCusEnable(rs.getString("cus_enable"));
 
         return user;
     }

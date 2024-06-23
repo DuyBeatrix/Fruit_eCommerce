@@ -45,21 +45,7 @@ public class UserDao {
 
     // Add a new user
     public void addUser(Users user) {
-        String sql = "INSERT INTO customer (cus_name, usename, password, cus_phone, cus_email, cus_address, gender, role_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql,
-                user.getCusName(),
-                user.getUsername(),
-                user.getPassword(),
-                user.getCusPhone(),
-                user.getCusEmail(),
-                user.getCusAddress(),
-                user.isGender(),
-                user.getRoleId());
-    }
-
-    // Update an existing user
-    public void updateUser(Users user) {
-        String sql = "UPDATE customer SET cus_name = ?, usename = ?, password = ?, cus_phone = ?, cus_email = ?, cus_address = ?, gender = ?, role_id = ? WHERE id = ?";
+        String sql = "INSERT INTO customer (cus_name, usename, password, cus_phone, cus_email, cus_address, gender, role_id, cus_enable) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql,
                 user.getCusName(),
                 user.getUsername(),
@@ -69,7 +55,13 @@ public class UserDao {
                 user.getCusAddress(),
                 user.isGender(),
                 user.getRoleId(),
-                user.getId());
+                user.getCusEnable());
+    }
+
+    // Update an existing user
+    public void updateUser(int id, String cusEnable) {
+        String sql = "UPDATE customer SET cus_enable = ? WHERE id = ?";
+        jdbcTemplate.update(sql, cusEnable, id);
     }
 
     // Delete a user by ID

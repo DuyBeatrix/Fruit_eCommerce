@@ -48,8 +48,12 @@
       <div class="mb-3">
         <label for="roleId" class="form-label">ID quyền</label>
         <form:select path="roleId" id="roleId" class="form-control" required="true">
-          <form:options items="${roles}" itemValue="id" itemLabel="id"/>
+          <form:options items="${roles}" itemValue="id" itemLabel="roles"/>
         </form:select>
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Trạng Thái</label>
+        <input type="text" class="form-control" id="cusEnable" name="cusEnable"value="Kích hoạt" readonly="true">
       </div>
       <a href="${pageContext.request.contextPath}/user/1" class="btn btn-secondary">Trở lại</a>
       <button type="submit" class="btn btn-primary">Thêm</button>
