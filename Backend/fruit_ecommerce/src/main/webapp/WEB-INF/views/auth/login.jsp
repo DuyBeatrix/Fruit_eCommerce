@@ -18,7 +18,7 @@
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <span class="h1 fw-bold mb-0 text-primary">Fruitables</span>
                                     </div>
-                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in to your account</h5>
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Đăng nhập</h5>
 
                                     <!-- Display error message if exists -->
                                     <c:if test="${not empty statuslogin}">
@@ -36,10 +36,10 @@
                                         <form:input type="password" id="form2Example27" class="form-control form-control-lg" path="password"/>
                                     </div>
                                     <div class="pt-1 mb-4">
-                                        <button class="btn btn-primary btn-lg btn-block w-100 text-white" type="submit">Login</button>
+                                        <button class="btn btn-primary btn-lg btn-block w-100 text-white" type="submit">Đăng nhập</button>
                                     </div>
-                                    <p><a class="small" href="${pageContext.request.contextPath}/forgotPassword" style="color: #7fad39;">Forgot the password</a></p>
-                                    <p class="mb-5 pb-lg-2">Don't have an account? <a href="<c:url value='/register'/>" style="color: #7fad39;">Register</a></p>
+                                    <p><a class="small" href="${pageContext.request.contextPath}/forgotPassword" style="color: #7fad39;">Quên mật khẩu</a></p>
+                                    <p class="mb-5 pb-lg-2">Không có tài khoản<a href="<c:url value='/register'/>" style="color: #7fad39;">Đăng ký</a></p>
                                 </form:form>
                             </div>
                         </div>
