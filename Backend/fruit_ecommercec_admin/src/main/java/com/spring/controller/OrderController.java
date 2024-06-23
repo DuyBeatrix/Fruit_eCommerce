@@ -1,12 +1,17 @@
 package com.spring.controller;
 
+import com.spring.model.OrderDetail;
+import com.spring.model.Orders;
 import com.spring.service.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+
 @RequestMapping(value = "/order")
 @Controller
 public class OrderController {
@@ -14,33 +19,36 @@ public class OrderController {
     private OrderServiceImpl orderService;
 
     @GetMapping(value = "/{index}")
-    public ModelAndView order(@PathVariable(required = false) Integer index, HttpServletRequest request){
+    public ModelAndView order(@PathVariable(required = false) Integer index, HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("admin/order");
         int count = orderService.countOrder();
-        int endPage = count/10;
-        if(count % 10 != 0) {
+        int endPage = count / 10;
+        if (count % 10 != 0) {
             endPage = endPage + 1;
         }
         request.setAttribute("endPage", endPage);
-        if(index !=null && index > 0){
+        if (index != null && index > 0) {
             mv.addObject("listOrder", orderService.getAllOrder(index));
-        }
-        else {
+        } else {
             mv.addObject("listOrder", orderService.getAllOrder(1));
         }
         return mv;
     }
-//    @GetMapping(value = "/delete/{id}")
-//    public ModelAndView deleteFeedBack(@PathVariable(required = false) Integer id){
-//        ModelAndView mv = new ModelAndView();
-//        feedbackService.deleteFeedback(id);
-//        mv.setViewName("redirect:/feedback/1");
-//        return mv;
-//    }
+
     @PostMapping("/updateDeliveryStatus")
-    public ModelAndView updateDeliveryStatus(@RequestParam("orderDetailId") int orderDetailId, @RequestParam("deliveryStatus") String deliveryStatus) {
-    orderService.updateDeliveryStatus(orderDetailId, deliveryStatus);
-    return new ModelAndView("redirect:/order/1");
-}
+    public ModelAndView updateDeliveryStatus(@RequestParam("orderId") int orderId, @RequestParam("status") String status) {
+        orderService.updateDeliveryStatus(orderId, status);
+        return new ModelAndView("redirect:/order/1");
+    }
+    @GetMapping("/orderDetail")
+    public ModelAndView orderDetail(@RequestParam("orderId") int orderId){
+        ModelAndView mv = new ModelAndView("admin/orderdetail");
+        List<OrderDetail> listProductOrder = orderService.getOrderDetailByOrder(orderId);
+        Orders orders = orderService.orderById(orderId);
+        mv.addObject("listProductOrder",listProductOrder);
+        mv.addObject("orders",orders);
+        return mv;
+    }
+
 }

@@ -11,5 +11,7 @@ public interface FeedbackService {
     public void deleteFeedback(int id);
     public int countFeedback();
     public void addFeedback(Feedback feedback);
+    public void update(Feedback feedback);
+    public Feedback getFeedbackById(int id);
 
 }

@@ -10,7 +10,7 @@
                     <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="tm-block-title d-inline-block">Add Product</h2>
+                                <h2 class="tm-block-title d-inline-block">Update Product</h2>
                             </div>
                         </div>
 
@@ -19,8 +19,8 @@
                                 <form:form action="add" method="post" modelAttribute="feedback">
                                     <div class="form-group">
                                         <label for="content">Content</label>
-                                        <form:textarea path="content" type="text" id="content" class="form-control"
-                                                    required="true"/>
+                                        <form:textarea path="content" type="text" id="content" class="form-control" value="${feedback.content}"
+                                                       required="true"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="rate">Rate</label>
@@ -29,15 +29,15 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="product_id">Product ID</label>
-                                        <form:input path="product_id" type="text" id="product_id" class="form-control"
+                                        <form:input path="product_id" type="text" id="product_id" class="form-control" value="${feedback.product_id}"
                                                     required="true"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="customer_id">Customer ID</label>
-                                        <form:input path="customer_id" type="text" id="customer_id" class="form-control"
+                                        <form:input path="customer_id" type="text" id="customer_id" class="form-control" value="${feedback.customer_id}"
                                                     required="true"/>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mt-2">Add</button>
+                                    <button type="submit" class="btn btn-primary mt-2">Lưu lại</button>
                                 </form:form>
                             </div>
                         </div>

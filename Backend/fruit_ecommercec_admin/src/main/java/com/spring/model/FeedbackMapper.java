@@ -15,7 +15,7 @@ public class FeedbackMapper implements RowMapper<Feedback> {
         fb.setRate(rs.getInt("rate"));
         fb.setCustomer_id(rs.getInt("id"));
         fb.setProduct_id(rs.getInt("product_id"));
-        fb.setCusName(rs.getNString("cus_name"));
+//        fb.setCusName(rs.getNString("cus_name"));
         return fb;
     }
 }

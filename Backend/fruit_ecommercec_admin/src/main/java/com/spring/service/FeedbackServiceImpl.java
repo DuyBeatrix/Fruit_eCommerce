@@ -29,4 +29,13 @@ public class FeedbackServiceImpl implements FeedbackService{
     public void addFeedback(Feedback feedback) {
         feedbackDao.addFeedback(feedback);
     }
+
+    @Override
+    public void update(Feedback feedback) {
+        feedbackDao.update(feedback);
+    }
+    @Override
+    public Feedback getFeedbackById(int id){
+        return feedbackDao.getFeedbackById(id);
+    }
 }

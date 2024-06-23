@@ -50,16 +50,10 @@ create table product (
     cate_id int,
     FOREIGN KEY (cate_id) REFERENCES category(cate_id)
 );
-drop table order_detail;
-drop table orders;
-drop table product;
-drop table feedback;
-drop table customer;
-drop table blog_detail;
 create table orders
 (
 	id int auto_increment not null primary key,
-    order_date date not null,
+    createDay date not null,
     total_price double not null,
     total_product double not null,
     address text not null,
@@ -67,18 +61,19 @@ create table orders
     phone text not null,
     email text not null,
     customer_id int,
-    delivery double not null,
-    product_id int,
-    foreign key (product_id) references product(id),
+    status double not null,
+    payment_method text,
+    status_payment text,
     foreign key (customer_id) references customer(id)
 );
 create table order_detail
 (
 	id int auto_increment not null primary key,
     total_piad double not null,
-    delivery_status varchar(255) not null,
+    product_id int,
     order_id int,
-    foreign key (order_id) references orders(id)
+    foreign key (order_id) references orders(id),
+    foreign key (product_id) references product(id)
 );
 
 create table feedback 
@@ -118,3 +113,4 @@ create table blog_detail
     customer_id int,
     foreign key (blog_id) references blog_type(id),
     foreign key (customer_id) references customer(id)
+)

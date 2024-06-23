@@ -12,4 +12,7 @@ public interface ProductService {
     public void deleteProduct(int id);
     public void addProduct(Products product);
     public void updateProduct(Products product);
+    public List<Products> showBestSellerProduct();
+    public List<Products> showPoorlyProduct();
+    public void updateSale(int productId, double sale);
 }
