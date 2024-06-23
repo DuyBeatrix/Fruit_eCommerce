@@ -25,20 +25,22 @@ public class LoginController {
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public ModelAndView login(HttpSession session, @ModelAttribute("user") User user){
         ModelAndView mv = new ModelAndView();
-        user = authService.login(user);
-        String username = user.getUserName();
-        int check  = authService.findAccountbyUsername(username);
-
-        if(user != null ){
+        User authenticatedUser = authService.login(user);
+        if (authenticatedUser != null) {
+            String username = authenticatedUser.getUserName();
+            int check = authService.findAccountbyUsername(username);
             mv.setViewName("redirect:/home");
-            session.setAttribute("loginInfo", user);
+            session.setAttribute("loginInfo", authenticatedUser);
         } else {
-            if(check == 0){
-                mv.addObject("statuslogin","Tài khoản không tồn tại");
-            }
-            mv.addObject("statuslogin","Tài khoản hoặc mật khẩu không đúng");
             mv.setViewName("auth/login");
+            int check = authService.findAccountbyUsername(user.getUserName());
+            if (check == 0) {
+                mv.addObject("statuslogin", "Tài khoản không tồn tại");
+            } else {
+                mv.addObject("statuslogin", "Tài khoản hoặc mật khẩu không đúng");
+            }
         }
+        mv.addObject("user", user);
         return mv;
     }
     @RequestMapping(value = "/setup_user",method = RequestMethod.GET)

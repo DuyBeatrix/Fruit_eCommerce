@@ -3,6 +3,7 @@ package com.spring.DAO;
 import com.spring.model.User;
 import com.spring.model.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -12,11 +13,14 @@ public class AuthDao {
     private JdbcTemplate jdbcTemplate;
     public User login(User user){
         String sql = "select * from customer where username=?";
-        User result = jdbcTemplate.queryForObject(sql, new Object[]{user.getUserName()}, new UserMapper());
-        return result;
+        try {
+            return jdbcTemplate.queryForObject(sql, new Object[]{user.getUserName()}, new UserMapper());
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
     }
     public int register(User user) {
-        String sql = "Insert into customer (cus_email, username, password) values (?,?,?)";
+        String sql = "Insert into customer (cus_email, username, password,role_id,cus_enable) values (?,?,?,2,'Kích hoạt')";
         int result = jdbcTemplate.update(sql,user.getCusEmail(), user.getUserName(),user.getPassword());
         return result;
     }
