@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -43,26 +44,38 @@ public class UserController {
     }
 
     @PostMapping("/add")
-    public String addUser(@ModelAttribute Users user) {
-        userService.addUser(user);
-        return "redirect:/user/1"; // Redirect to the first page after adding
+    public String addUser(@ModelAttribute Users user, RedirectAttributes redirectAttributes) {
+        try {
+            userService.addUser(user);
+            redirectAttributes.addFlashAttribute("addMessageSuccess", "Thêm người dùng thành công");
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("addMessageFail", "Thêm người dùng thất bại");
+        }
+        return "redirect:/user/1";
     }
 
-    @GetMapping("/edit/{id}")
-    public String showEditForm(@PathVariable int id, HttpServletRequest request, Model model) {
-        Users user = userService.getUserById(id);
-        request.setAttribute("user", user);
-        model.addAttribute("roles", userService.getAllRoles());
-        return "admin/edit-user"; // Change to your actual view name for editing users
-    }
+//    @GetMapping("/edit/{id}")
+//    public String showEditForm(@PathVariable int id, HttpServletRequest request, Model model) {
+//        Users user = userService.getUserById(id);
+//        request.setAttribute("user", user);
+//        model.addAttribute("roles", userService.getAllRoles());
+//        return "admin/edit-user"; // Change to your actual view name for editing users
+//    }
+//
+//    @PostMapping("/edit/{id}")
+//    public String updateUser(@PathVariable int id, @ModelAttribute Users user) {
+//
+//        user.setId(id);
+//        userService.updateUser(user);
+//        return "redirect:/user/1"; // Redirect to the first page after updating
+//    }
+@PostMapping("/updateUserStatus")
+public String updateUserStatus(@RequestParam("userId") int userId, @RequestParam("userStatus") String userStatus, RedirectAttributes redirectAttributes) {
+    userService.updateUser(userId, userStatus);
+    redirectAttributes.addFlashAttribute("updateMessageSuccess", "Cập nhật trạng thái người dùng thành công");
+    return "redirect:/user/1";
+}
 
-    @PostMapping("/edit/{id}")
-    public String updateUser(@PathVariable int id, @ModelAttribute Users user) {
-
-        user.setId(id);
-        userService.updateUser(user);
-        return "redirect:/user/1"; // Redirect to the first page after updating
-    }
 
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable int id, Model model) {
