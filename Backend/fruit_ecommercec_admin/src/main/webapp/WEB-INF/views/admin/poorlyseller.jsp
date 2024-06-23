@@ -2,33 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <title>Product</title>
-<head>
-<%--    <style>--%>
-<%--        .exprire-green {--%>
-<%--            color: green;--%>
-<%--        }--%>
-<%--        .exprire-yellow {--%>
-<%--            color: yellow;--%>
-<%--        }--%>
-<%--        .exprire-red {--%>
-<%--            color: red;--%>
-<%--        }--%>
-<%--    </style>--%>
-</head>
 <body>
 <div class="col-sm-12 col-xl-12">
     <div class="bg-light rounded h-100 p-4">
-        <h6 class="mb-4">Product</h6>
-        <div class="d-flex justify-content-between">
-            <a href="addproduct" class="btn btn-primary mb-2"><span>+</span> Add new product</a>
-            <div>
-                <a class="btn btn-primary" href="bestSeller">Sản phẩm bán chạy</a>
-                <a class="btn btn-primary" href="poorlySeller">Sản phẩm bán ế</a>
-            </div>
-        </div>
-
+        <h3 class="mb-4">Top 10 sảm phẩm bán ế</h3>
         <p class="text-danger">${msg}</p>
-
         <table class="table table-hover">
 
             <thead>
@@ -46,7 +24,7 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="product" items="${paginationProduct}">
+            <c:forEach var="product" items="${list}">
                 <tr>
                     <th scope="row">${product.productId}</th>
                     <td>${product.productName}</td>
@@ -55,17 +33,7 @@
                     <td>${product.quantity}</td>
                     <td class="d-none">${product.createDate}</td>
                     <td class="fw-bold">${product.expDate}</td>
-                    <td>
-                        <form action="updateSale" method="post">
-                        <input type="hidden" name="productId" value="${product.productId}">
-                        <select class="form-select" aria-label="Default select example" name="sale" onchange="this.form.submit()">
-                            <option selected>${product.sale}%</option>
-                            <option value="25">25%</option>
-                            <option value="50">50%</option>
-                            <option value="75">75%</option>
-                        </select>
-                        </form>
-                    </td>
+                    <td>${product.sale}</td>
                     <td>${product.cateName}</td>
                     <td>
                         <a href="updateProduct?productId=${product.productId}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
@@ -98,7 +66,6 @@
         </div>
     </div>
 </div>
-
 <script>
 
     function deleteProduct(id) {

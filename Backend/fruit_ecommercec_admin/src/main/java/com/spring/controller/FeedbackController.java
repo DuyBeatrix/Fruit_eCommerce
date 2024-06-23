@@ -55,5 +55,19 @@ public class FeedbackController {
         mv.setViewName("redirect:/feedback/1");
         return mv;
     }
-
+    @GetMapping(value = "/update")
+    public ModelAndView updateFeedback(@RequestParam("id") int id){
+        ModelAndView mv = new ModelAndView();
+        Feedback feedback = feedbackService.getFeedbackById(id);
+        mv.addObject("feedback", feedback);
+        mv.setViewName("admin/updatefeedback");
+        return mv;
+    }
+    @PostMapping(value = "/update")
+    public ModelAndView updateFeedback(@ModelAttribute("feedback")Feedback feedback){
+        ModelAndView mv = new ModelAndView();
+        feedbackService.update(feedback);
+        mv.setViewName("redirect:/feedback/1");
+        return mv;
+    }
 }

@@ -19,36 +19,36 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @RequestMapping("/product")
 @Controller
-public class ProductController
-{
+public class ProductController {
     @Autowired
     public ProductServiceImpl productService;
     @Autowired
     public CategoryServiceImpl categoryService;
 
     @GetMapping(value = "/{index}")
-    public ModelAndView product(@PathVariable(required = false) Integer index, HttpServletRequest request){
+    public ModelAndView product(@PathVariable(required = false) Integer index, HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("admin/product");
         int count = productService.countProduct();
-        int endPage = count/10;
-        if(count % 10 != 0) {
+        int endPage = count / 10;
+        if (count % 10 != 0) {
             endPage = endPage + 1;
         }
         request.setAttribute("endPage", endPage);
-        if(index !=null && index > 0){
+        if (index != null && index > 0) {
             mv.addObject("paginationProduct", productService.paginationProduct(index));
-        }
-        else {
+        } else {
             mv.addObject("paginationProduct", productService.paginationProduct(1));
         }
-       return mv;
+        return mv;
     }
+
     @GetMapping(value = "/delete/{id}")
-    public ModelAndView deleteProduct(@PathVariable(required = false) Integer id){
+    public ModelAndView deleteProduct(@PathVariable(required = false) Integer id) {
         ModelAndView mv = new ModelAndView();
         try {
             productService.deleteProduct(id);
@@ -59,8 +59,9 @@ public class ProductController
         }
         return mv;
     }
+
     @GetMapping(value = "/addproduct")
-    public ModelAndView addProduct(){
+    public ModelAndView addProduct() {
         ModelAndView mv = new ModelAndView();
         Products product = new Products();
         mv.setViewName("admin/addproduct");
@@ -68,23 +69,47 @@ public class ProductController
         mv.addObject("category", categoryService.getCategories());
         return mv;
     }
+
     @PostMapping(value = "/addproduct")
     public ModelAndView addProduct(@ModelAttribute("product") Products product) {
         productService.addProduct(product);
         return new ModelAndView("redirect:/product/1");
     }
-@GetMapping(value = "/updateProduct")
-public ModelAndView update(@RequestParam("productId") int productId) {
-    ModelAndView mv = new ModelAndView();
-    Products product = productService.getProductById(productId);
-    mv.setViewName("admin/updateproduct");
-    mv.addObject("product", product);
-    mv.addObject("category", categoryService.getCategories());
-    return mv;
-}
+
+    @GetMapping(value = "/updateProduct")
+    public ModelAndView update(@RequestParam("productId") int productId) {
+        ModelAndView mv = new ModelAndView();
+        Products product = productService.getProductById(productId);
+        mv.setViewName("admin/updateproduct");
+        mv.addObject("product", product);
+        mv.addObject("category", categoryService.getCategories());
+        return mv;
+    }
+
     @PostMapping(value = "/updateProduct")
     public ModelAndView updateProduct(@ModelAttribute("product") Products product) {
         productService.updateProduct(product);
         return new ModelAndView("redirect:/product/1");
+    }
+    @GetMapping(value = "/bestSeller")
+    public ModelAndView showBestSellerProduct(){
+        ModelAndView mv = new ModelAndView();
+        List<Products> list = productService.showBestSellerProduct();
+        mv.addObject("list",list);
+        mv.setViewName("admin/bestseller");
+        return mv;
+    }
+    @GetMapping(value = "/poorlySeller")
+    public ModelAndView showPoorlySellerProduct(){
+        ModelAndView mv = new ModelAndView();
+        List<Products> list = productService.showPoorlyProduct();
+        mv.addObject("list",list);
+        mv.setViewName("admin/poorlyseller");
+        return mv;
+    }
+    @PostMapping("/updateSale")
+    public String updateSale(@RequestParam("productId") int productId, @RequestParam("sale") double sale){
+        productService.updateSale(productId, sale);
+        return "redirect:/product/1";
     }
 }

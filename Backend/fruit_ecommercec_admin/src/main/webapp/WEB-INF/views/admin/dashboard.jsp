@@ -40,24 +40,59 @@
                 <h3>Doanh thu và số lượng đơn hàng theo ngày</h3>
                 <div class="text-end">
                     <form action="${pageContext.request.contextPath}/" method="get">
-                        <label for="year">Năm:</label>
-                        <select name="year" id="year"  class="py-1 px-3 rounded">
+                        <label for="year_1">Năm:</label>
+                        <select name="year_1" id="year_1" class="py-1 px-3 rounded">
                             <c:forEach begin="2020" end="2030" var="year">
-                                <option value="${year}" <c:if test="${year == selectedYear}">selected</c:if>>${year}</option>
+                                <option value="${year}" <c:if test="${year == selectedYear_1}">selected</c:if>>${year}</option>
                             </c:forEach>
                         </select>
 
                         <label for="month">Tháng:</label>
-                        <select name="month" id="month" class="py-1 px-3 rounded" >
+                        <select name="month" id="month" class="py-1 px-3 rounded">
                             <c:forEach begin="1" end="12" var="month">
                                 <option value="${month}" <c:if test="${month == selectedMonth}">selected</c:if>>${month}</option>
                             </c:forEach>
                         </select>
 
-                        <button type="submit" class="btn btn-primary px-3"><i class="fa-solid fa-filter me-2" style="color: #ffffff;"></i>Lọc</button>
+                        <button type="submit" class="btn btn-primary px-3">
+                            <i class="fa-solid fa-filter me-2" style="color: #ffffff;"></i>Lọc
+                        </button>
                     </form>
                 </div>
                 <canvas id="myChart" width="688" height="250" style="display: block; box-sizing: border-box;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light text-center rounded p-4">
+                <h3>Doanh thu và số lượng đơn hàng theo tháng</h3>
+                <div class="text-end">
+                    <form action="${pageContext.request.contextPath}/" method="get">
+                        <label for="year_2">Năm:</label>
+                        <select name="year_2" id="year_2" class="py-1 px-3 rounded">
+                            <c:forEach begin="2020" end="2030" var="year">
+                                <option value="${year}" <c:if test="${year == selectedYear_2}">selected</c:if>>${year}</option>
+                            </c:forEach>
+                        </select>
+                        <button type="submit" class="btn btn-primary px-3">
+                            <i class="fa-solid fa-filter me-2" style="color: #ffffff;"></i>Lọc
+                        </button>
+                    </form>
+                </div>
+                <canvas id="chartMonth" width="688" height="250" style="display: block; box-sizing: border-box;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light text-center rounded p-4">
+                <h3>Doanh thu và số lượng đơn hàng theo năm</h3>
+                <canvas id="chartYear" width="688" height="200" style="display: block; box-sizing: border-box;"></canvas>
             </div>
         </div>
     </div>
@@ -194,7 +229,98 @@
         }
     });
 </script>
+<script>
+    const nam = [];
+    const thang = [];
+    const thangNam = [];
+    const dtData = [0];
+    const datalenght = [0];
 
+    <c:forEach var="item" items="${listRevenueMonth}">
+    nam.push('${item.Nam}')
+    thang.push('${item.Thang}')
+    dtData.push(${item.DoanhThu})
+    datalenght.push(${item.SoLuongDonHang})
+    </c:forEach>
+    let minLenght = Math.min(nam.length, thang.length);
+    for(let i = 0; i < minLenght; i++){
+        thangNam.push(nam[i]+ '-'+ thang[i])
+    }
+    console.log(nam)
+    console.log(thang)
+    console.log(thangNam)
+    new Chart("chartMonth", {
+        type: 'bar',
+        data: {
+            labels: thangNam,
+            datasets: [{
+                type: 'bar',
+                label: 'Doanh thu',
+                data: dtData,
+                backgroundColor: '#009CFF',
+                borderColor: '#009CFF',
+                borderWidth: 1
+            }, {
+                type: 'line',
+                label: 'Số lượng đơn hàng',
+                data: datalenght,
+                backgroundColor: '#0dcaf0',
+                borderColor: '#0dcaf0',
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+<script>
+    const revenueYear = [];
+    const dtnData = [];
+    const datalenght_2 = [0];
+    <c:forEach var="item" items="${listRevenueYear}">
+    revenueYear.push('${item.Nam}');
+    dtnData.push(${item.DoanhThu});
+    datalenght_2.push(${item.SoLuongDonHang});
+    </c:forEach>;
+
+    console.log(revenueYear);
+    console.log(dtnData);
+    console.log(datalenght_2);
+
+    new Chart("chartYear", {
+        type: 'bar',
+        data: {
+            labels: revenueYear,
+            datasets: [{
+                type: 'bar',
+                label: 'Doanh thu',
+                data: dtnData,
+                backgroundColor: '#009CFF',
+                borderColor: '#009CFF',
+                borderWidth: 1
+            }, {
+                type: 'line',
+                label: 'Số lượng đơn hàng',
+                data: datalenght_2,
+                backgroundColor: '#0dcaf0',
+                borderColor: '#0dcaf0',
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 </body>
