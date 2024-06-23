@@ -37,10 +37,10 @@
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="<c:url value="/"/>" class="nav-item nav-link active">Home</a>
-                    <a href="${pageContext.request.contextPath}/shop/1" class="nav-item nav-link">Shop</a>
-                    <a href="${pageContext.request.contextPath}/blog/1" class="nav-item nav-link">Blogs</a>
+                    <a href="${pageContext.request.contextPath}/shop/1" class="nav-item nav-link">Cửa hàng</a>
+                    <a href="${pageContext.request.contextPath}/blog/1" class="nav-item nav-link">Bài vết</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Danh mục</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <c:forEach var="cate" items="${categories}">
                                 <a href="${pageContext.request.contextPath}/productbycatepage/${cate.cateId}/1" class="dropdown-item">${cate.cateName}</a>
@@ -48,13 +48,13 @@
                         </div>
                     </div>
                     <a href="${pageContext.request.contextPath}/newsale" class="nav-item nav-link"><b>New & Sale</b></a>
-                    <a href="${pageContext.request.contextPath}/contact" class="nav-item nav-link">Contact</a>
+                    <a href="${pageContext.request.contextPath}/contact" class="nav-item nav-link">Liên hệ</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tài Khoản</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/trackorder', ${empty loginInfo})">My Order</a>
-                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/setup_user', ${empty loginInfo})">My Information</a>
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/trackorder', ${empty loginInfo})">Đơn Hàng</a>
+                            <a href="javascript:void(0);" class="nav-item nav-link" onclick="redirectToPage('${pageContext.request.contextPath}/setup_user', ${empty loginInfo})">Thông tin</a>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@
 
                     <div>
                         <form class="position-relative me-3" id="searchForm" action="${pageContext.request.contextPath}/search/${freeText}" method="GET">
-                            <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Search">
+                            <input name="freeText" id="searchInput" class="form-control border-2 border-secondary w-90 py-2 px-3 rounded-pill" type="text" placeholder="Tìm kiếm">
                             <button type="submit" class="btn btn-primary py-2 px-3 position-absolute rounded-pill text-white h-100 fas fa-search" style="top: 0; right: 0;"></button>
                         </form>
                     </div>
