@@ -20,7 +20,7 @@
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-3">
-                <h6 class="mb-0">Jhon Doe</h6>
+                <h6 class="mb-0">${loginInfor.username}</h6>
                 <span>Admin</span>
             </div>
         </div>
@@ -33,6 +33,7 @@
             <a href="${pageContext.request.contextPath}/blogdetails/1" class="nav-item nav-link"><i class="fa-solid fa-paper-plane me-2"></i>Bài viết</a>
             <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa-solid fa-user me-2"></i>Người dùng</a>
             <a href="${pageContext.request.contextPath}/feedback/1" class="nav-item nav-link"><i class="fa-solid fa-comment me-2"></i>Đánh giá</a>
+            <a href="${pageContext.request.contextPath}/supplier/1" class="nav-item nav-link"><i class="fa-solid fa-truck-field-un"></i>Nhà cung cấp</a>
             <%--            <a href="${pageContext.request.contextPath}/user/1" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User</a>--%>
         </div>
     </nav>

@@ -2,5 +2,7 @@
     <decorator name="admin" page="admin.jsp">
         <pattern>/*</pattern>
     </decorator>
-
+    <decorator name="login" page="login.jsp">
+        <pattern>/login</pattern>
+    </decorator>
 </decorators>

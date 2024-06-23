@@ -63,6 +63,10 @@ public class UserDao {
         String sql = "UPDATE customer SET cus_enable = ? WHERE id = ?";
         jdbcTemplate.update(sql, cusEnable, id);
     }
+    public void updateRole(int id, String roleId) {
+        String sql = "UPDATE customer SET role_id = ? WHERE id = ?";
+        jdbcTemplate.update(sql, roleId, id);
+    }
 
     // Delete a user by ID
     public void deleteUser(int id) {

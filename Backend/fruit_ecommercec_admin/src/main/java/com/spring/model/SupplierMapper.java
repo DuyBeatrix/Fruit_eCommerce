@@ -9,7 +9,7 @@ public class SupplierMapper implements RowMapper<Supplier> {
     @Override
     public Supplier mapRow(ResultSet rs, int rowNum) throws SQLException {
         Supplier supplier = new Supplier();
-        supplier.setId(rs.getInt("id"));
+        supplier.setId(rs.getInt("supplier_id"));
         supplier.setSupName(rs.getString("sup_name"));
         supplier.setSupAddress(rs.getString("sup_address"));
         supplier.setAwards(rs.getString("awards"));
