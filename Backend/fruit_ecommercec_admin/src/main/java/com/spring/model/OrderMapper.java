@@ -14,7 +14,7 @@ public class OrderMapper implements RowMapper<Orders> {
         orders.setFullName(rs.getString("fullname"));
         orders.setTotal(rs.getDouble("total_price"));
         orders.setQuantity(rs.getInt("total_product"));
-        orders.setOrderDate(rs.getDate("createDay"));
+        orders.setCreateDay(rs.getDate("createDay"));
         orders.setAddress(rs.getString("address"));
         orders.setDesc_order(rs.getString("desc_order"));
         orders.setPhone(rs.getString("phone"));

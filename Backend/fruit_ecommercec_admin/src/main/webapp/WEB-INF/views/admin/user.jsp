@@ -50,7 +50,17 @@
                         <td>${user.cusPhone}</td>
                         <td>${user.cusAddress}</td>
                         <td>${user.gender ? 'Male' : 'Female'}</td>
-                        <td>${user.roleId}</td>
+                        <td><c:choose>
+                            <c:when test="${user.roleId == 1}">
+                                Admin
+                            </c:when>
+                            <c:when test="${user.roleId == 2}">
+                                Khách hàng
+                            </c:when>
+                            <c:otherwise>
+                                Unknown Role
+                            </c:otherwise>
+                        </c:choose></td>
                         <td>
                             <form action="${pageContext.request.contextPath}/user/updateUserStatus" method="post">
                                 <input type="hidden" name="userId" value="${user.id}" />
