@@ -1,122 +1,103 @@
 package com.spring.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Orders {
-    private int id;
-    private Date orderDate;
-    private double totalPrice;
-    private double totalProduct;
+    private int orderId;
+    private String fullName;
     private String address;
     private String phone;
-    private String descOrder;
     private String email;
-    private int cusId;
-    private double delivery;
-    private int productId;
+    private String desc_order;
+    private int quantity;
+    private double total;
+    private int userid;
+    private String status;
+    private java.sql.Date createDay;
+    private String paymentMethod;
+    private String statusPayment;
+    public Orders() {}
 
-    public int getId() {
-        return id;
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getStatusPayment() {
+        return statusPayment;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public void setStatusPayment(String statusPayment) {
+        this.statusPayment = statusPayment;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    public java.sql.Date getCreateDay() {
+        return createDay;
     }
-
-    public String getDescOrder() {
-        return descOrder;
+    public void setCreateDay(Date createDay) {
+        this.createDay = createDay;
     }
-
-    public void setDescOrder(String descOrder) {
-        this.descOrder = descOrder;
+    public String getStatus() {
+        return status;
     }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setStatus(String status) {
+        this.status = status;
     }
-
-    public double getTotalProduct() {
-        return totalProduct;
+    public int getOrderId() {
+        return orderId;
     }
-
-    public void setTotalProduct(double totalProduct) {
-        this.totalProduct = totalProduct;
+    public void setOrderId(int checkoutid) {
+        this.orderId = checkoutid;
     }
-
+    public String getFullName() {
+        return fullName;
+    }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
-
     public String getPhone() {
         return phone;
     }
-
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public int getCusId() {
-        return cusId;
+    public String getDesc_order() {
+        return desc_order;
     }
-
-    public void setCusId(int cusId) {
-        this.cusId = cusId;
+    public void setDesc_order(String desc_order) {
+        this.desc_order = desc_order;
     }
-
-    public double getDelivery() {
-        return delivery;
+    public int getQuantity() {
+        return quantity;
     }
-
-    public void setDelivery(double delivery) {
-        this.delivery = delivery;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
-
-    public int getProductId() {
-        return productId;
+    public double getTotal() {
+        return total;
     }
-
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setTotal(double total) {
+        this.total = total;
     }
-
-    public Orders() {
+    public int getUserid() {
+        return userid;
     }
-
-    public Orders(int id, Date orderDate, double totalPrice, double totalProduct, String address, String phone, String descOrder, String email, int cusId, double delivery, int productId) {
-        this.id = id;
-        this.orderDate = orderDate;
-        this.totalPrice = totalPrice;
-        this.totalProduct = totalProduct;
-        this.address = address;
-        this.phone = phone;
-        this.descOrder = descOrder;
-        this.email = email;
-        this.cusId = cusId;
-        this.delivery = delivery;
-        this.productId = productId;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 }

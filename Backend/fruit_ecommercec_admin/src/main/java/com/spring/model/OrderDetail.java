@@ -3,9 +3,20 @@ package com.spring.model;
 public class OrderDetail {
     private int id;
     private double totalPiad;
-    private String deliveryStatus;
     private int orderID;
-    private Orders order;
+    private int quantityProduct;
+//    private Orders order;
+    private int productId;
+    private String productName;
+    private double productPrice;
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public int getId() {
         return id;
@@ -23,12 +34,21 @@ public class OrderDetail {
         this.totalPiad = totalPiad;
     }
 
-    public String getDeliveryStatus() {
-        return deliveryStatus;
+
+    public double getProductPrice() {
+        return productPrice;
     }
 
-    public void setDeliveryStatus(String deliveryStatus) {
-        this.deliveryStatus = deliveryStatus;
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public int getQuantityProduct() {
+        return quantityProduct;
+    }
+
+    public void setQuantityProduct(int quantityProduct) {
+        this.quantityProduct = quantityProduct;
     }
 
     public int getOrderID() {
@@ -39,22 +59,22 @@ public class OrderDetail {
         this.orderID = orderID;
     }
 
-    public Orders getOrder() {
-        return order;
+//    public Orders getOrder() {
+//        return order;
+//    }
+//
+//    public void setOrder(Orders order) {
+//        this.order = order;
+//    }
+
+    public int getProductId() {
+        return productId;
     }
 
-    public void setOrder(Orders order) {
-        this.order = order;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public OrderDetail() {
-    }
-
-    public OrderDetail(int id, double totalPiad, String deliveryStatus, int orderID, Orders order) {
-        this.id = id;
-        this.totalPiad = totalPiad;
-        this.deliveryStatus = deliveryStatus;
-        this.orderID = orderID;
-        this.order = order;
     }
 }

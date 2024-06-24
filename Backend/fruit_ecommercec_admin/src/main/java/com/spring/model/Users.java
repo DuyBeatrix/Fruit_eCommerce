@@ -1,19 +1,32 @@
 package com.spring.model;
 
-
-
-public class User {
+public class Users {
     private int id;
     private String cusName;
-
-    private String userName;
-
+    private String username;
     private String password;
     private String cusPhone;
-    private String cusAddress;
     private String cusEmail;
+    private String cusAddress;
     private boolean gender;
     private int roleId;
+    private String cusEnable;
+
+    public Users() {
+    }
+
+    public Users(int id, String cusName, String username, String password, String cusPhone, String cusEmail, String cusAddress, boolean gender, int roleId, String cusEnable) {
+        this.id = id;
+        this.cusName = cusName;
+        this.username = username;
+        this.password = password;
+        this.cusPhone = cusPhone;
+        this.cusEmail = cusEmail;
+        this.cusAddress = cusAddress;
+        this.gender = gender;
+        this.roleId = roleId;
+        this.cusEnable = cusEnable;
+    }
 
     public int getId() {
         return id;
@@ -31,12 +44,12 @@ public class User {
         this.cusName = cusName;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -53,6 +66,14 @@ public class User {
 
     public void setCusPhone(String cusPhone) {
         this.cusPhone = cusPhone;
+    }
+
+    public String getCusEmail() {
+        return cusEmail;
+    }
+
+    public void setCusEmail(String cusEmail) {
+        this.cusEmail = cusEmail;
     }
 
     public String getCusAddress() {
@@ -79,26 +100,11 @@ public class User {
         this.roleId = roleId;
     }
 
-    public String getCusEmail() {
-        return cusEmail;
+    public String getCusEnable() {
+        return cusEnable;
     }
 
-    public void setCusEmail(String cusEmail) {
-        this.cusEmail = cusEmail;
-    }
-
-    public User() {
-    }
-
-    public User(int id, String cusName, String userName, String password, String cusPhone, String cusAddress, String cusEmail, boolean gender, int roleId) {
-        this.id = id;
-        this.cusName = cusName;
-        this.userName = userName;
-        this.password = password;
-        this.cusPhone = cusPhone;
-        this.cusAddress = cusAddress;
-        this.cusEmail = cusEmail;
-        this.gender = gender;
-        this.roleId = roleId;
+    public void setCusEnable(String cusEnable) {
+        this.cusEnable = cusEnable;
     }
 }

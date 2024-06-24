@@ -73,4 +73,20 @@ public class ProductsDao {
         String sql = "delete from product where id=?";
         jdbcTemplate.update(sql,id);
     }
+    public List<Products> showBestSellerProduct(){
+        List<Products> list = new ArrayList<Products>();
+        String sql = "SELECT p.*, c.cate_name FROM product p INNER JOIN category c ON p.cate_id = c.cate_id ORDER BY sell_quantity DESC LIMIT 10";
+        list = jdbcTemplate.query(sql,new Object[]{}, new ProductsMapper());
+        return list;
+    }
+    public List<Products> showPoorlyProduct(){
+        List<Products> list = new ArrayList<Products>();
+        String sql = "SELECT p.*, c.cate_name FROM product p INNER JOIN category c ON p.cate_id = c.cate_id ORDER BY sell_quantity ASC LIMIT 10";
+        list = jdbcTemplate.query(sql,new Object[]{}, new ProductsMapper());
+        return list;
+    }
+    public void updateSale(int productId, double sale){
+        String sql = "Update product set product_sales=? where id=?";
+        jdbcTemplate.update(sql,sale ,productId);
+    }
 }

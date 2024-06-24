@@ -19,10 +19,10 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Content</th>
-                <th scope="col">Rate</th>
-                <th scope="col">Product ID</th>
-                <th scope="col">Customer ID</th>
+                <th scope="col">Nội dung</th>
+                <th scope="col">Đánh giá</th>
+                <th scope="col">Sản phẩm</th>
+                <th scope="col">Người dùng</th>
 
                 <th></th>
             </tr>
@@ -37,7 +37,7 @@
                     <td>${item.customer_id}</td>
 
                     <td>
-                        <a href="#" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="update?id=${item.id}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
                         <a href="#"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteFeedback('${item.id}')"></i></a>
                     </td>
                 </tr>
