@@ -23,7 +23,7 @@
                 <h4>${probycate.productName}</h4>
                     <%--                                            <p>${probycate.shortDesc}</p>--%>
                 <div class="d-flex justify-content-between flex-lg-wrap">
-                    <p class="text-dark fs-5 fw-bold mb-0">${probycate.productPrice} / kg</p>
+                    <p class="text-dark fs-5 fw-bold mb-0">${probycate.productPrice} VND/KG</p>
                     <a href="${pageContext.request.contextPath}/addCart/${probycate.productId}/1"
                        class="btn border border-secondary rounded-pill px-3 text-primary"><i
                             class="fa fa-shopping-bag me-2 text-primary"></i> Add to

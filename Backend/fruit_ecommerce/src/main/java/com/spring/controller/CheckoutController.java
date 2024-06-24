@@ -30,16 +30,16 @@ public class CheckoutController
         ModelAndView mv = new ModelAndView();
         mv.setViewName("user/checkout");
         Checkout checkout = new Checkout();
-//        loginInfo = (User) session.getAttribute("loginInfo");
-//        if(loginInfo != null)
-//        {
-//            checkout.setAddress(loginInfo.getCusAddress());
-//            checkout.setFullName(loginInfo.getCusName());
-//            checkout.setPhone(loginInfo.getCusPhone());
-//            checkout.setEmail(loginInfo.getCusEmail());
-//            checkout.setUserid(loginInfo.getId());
-//
-//        }
+        loginInfo = (User) session.getAttribute("loginInfo");
+        if(loginInfo != null)
+        {
+            checkout.setAddress(loginInfo.getCusAddress());
+            checkout.setFullName(loginInfo.getCusName());
+            checkout.setPhone(loginInfo.getCusPhone());
+            checkout.setEmail(loginInfo.getCusEmail());
+            checkout.setUserid(loginInfo.getId());
+
+        }
         mv.addObject("checkout", checkout);
 
         return mv;

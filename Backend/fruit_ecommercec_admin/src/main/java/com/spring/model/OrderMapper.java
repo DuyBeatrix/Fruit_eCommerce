@@ -11,7 +11,7 @@ public class OrderMapper implements RowMapper<Orders> {
     public Orders mapRow(ResultSet rs, int i) throws SQLException {
         Orders orders = new Orders();
         orders.setId(rs.getInt("id"));
-        orders.setOrderDate(rs.getDate("createDay "));
+        orders.setOrderDate(rs.getDate("createDay"));
         orders.setTotalPrice(rs.getDouble("total_price"));
         orders.setTotalProduct(rs.getDouble("total_product"));
         orders.setAddress(rs.getString("address"));
@@ -19,7 +19,7 @@ public class OrderMapper implements RowMapper<Orders> {
         orders.setPhone(rs.getString("phone"));
         orders.setEmail(rs.getString("email"));
         orders.setCusId(rs.getInt("customer_id"));
-        orders.setDelivery(rs.getDouble("delivery"));
+        //orders.setDelivery(rs.getDouble("delivery"));
         orders.setProductId(rs.getInt("product_id"));
         return orders;
     }
