@@ -40,6 +40,7 @@
     <link href="<c:url value="/resource/admin/css/bootstrap.min.css"/>" rel="stylesheet"/>
     <!-- Template Stylesheet -->
     <link href="<c:url value="/resource/admin/css/style.css"/>" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 <body>
 <div class="container-xxl position-relative bg-white d-flex p-0">
@@ -47,13 +48,14 @@
     <div class="content">
         <%@include file="/WEB-INF/views/layout/admin/header.jsp"%>
         <decorator:body/>
-        <%@include file="/WEB-INF/views/layout/admin/footer.jsp"%>
+<%--        <%@include file="/WEB-INF/views/layout/admin/footer.jsp"%>--%>
     </div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="<c:url value="/resource/admin/lib/chart/chart.min.js"/>"></script>
 <script src="<c:url value="/resource/admin/lib/easing/easing.min.js"/>" ></script>
 <script src="<c:url value="/resource/admin/lib/waypoints/waypoints.min.js"/>" ></script>

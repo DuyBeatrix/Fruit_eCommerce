@@ -1,95 +1,110 @@
 <%--
   Created by IntelliJ IDEA.
-  User: vithi
-  Date: 6/17/2024
-  Time: 12:11 AM
+  User: admin
+  Date: 6/13/2024
+  Time: 12:32 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-    <title>Title</title>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<title>Quản Lý Người Dùng</title>
 <body>
-<div class="col-sm-12 col-xl-12">
-    <div class="bg-light rounded h-100 p-4">
-        <h6 class="mb-4">Product</h6>
-        <a href="addproduct" class="btn btn-primary mb-2"><span>+</span> Add new user</a>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Customer name</th>
-                <th scope="col">Username</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Gender</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <c:forEach var="user" items="${allUser}">
-                <tr>
-                    <th scope="row">${user.id}</th>
-                    <td>${user.cusName}</td>
-                    <td>${user.userName}</td>
-                    <td>${user.cusPhone}</td>
-                    <td>${user.cusAddress}</td>
-                    <td>${user.cusEmail}</td>
-                    <td>
-                        <c:choose>
-                            <c:when test="${user.gender eq 'true'}">
-                                <p>Nam</p>
-                            </c:when>
-                            <c:when test="${user.gender eq 'false'}">
-                                <p>Nữ</p>
-                            </c:when>
-                            <c:otherwise>
-                                <p></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </td>
-                    <td>
-                        <a href="#" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteUser('${user.id}')"></i></a>
-                    </td>
+<!-- Recent Users Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Quản Lý Người Dùng</h6>
+            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/user/add">Thêm Người Dùng</a></td>
+        </div>
+        <p class="text-success">${addMessageSuccess}</p>
+        <p class="text-danger">${addMessageFail}</p>
+        <p class="text-success">${updateMessageSuccess}</p>
+        <p class="text-danger">${updateMessageFail}</p>
+        <p class="text-success">${deteleMessageSuccess}</p>
+        <p class="text-danger">${deteleMessageFail}</p>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table table-hover table-striped mb-0">
+                <thead>
+                <tr class="text-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Tên tài khoản</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">ID quyền</th>
+                    <th scope="col">Trạng Thái</th>
+                    <th scope="col">Hành động</th>
+
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-        <div class="d-flex justify-content-center">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <c:forEach begin="1" end="${endPage}" var="i">
-                        <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/user/${i}">${i}</a></li>
-                    </c:forEach>
-                    <%--                <li class="page-item"><a class="page-link" href="#">2</a></li>--%>
-                    <%--                <li class="page-item"><a class="page-link" href="#">3</a></li>--%>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                </thead>
+                <tbody>
+                <c:forEach var="user" items="${paginationUsers}">
+                    <tr>
+                        <td>${user.id}</td>
+                        <td>${user.cusName}</td>
+                        <td>${user.username}</td>
+                        <td>${user.cusEmail}</td>
+                        <td>${user.cusPhone}</td>
+                        <td>${user.cusAddress}</td>
+                        <td>${user.gender ? 'Male' : 'Female'}</td>
+                        <td>${user.roleId}</td>
+                        <td>
+                            <form action="${pageContext.request.contextPath}/user/updateUserStatus" method="post">
+                                <input type="hidden" name="userId" value="${user.id}" />
+                                <select class="form-select" aria-label="Default select example" name="userStatus" onchange="this.form.submit()">
+                                    <option selected>${user.cusEnable}</option>
+                                    <c:if test="${user.cusEnable != 'Kích hoạt'}">
+                                        <option value="Kích hoạt">Kích hoạt</option>
+                                    </c:if>
+                                    <c:if test="${user.cusEnable != 'Vô hiệu hóa'}">
+                                        <option value="Vô hiệu hóa">Vô hiệu hóa</option>
+                                    </c:if>
+                                </select>
+                            </form>
+                        </td>
+                        <td>
+                            <a href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px"></i></a>
+<%--                            <a class="btn btn-sm btn-warning" href="${pageContext.request.contextPath}/user/edit/${user.id}">Edit</a>--%>
+<%--                            <a class="btn btn-sm btn-danger" href="${pageContext.request.contextPath}/user/delete/${user.id}" onclick="deleteUser('${user.id}')">Delete</a>--%>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/user/${1}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <c:forEach begin="1" end="${endPage}" var="i">
+                            <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/user/${i}">${i}</a></li>
+                        </c:forEach>
+                        <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/user/${endPage}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </div>
 <script>
     function deleteUser(id) {
-        let ans = confirm("Bạn có đồng ý xóa người dùng này?");
+        let ans = confirm("Bạn có đồng ý xóa nguười dùng này này?");
         if(ans){
             window.location = "delete/"+id;
         }
     }
 </script>
+<!-- Recent Users End -->
 </body>
-
