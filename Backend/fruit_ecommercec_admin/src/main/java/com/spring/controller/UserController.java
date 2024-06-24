@@ -1,5 +1,6 @@
 package com.spring.controller;
 
+import com.spring.model.Roles;
 import com.spring.model.Users;
 import com.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RequestMapping("/user")
 @Controller
@@ -22,7 +24,9 @@ public class UserController {
     @GetMapping(value = "/{index}")
     public ModelAndView user(@PathVariable(required = false) Integer index, HttpServletRequest request) {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("admin/user"); // Change to your actual view name for users
+        List<Roles> listRole = userService.getAllRoles();
+        mv.addObject("listRole",listRole);
+        mv.setViewName("admin/user");
         int count = userService.countUsers();
         int endPage = count / 10;
         if (count % 10 != 0) {
@@ -75,7 +79,12 @@ public String updateUserStatus(@RequestParam("userId") int userId, @RequestParam
     redirectAttributes.addFlashAttribute("updateMessageSuccess", "Cập nhật trạng thái người dùng thành công");
     return "redirect:/user/1";
 }
-
+    @PostMapping("/updateRole")
+    public String updateRole(@RequestParam("userId") int userId, @RequestParam("roleId") String roleId, RedirectAttributes redirectAttributes) {
+        userService.updateRole(userId, roleId);
+        redirectAttributes.addFlashAttribute("updateMessageSuccess", "Cập nhật người dùng thành công");
+        return "redirect:/user/1";
+    }
 
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable int id, Model model) {

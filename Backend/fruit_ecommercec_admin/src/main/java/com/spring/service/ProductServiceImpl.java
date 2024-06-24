@@ -45,4 +45,19 @@ public class ProductServiceImpl implements ProductService{
     public void updateProduct(Products product) {
         proDao.updateProduct(product);
     }
+
+    @Override
+    public List<Products> showBestSellerProduct() {
+        return proDao.showBestSellerProduct();
+    }
+
+    @Override
+    public List<Products> showPoorlyProduct() {
+        return proDao.showPoorlyProduct();
+    }
+
+    @Override
+    public void updateSale(int productId, double sale) {
+        proDao.updateSale(productId, sale);
+    }
 }

@@ -4,8 +4,19 @@ public class OrderDetail {
     private int id;
     private double totalPiad;
     private int orderID;
-    private Orders order;
+    private int quantityProduct;
+//    private Orders order;
     private int productId;
+    private String productName;
+    private double productPrice;
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public int getId() {
         return id;
@@ -24,6 +35,21 @@ public class OrderDetail {
     }
 
 
+    public double getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public int getQuantityProduct() {
+        return quantityProduct;
+    }
+
+    public void setQuantityProduct(int quantityProduct) {
+        this.quantityProduct = quantityProduct;
+    }
 
     public int getOrderID() {
         return orderID;
@@ -33,13 +59,13 @@ public class OrderDetail {
         this.orderID = orderID;
     }
 
-    public Orders getOrder() {
-        return order;
-    }
-
-    public void setOrder(Orders order) {
-        this.order = order;
-    }
+//    public Orders getOrder() {
+//        return order;
+//    }
+//
+//    public void setOrder(Orders order) {
+//        this.order = order;
+//    }
 
     public int getProductId() {
         return productId;
@@ -50,13 +76,5 @@ public class OrderDetail {
     }
 
     public OrderDetail() {
-    }
-
-    public OrderDetail(int id, double totalPiad, int orderID, Orders order, int productId) {
-        this.id = id;
-        this.totalPiad = totalPiad;
-        this.orderID = orderID;
-        this.order = order;
-        this.productId = productId;
     }
 }

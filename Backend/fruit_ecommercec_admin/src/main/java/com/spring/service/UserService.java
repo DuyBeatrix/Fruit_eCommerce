@@ -17,4 +17,5 @@ public interface UserService {
     public void updateUser(int id, String cusEnable);
     public void deleteUser(int id);
     public List<Roles> getAllRoles ();
+    public void updateRole(int id, String roleId);
 }

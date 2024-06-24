@@ -12,9 +12,12 @@ public class OrderDetailMapper implements RowMapper<OrderDetail> {
         orderDetail.setId(rs.getInt("id"));
         orderDetail.setTotalPiad(rs.getDouble("total_piad"));
         orderDetail.setOrderID(rs.getInt("order_id"));
-        OrderMapper ordersMapper = new OrderMapper();
-        Orders order = ordersMapper.mapRow(rs, i);
-        orderDetail.setOrder(order);
+        orderDetail.setQuantityProduct(rs.getInt("quantity"));
+        orderDetail.setProductName(rs.getString("product_name"));
+        orderDetail.setProductPrice(rs.getDouble("product_price"));
+//        OrderMapper ordersMapper = new OrderMapper();
+//        Orders order = ordersMapper.mapRow(rs, i);
+//        orderDetail.setOrder(order);
         orderDetail.setProductId(rs.getInt("product_id"));
         return orderDetail;
     }

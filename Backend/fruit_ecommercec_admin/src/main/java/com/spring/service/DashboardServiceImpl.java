@@ -17,8 +17,8 @@ public class DashboardServiceImpl implements DashboardService{
     }
 
     @Override
-    public List<Map<String, Object>> getRevenueByMonth() {
-        return dao.getRevenueByMonth();
+    public List<Map<String, Object>> getRevenueByMonth(int year) {
+        return dao.getRevenueByMonth(year);
     }
 
     @Override

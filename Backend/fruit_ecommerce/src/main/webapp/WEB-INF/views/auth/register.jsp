@@ -29,7 +29,7 @@
 
                                 <%--@elvariable id="user" type=""--%>
                                 <form:form action="sendEmail" method="post" modelAttribute="user" id="registerForm"  >
-
+    <%--                                    <form:input path="roleId" type="hidden" value="2"/>--%>
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <span class="h1 fw-bold mb-0 text-primary">Fruitables</span>
                                     </div>

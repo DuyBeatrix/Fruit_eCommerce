@@ -1,5 +1,7 @@
 package com.spring.dao;
 
+import com.spring.model.Categories;
+import com.spring.model.CategoriesMapper;
 import com.spring.model.Feedback;
 import com.spring.model.FeedbackMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +36,15 @@ public class FeedbackDao {
     public void addFeedback(Feedback feedback){
         String sql = "Insert into feedback (content, rate, product_id, id) values(?,?,?,?)";
         jdbcTemplate.update(sql, feedback.getContent(),feedback.getRate(),feedback.getProduct_id(),feedback.getCustomer_id());
+    }
+    public void update(Feedback feedback){
+        String sql = "update feedback set content=?,rate=?,product_id=?,id=? where fb_id=?";
+        jdbcTemplate.update(sql,feedback.getContent(),feedback.getRate(),feedback.getProduct_id(),feedback.getCustomer_id(),feedback.getId());
+    }
+    public Feedback getFeedbackById(int id){
+        Feedback feedback = new Feedback();
+        String sql = "SELECT * FROM feedback where fb_id=?";
+        feedback = jdbcTemplate.queryForObject(sql, new FeedbackMapper(), new Object[]{id});
+        return feedback;
     }
 }

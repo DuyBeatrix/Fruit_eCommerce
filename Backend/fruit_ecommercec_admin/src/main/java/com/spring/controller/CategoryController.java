@@ -61,7 +61,6 @@ public class CategoryController {
         model.addAttribute("categories", categories);
         return "admin/edit-category"; // Change to your actual view name for editing categories
     }
-
     @PostMapping("/edit/{id}")
     public String updateCategory(@PathVariable int id, @ModelAttribute Categories categories, RedirectAttributes redirectAttributes) {
         try {

@@ -9,33 +9,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="update chuc nang signin, signup, logout, forgot password">
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/BlogDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/BlogDetailDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/BlogDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/BlogDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/UsersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/BlogDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/BlogDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/add-blog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/add-category.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/add-user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/blogdetails.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/category.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/edit-blog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/edit-user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/CategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/CategoryServiceImpl.java" afterDir="false" />
+    <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="update payment online bang order them 2 truong payment_method and status_payment trong csdl">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/FeedbackDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/FeedbackDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/ProductsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/ProductsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderDetailMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/model/UsersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/FeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/FeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/FeedbackServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/feedback.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/feedback.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/layout/admin/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/layout/admin/sidebar.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,9 +75,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -98,7 +95,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;thienvd&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DoAnChuyenNganh/Fruit_eCommerce/Fruit_eCommerce/Backend/fruit_ecommercec_admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DoAnChuyenNganh/Fruit_eCommerce/Fruit_eCommerce/Backend/fruit_ecommerce&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -106,7 +103,6 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; fa0445fce97cc93ac6cfc6dd9ac81e9303bd7b42
   }
 }</component>
   <component name="RecentsManager">
@@ -269,7 +265,14 @@
       <workItem from="1716541692148" duration="2058000" />
       <workItem from="1716544694910" duration="679000" />
       <workItem from="1716627759474" duration="591000" />
-      <workItem from="1718346672164" duration="33000" />
+      <workItem from="1718777091622" duration="8119000" />
+      <workItem from="1718807313806" duration="11886000" />
+      <workItem from="1718860990393" duration="13028000" />
+      <workItem from="1718883145193" duration="19944000" />
+      <workItem from="1718952948124" duration="1153000" />
+      <workItem from="1719020384941" duration="1946000" />
+      <workItem from="1719062750117" duration="2527000" />
+      <workItem from="1719113913347" duration="814000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />

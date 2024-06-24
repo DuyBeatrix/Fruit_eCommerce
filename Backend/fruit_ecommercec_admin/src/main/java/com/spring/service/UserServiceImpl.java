@@ -61,4 +61,9 @@ public class UserServiceImpl implements UserService{
     public List<Roles> getAllRoles() {
         return rolesDao.getAllRoles();
     }
+
+    @Override
+    public void updateRole(int id, String roleId) {
+        userDao.updateRole(id, roleId);
+    }
 }
