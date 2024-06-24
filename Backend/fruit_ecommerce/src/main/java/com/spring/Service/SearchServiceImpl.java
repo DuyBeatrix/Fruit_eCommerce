@@ -2,7 +2,7 @@ package com.spring.Service;
 
 import com.spring.DAO.NewSaleDAO;
 import com.spring.DAO.SearchDAO;
-import com.spring.model.Product;
+import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class SearchServiceImpl implements SearchService
     private SearchDAO searchDAO = new SearchDAO();
 
     @Override
-    public List<Product> findAllProducts(String text) {
+    public List<Products> findAllProducts(String text) {
         return searchDAO.findAllProduct(text);
     }
 }

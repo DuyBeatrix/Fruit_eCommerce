@@ -20,7 +20,7 @@
                     <c:forEach var="item" items="${sellingProduct}">
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="<c:url value="/resource/user/img/products/${item.productImage}"/>" class="img-fluid w-100 rounded-top" alt="">
+                                <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid w-100 rounded-top" alt="">
                             </div>
                             <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">${item.cateName}</div>
                             <div class="p-4 pb-0 rounded-bottom">
@@ -28,7 +28,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                     <p class="text-dark fs-5 fw-bold">${item.productPrice} VND/KG</p>
-                                    <a href="${pageContext.request.contextPath}/addCart/${item.id}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    <a href="${pageContext.request.contextPath}/addCart/${item.productId}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                     <c:forEach var="item" items="${discountProduct}">
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
-                                <img src="<c:url value="/resource/user/img/products/${item.productImage}"/>" class="img-fluid w-100 rounded-top bg-light" alt="">
+                                <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid w-100 rounded-top bg-light" alt="">
                             </div>
                             <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">${item.cateName}</div>
                             <div class="p-4 pb-0 rounded-bottom">
@@ -52,10 +52,10 @@
                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                     <div class="w-100">
                                         <p class="text-danger text-decoration-line-through fs-5 fw-bold ml-2">${item.productPrice} VND/KG</p>
-                                        <p class="text-dark fs-5 fw-bold ml-2">${item.productPrice - (item.productPrice * item.productSale / 100)} VND/KG</p>
+                                        <p class="text-dark fs-5 fw-bold ml-2">${item.productPrice - (item.productPrice * item.sale / 100)} VND/KG</p>
                                     </div>
                                 </div>
-                                <div class="w-100"><a href="${pageContext.request.contextPath}/addCart/${item.id}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a></div>
+                                <div class="w-100"><a href="${pageContext.request.contextPath}/addCart/${item.productId}/1" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a></div>
                                 <!-- CHUYEN RA GIUA -->
                             </div>
                         </div>

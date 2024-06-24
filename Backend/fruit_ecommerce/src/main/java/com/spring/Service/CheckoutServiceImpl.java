@@ -30,7 +30,7 @@ public class CheckoutServiceImpl implements CheckoutService
         {
             CheckoutDetail checkoutDetail = new CheckoutDetail();
             checkoutDetail.setCheckoutID(checkoutid);
-            checkoutDetail.setProductID(itemCart.getValue().getProduct().getId());
+            checkoutDetail.setProductID(itemCart.getValue().getProduct().getProductId());
             checkoutDetail.setQuantity(itemCart.getValue().getQuantity());
             checkoutDetail.setTotal(itemCart.getValue().getTotalPrice());
             checkoutDAO.addCheckoutDetail(checkoutDetail);

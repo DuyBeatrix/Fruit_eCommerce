@@ -1,7 +1,7 @@
 package com.spring.Service;
 
 import com.spring.DAO.NewSaleDAO;
-import com.spring.model.Product;
+import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +14,10 @@ public class New_Sale_ServiceImpl implements New_Sale_Service
     private NewSaleDAO new_sale_DAO = new NewSaleDAO();
 
     @Override
-    public List<Product> getSellingProduct() {
+    public List<Products> getSellingProduct() {
         return new_sale_DAO.getSellingProduct();
     }
-    public List<Product> getDiscountProduct() {
+    public List<Products> getDiscountProduct() {
         return new_sale_DAO.getDiscountProduct();
     }
     @Override
