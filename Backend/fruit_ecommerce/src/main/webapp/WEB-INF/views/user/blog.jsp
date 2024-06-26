@@ -67,7 +67,9 @@
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="blog__item">
                                     <div class="blog__item__pic">
-                                        <img src="<c:url value="/resource/user/img/blog/${itemBox.blogImg}"/>" alt="">
+<%--                                        <img src="<c:url value="/resource/user/img/blog/${itemBox.blogImg}"/>" alt=""/>--%>
+                                            <img src="${pageContext.request.contextPath}/blog/image/${itemBox.blogImg}"/>
+
                                     </div>
                                     <div class="blog__item__text">
                                         <ul>

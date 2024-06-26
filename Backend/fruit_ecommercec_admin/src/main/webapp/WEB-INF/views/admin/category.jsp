@@ -43,7 +43,12 @@
         <c:forEach var="category" items="${paginationCategory}">
           <tr>
             <td>${category.cateId}</td>
-            <td>${category.cateImg}</td>
+<%--            <td>${category.cateImg}</td>--%>
+            <td>
+              <img src="${pageContext.request.contextPath}/category/image/${category.cateImg}" alt="Category Image" style="width: 100px; height: auto;"/>
+
+            </td>
+
             <td>${category.cateName}</td>
             <td>
               <c:if test="${category.enable eq 'true'}">Enable</c:if>
