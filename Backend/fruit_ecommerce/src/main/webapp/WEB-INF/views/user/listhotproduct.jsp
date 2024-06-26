@@ -13,7 +13,7 @@
 <c:forEach var="hotProducts" items="${hotProducts}">
     <div class="d-flex align-items-center justify-content-start">
         <div class="rounded me-4" style="width: 100px; height: 100px;">
-            <img src="<c:url value="/resource/user/products/img/${hotProducts.productImg}"/> " class="img-fluid rounded"
+            <img src="${pageContext.request.contextPath}/product/image/${hotProducts.productImg}" class="img-fluid rounded"
                  alt="">
         </div>
         <div>

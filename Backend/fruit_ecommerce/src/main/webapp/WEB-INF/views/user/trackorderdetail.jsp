@@ -31,7 +31,7 @@
                                                 <c:forEach var="item" items="${orderdetail}">
                                                     <div class="row">
                                                         <div class="col-md-2">
-                                                            <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Phone">
+                                                            <img src="${pageContext.request.contextPath}/product/image/${item.productImg}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="Phone">
                                                         </div>
                                                         <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
                                                             <p class="text-muted mb-0">${item.productName}</p>
@@ -39,6 +39,7 @@
                                                         <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
                                                             <p class="text-muted mb-0 small">${item.productPrice}</p>
                                                         </div>
+                                                        <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
                                                         <div class="col-md-2 text-center d-flex justify-content-center align-items-center">
                                                             <p class="text-muted mb-0 small">Quantity: ${item.quantity}</p>
                                                         </div>
