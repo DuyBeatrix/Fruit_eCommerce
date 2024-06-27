@@ -1,7 +1,8 @@
 package com.spring.DAO;
 
 import com.spring.model.Cart;
-import com.spring.model.Product;
+
+import com.spring.model.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -21,7 +22,7 @@ public class CartDAO
     public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart, int quantity)
     {
         Cart itemCart = new Cart();
-        Product product = productDAO.FindProductByID(id);
+        Products product = productDAO.FindProductByID(id);
         if(product != null && cart.containsKey(id))
         {
             itemCart = cart.get(id);

@@ -118,7 +118,7 @@ public class PaymentController
 //        resp.getWriter().write(gson.toJson(job));
         return ResponseEntity.status(HttpStatus.OK).body(new Gson().toJson(job));
     }
-    @GetMapping(value = "/paymentResult")
+    @RequestMapping(value = "/paymentResult", method = RequestMethod.GET)
     public ModelAndView showPaymentResult(HttpServletRequest request, HttpSession session) throws Exception {
         ModelAndView modelAndView = new ModelAndView("user/vnpay_return");
 

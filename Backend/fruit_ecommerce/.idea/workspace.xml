@@ -11,18 +11,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CheckoutDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CheckoutDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/CheckoutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/CheckoutServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/CheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/shop-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/shop-detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorderdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorderdetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,6 +258,7 @@
       <workItem from="1719155959928" duration="1315000" />
       <workItem from="1719328925375" duration="2650000" />
       <workItem from="1719416504466" duration="2580000" />
+      <workItem from="1719475903611" duration="2814000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />
