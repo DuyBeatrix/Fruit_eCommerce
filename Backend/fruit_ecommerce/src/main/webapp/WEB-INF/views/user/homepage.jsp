@@ -169,19 +169,19 @@
 
 <div class="col-12 page-product">
     <div class="pagination d-flex justify-content-center mt-5">
-        <%--        <a href="#" class="rounded">&laquo;</a>--%>
+<%--        <a href="#" class="rounded">&laquo;</a>--%>
         <c:if test="${not empty endPage}">
             <c:forEach begin="1" end="${endPage}" var="i">
                 <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>
             </c:forEach>
         </c:if>
-        <%--        THUA MOT PHAN TRANG--%>
-        <%--        <c:if test="${not empty endPageProductByCate}">--%>
-        <%--            <c:forEach begin="1" end="${endPageProductByCate}" var="i">--%>
-        <%--                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>--%>
-        <%--            </c:forEach>--%>
-        <%--        </c:if>--%>
-        <%--        <a href="#" class="rounded">&raquo;</a>--%>
+<%--        THUA MOT PHAN TRANG--%>
+<%--        <c:if test="${not empty endPageProductByCate}">--%>
+<%--            <c:forEach begin="1" end="${endPageProductByCate}" var="i">--%>
+<%--                <button class="active rounded px-3 border-warning border-1 me-2 bg-white" id="page-${i}">${i}</button>--%>
+<%--            </c:forEach>--%>
+<%--        </c:if>--%>
+<%--        <a href="#" class="rounded">&raquo;</a>--%>
     </div>
 </div>
 
@@ -243,24 +243,24 @@
         <h1 class="mb-0">Fresh Organic Vegetables</h1>
         <div class="owl-carousel vegetable-carousel justify-content-center">
             <c:forEach var="list" items="${listvegetable}">
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="<c:url value="/resource/user/img/products/${list.productImg}"/>"
-                             class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                         style="top: 10px; right: 10px;">${list.cateName}
-                    </div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>${list.productName}</h4>
-                            <%--                    <p>${list.shortDesc}t</p>--%>
-                        <div class="d-flex justify-content-between flex-lg-wrap">
-                            <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
-                            <a href="${pageContext.request.contextPath}/addCart/${list.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="<c:url value="/resource/user/img/products/${list.productImg}"/>"
+                         class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                     style="top: 10px; right: 10px;">${list.cateName}
+                </div>
+                <div class="p-4 rounded-bottom">
+                    <h4>${list.productName}</h4>
+<%--                    <p>${list.shortDesc}t</p>--%>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                        <p class="text-dark fs-5 fw-bold mb-0">${list.productPrice} / kg</p>
+                        <a href="${pageContext.request.contextPath}/addCart/${list.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
                 </div>
+            </div>
             </c:forEach>
         </div>
     </div>
@@ -311,29 +311,29 @@
         </div>
         <div class="row g-4">
             <c:forEach var="seller" items="${bestseller}">
-                <div class="col-lg-6 col-xl-4">
-                    <div class="p-4 rounded bg-light">
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                                <img src="<c:url value="/resource/user/img/products/${seller.productImg}"/>"
-                                     class="img-fluid rounded-circle w-100" alt=""/>
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="<c:url value="/resource/user/img/products/${seller.productImg}"/>"
+                                 class="img-fluid rounded-circle w-100" alt=""/>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h5">${seller.productName}</a>
+                            <div class="d-flex my-3">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            <div class="col-6">
-                                <a href="#" class="h5">${seller.productName}</a>
-                                <div class="d-flex my-3">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">${seller.productPrice}</h4>
-                                <a href="${pageContext.request.contextPath}/addCart/${seller.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
+                            <h4 class="mb-3">${seller.productPrice}</h4>
+                            <a href="${pageContext.request.contextPath}/addCart/${seller.productId}/1" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>
+            </div>
             </c:forEach>
         </div>
     </div>
@@ -477,6 +477,7 @@
 </div>
 <!-- Tastimonial End -->
 <script type="text/javascript">
+
     $(document).ready(function () {
 
         $.ajax({

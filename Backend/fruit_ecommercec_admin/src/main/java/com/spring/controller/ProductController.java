@@ -49,6 +49,7 @@ public class ProductController {
 
     @GetMapping(value = "/delete/{id}")
     public ModelAndView deleteProduct(@PathVariable(required = false) Integer id) {
+
         ModelAndView mv = new ModelAndView();
         try {
             productService.deleteProduct(id);
@@ -71,7 +72,27 @@ public class ProductController {
     }
 
     @PostMapping(value = "/addproduct")
-    public ModelAndView addProduct(@ModelAttribute("product") Products product) {
+    public ModelAndView addProduct(@ModelAttribute("product") Products product,
+                                   @RequestParam("productImage") MultipartFile file) {
+        if (!file.isEmpty()) {
+            try {
+                // Đường dẫn tới thư mục lưu trữ ảnh
+                String uploadDir = System.getProperty("catalina.home") + File.separator + "assets/user/img/products";
+                File dir = new File(uploadDir);
+                if (!dir.exists()) dir.mkdirs();
+
+                // Lưu trữ tập tin
+                String fileName = file.getOriginalFilename();
+                File uploadFile = new File(dir, fileName);
+                try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(uploadFile))) {
+                    stream.write(file.getBytes());
+                }
+                product.setProductImg(fileName); // Lưu tên tập tin vào database
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new ModelAndView("admin/addproduct", "message", "Image upload failed");
+            }
+        }
         productService.addProduct(product);
         return new ModelAndView("redirect:/product/1");
     }
@@ -80,17 +101,42 @@ public class ProductController {
     public ModelAndView update(@RequestParam("productId") int productId) {
         ModelAndView mv = new ModelAndView();
         Products product = productService.getProductById(productId);
-        mv.setViewName("admin/updateproduct");
+        mv.setViewName("admin/edit-product");
         mv.addObject("product", product);
         mv.addObject("category", categoryService.getCategories());
         return mv;
     }
 
     @PostMapping(value = "/updateProduct")
-    public ModelAndView updateProduct(@ModelAttribute("product") Products product) {
+    public ModelAndView updateProduct(@ModelAttribute("product") Products product,
+                                      @RequestParam(value = "productImage", required = false) MultipartFile file) {
+        if (file != null && !file.isEmpty()) {
+            try {
+                // Đường dẫn tới thư mục lưu trữ ảnh
+                String uploadDir = System.getProperty("catalina.home") + File.separator + "assets/user/img/products";
+                File dir = new File(uploadDir);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+
+                // Lưu trữ tập tin mới
+                String fileName = file.getOriginalFilename();
+                File uploadFile = new File(dir, fileName);
+                try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(uploadFile))) {
+                    stream.write(file.getBytes());
+                }
+                product.setProductImg(fileName); // Cập nhật tên tập tin mới vào database
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new ModelAndView("admin/edit-product", "message", "Image upload failed");
+            }
+        }
+
+        // Thực hiện cập nhật thông tin sản phẩm
         productService.updateProduct(product);
         return new ModelAndView("redirect:/product/1");
     }
+
     @GetMapping(value = "/bestSeller")
     public ModelAndView showBestSellerProduct(){
         ModelAndView mv = new ModelAndView();

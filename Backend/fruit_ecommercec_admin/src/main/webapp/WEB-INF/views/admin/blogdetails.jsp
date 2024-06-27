@@ -43,8 +43,9 @@
                         <td>${blogDetail.id}</td>
                         <td>${blogDetail.title}</td>
                         <td>${blogDetail.description}</td>
-<%--                        <td><img src="/resource/admin/img/blog/${blogDetail.blogImg}" width="100" height="100"/></td>--%>
-                        <td>${blogDetail.blogImg} </td>
+                        <td><img src="${pageContext.request.contextPath}/blog/image/${blogDetail.blogImg}" width="100" height="100"/></td>
+                        <c:out value="${pageContext.request.contextPath}/blog/image/${blogDetail.blogImg}" />
+<%--                        <td>${blogDetail.blogImg} </td>--%>
                         <td>
                            <a href="${pageContext.request.contextPath}/blogdetails/edit/${blogDetail.id}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>
                             <a href="${pageContext.request.contextPath}/blogdetails/delete/${blogDetail.id}" onclick="deleteBlogDetail('${blogDetail.id}')"><i class="fa-solid fa-trash-can" style="width: 24px; height: 24px" onclick="deleteProduct('${product.productId}')"></i></a>

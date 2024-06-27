@@ -50,7 +50,7 @@
                                     <c:forEach var="itemBoxNew" items="${blogdetailsnew}">
                                         <a href="${pageContext.request.contextPath}/blog-detail/${itemBoxNew.id}" class="blog__sidebar__recent__item">
                                             <div class="blog__sidebar__recent__item__pic">
-                                                <img style="height: 70px; width: 70px" src="<c:url value="/resource/user/img/blog/${itemBoxNew.blogImg}"/>" alt="">
+                                                <img style="height: 70px; width: 70px" src="${pageContext.request.contextPath}/blog/image/${itemBoxNew.blogImg}" alt="">
                                             </div>
                                             <div class="blog__sidebar__recent__item__text">
                                                 <h6>${itemBoxNew.title}</h6>
@@ -66,7 +66,7 @@
                         <c:forEach var="itemBlogDetails" items="${blogByID}">
                         <div class="blog__details__text">
                             <h3>${itemBlogDetails.title}</h3>
-                            <img src="<c:url value="/resource/user/img/blog/${itemBlogDetails.blogImg}"/>"  alt="">
+                            <img src="${pageContext.request.contextPath}/blog/image/${itemBlogDetails.blogImg}"  alt="">
                             <p>${itemBlogDetails.content}</p>
                         </div>
                         </c:forEach>

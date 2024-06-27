@@ -48,18 +48,9 @@
                         <td>
                             <p class="mb-0 mt-4">${item.value.product.productName}</p>
                         </td>
-
                         <td>
-                            <c:choose>
-                                <c:when test="${item.value.product.productSale > 0}">
-                                    <p class="mb-0 mt-4" style="color: #339900;">${item.value.product.productPrice - (item.value.product.productPrice * item.value.product.productSale / 100)} VNĐ/KG</p>
-                                </c:when>
-                                <c:otherwise>
-                                    <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
-                                </c:otherwise>
-                            </c:choose>
+                            <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
                         </td>
-
                         <td>
                             <div class="input-group quantity mt-4" style="width: 100px;">
                                 <div class="input-group-btn">
@@ -105,13 +96,14 @@
                         <div class="d-flex justify-content-between">
                             <h5 class="mb-0 me-4">Shipping</h5>
                             <div class="">
-                                <p class="mb-0">Free Ship</p>
+                                <p class="mb-0">Flat rate: $3.00</p>
                             </div>
                         </div>
+                        <p class="mb-0 text-end">Shipping to Ukraine.</p>
                     </div>
                     <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                         <h5 class="mb-0 ps-4 me-4">Total</h5>
-                        <p class="mb-0 pe-4">${totalPrice} VND</p>
+                        <p class="mb-0 pe-4">$99.00</p>
                     </div>
 
                     <c:if test="${empty loginInfo}">

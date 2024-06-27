@@ -28,12 +28,12 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Sản phẩm</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col">Số lượng</th>
-                    <th scope="col">Tổng giá</th>
-                    <th scope="col">Xóa</th>
+                    <th scope="col">Products</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Handle</th>
                 </tr>
                 </thead>
                 <tbody id="cart-items">
@@ -48,18 +48,9 @@
                         <td>
                             <p class="mb-0 mt-4">${item.value.product.productName}</p>
                         </td>
-
                         <td>
-                            <c:choose>
-                                <c:when test="${item.value.product.productSale > 0}">
-                                    <p class="mb-0 mt-4" style="color: #339900;">${item.value.product.productPrice - (item.value.product.productPrice * item.value.product.productSale / 100)} VNĐ/KG</p>
-                                </c:when>
-                                <c:otherwise>
-                                    <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
-                                </c:otherwise>
-                            </c:choose>
+                            <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
                         </td>
-
                         <td>
                             <div class="input-group quantity mt-4" style="width: 100px;">
                                 <div class="input-group-btn">
@@ -97,7 +88,7 @@
             <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                 <div class="bg-light rounded">
                     <div class="p-4">
-                        <h1 class="display-6 mb-4">Cart <span class="fw-normal">Tổng giá</span></h1>
+                        <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
                         <div class="d-flex justify-content-between mb-4">
                             <h5 class="mb-0 me-4">Subtotal:</h5>
                             <p class="mb-0">${totalPrice} VNĐ/KG</p>
@@ -110,7 +101,7 @@
                         </div>
                     </div>
                     <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
-                        <h5 class="mb-0 ps-4 me-4">Tổng đơn hàng</h5>
+                        <h5 class="mb-0 ps-4 me-4">Total</h5>
                         <p class="mb-0 pe-4">${totalPrice} VND</p>
                     </div>
 

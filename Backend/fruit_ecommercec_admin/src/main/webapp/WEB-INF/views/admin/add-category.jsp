@@ -11,13 +11,9 @@
                 <label for="cateName" class="form-label">Tên danh mục</label>
                 <form:input path="cateName" id="cateName" class="form-control" required="true"/>
             </div>
-<%--            <div class="mb-3">--%>
-<%--                <label for="cateImg" class="form-label">Category Image</label>--%>
-<%--                <input type="file" id="cateImg" name="cateImg" class="form-control-file" required="true"/>--%>
-<%--            </div>--%>
             <div class="mb-3">
-                <form:input id="fileInput" type="text" style="display: none;" path="cateImg"/>
-                <input accept="image/*" type='file' id="imgInp"  class="form-control" />
+                <label for="file" class="form-label">Hình ảnh</label>
+                <input type="file" id="file" name="file" class="form-control-file" required="true"/>
             </div>
             <div class="form-group mb-3">
                 <label for="enable">Trạng thái</label>
@@ -31,16 +27,5 @@
         </form:form>
     </div>
 </div>
-<script>
-    imgInp.onchange = evt => {
-        const [file] = imgInp.files
-        if (file) {
-            blah.src = URL.createObjectURL(file)
-        }
-    }
-    document.getElementById('imgInp').addEventListener('change', function() {
-        document.getElementById('fileInput').value = this.files[0].name;
-    });
-</script>
 <!-- Add Category Form End -->
 </body>

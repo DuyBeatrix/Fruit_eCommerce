@@ -27,7 +27,7 @@
 
                 <div class="mb-3">
                         <form:input id="fileInput" type="text" style="display: none;" path="blogImg"/>
-                        <input accept="image/*" type='file' id="imgInp"  class="form-control" />
+                        <input accept="image/*" type='file' id="imgInp" name="file"  class="form-control" />
                     </div>
 
 
