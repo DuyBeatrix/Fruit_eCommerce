@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <title>Dashboard</title>
 
@@ -97,95 +98,234 @@
         </div>
     </div>
 </div>
+
+
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light text-center rounded p-4">
-                <h3 class="pb-2">Số lượng và Doanh thu theo ngày</h3>
+                <h3 class="pb-2">Số lượng sản phẩm bán được trong ngày</h3>
+                <form method="get" action="${pageContext.request.contextPath}/">
+                    <label for="day">Chọn ngày:</label>
+                    <input type="date" id="day" name="day"
+                           value="${fn:escapeXml(selectedDay)}" onchange="this.form.submit()" class="py-1 px-3 rounded">
+                </form>
+
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">Ngày</th>
-                        <th scope="col">Số lượng đơn hàng</th>
-                        <th scope="col">Doanh thu(VND)</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Số lượng bán được</th>
+                        <th scope="col">Giá sản phẩm</th>
+                        <th scope="col">Tổng</th>
                     </tr>
-
                     </thead>
                     <tbody>
-                    <c:forEach var="list" items="${listRevenueDay}">
+                    <c:if test="${not empty productSellByDay}">
+                        <c:forEach var="item" items="${productSellByDay}">
+                            <tr>
+                                <td>${item.Name}</td>
+                                <td>${item.SoLuongSanPhamBanDuoc}</td>
+                                <td>${item.Price}</td>
+                                <td>${item.Price * item.SoLuongSanPhamBanDuoc}</td>
+                            </tr>
+                        </c:forEach>
+                    </c:if>
+                    <c:if test="${empty productSellByDay}">
                         <tr>
-                            <td>${list.createDay}</td>
-                            <td>${list.SoLuongDonHang}</td>
-                            <td>${list.DoanhThu}</td>
+                            <td colspan="4" class="text-center">${status}</td>
                         </tr>
-                    </c:forEach>
+                    </c:if>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 </div>
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light text-center rounded p-4">
-                <h3 class="pb-2 ">Số lượng và Doanh thu theo tháng</h3>
+                <h3 class="pb-2">Số lượng sản phẩm bán được trong tháng</h3>
+                <div class="text-end">
+                    <form action="${pageContext.request.contextPath}/" method="get">
+                        <label for="year">Năm:</label>
+                        <select name="year_1" id="year" class="py-1 px-3 rounded">
+                            <c:forEach begin="2020" end="2030" var="year">
+                                <option value="${year}" <c:if test="${year == selectedYear_1}">selected</c:if>>${year}</option>
+                            </c:forEach>
+                        </select>
+
+                        <label for="month_1">Tháng:</label>
+                        <select name="month" id="month_1" class="py-1 px-3 rounded">
+                            <c:forEach begin="1" end="12" var="month">
+                                <option value="${month}" <c:if test="${month == selectedMonth}">selected</c:if>>${month}</option>
+                            </c:forEach>
+                        </select>
+
+                        <button type="submit" class="btn btn-primary px-3">
+                            <i class="fa-solid fa-filter me-2" style="color: #ffffff;"></i>Lọc
+                        </button>
+                    </form>
+                </div>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">Năm</th>
-                        <th scope="col">Tháng</th>
-                        <th scope="col">Số lượng đơn hàng</th>
-                        <th scope="col">Doanh thu(VND)</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Số lượng bán được</th>
+                        <th scope="col">Giá sản phẩm</th>
+                        <th scope="col">Tổng</th>
                     </tr>
-
                     </thead>
                     <tbody>
-                    <c:forEach var="list" items="${listRevenueMonth}">
+                    <c:forEach var="item" items="${productSellByMonth}">
                         <tr>
-                            <td>${list.Nam}</td>
-                            <td>${list.Thang}</td>
-                            <td>${list.SoLuongDonHang}</td>
-                            <td>${list.DoanhThu}</td>
+                            <td>${item.Name}</td>
+                            <td>${item.SoLuongSanPhamBanDuoc}</td>
+                            <td>${item.Price}</td>
+                            <td>${item.Price * item.SoLuongSanPhamBanDuoc}</td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 </div>
+
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light text-center rounded p-4">
-                <h3 class="pb-2">Số lượng và Doanh thu theo năm</h3>
+                <h3 class="pb-2">Số lượng sản phẩm bán được trong năm</h3>
+                <div class="text-end">
+                    <form action="${pageContext.request.contextPath}/" method="get">
+                        <label for="nam">Năm:</label>
+                        <select name="year_2" id="nam" class="py-1 px-3 rounded">
+                            <c:forEach begin="2020" end="2030" var="year">
+                                <option value="${year}" <c:if test="${year == selectedYear_2}">selected</c:if>>${year}</option>
+                            </c:forEach>
+                        </select>
+                        <button type="submit" class="btn btn-primary px-3">
+                            <i class="fa-solid fa-filter me-2" style="color: #ffffff;"></i>Lọc
+                        </button>
+                    </form>
+                </div>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">Năm</th>
-                        <th scope="col">Số lượng đơn hàng</th>
-                        <th scope="col">Doanh thu(VND)</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Số lượng bán được</th>
+                        <th scope="col">Giá sản phẩm</th>
+                        <th scope="col">Tổng</th>
                     </tr>
-
                     </thead>
                     <tbody>
-                    <c:forEach var="list" items="${listRevenueYear}">
+                    <c:forEach var="item" items="${productSellByYear}">
                         <tr>
-                            <td>${list.Nam}</td>
-                            <td>${list.SoLuongDonHang}</td>
-                            <td>${list.DoanhThu}</td>
+                            <td>${item.Name}</td>
+                            <td>${item.SoLuongSanPhamBanDuoc}</td>
+                            <td>${item.Price}</td>
+                            <td>${item.Price * item.SoLuongSanPhamBanDuoc}</td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 </div>
+
+
+<%--<div class="container-fluid pt-4 px-4">--%>
+<%--    <div class="row g-4">--%>
+<%--        <div class="col-sm-12 col-xl-12">--%>
+<%--            <div class="bg-light text-center rounded p-4">--%>
+<%--                <h3 class="pb-2">Số lượng và Doanh thu theo ngày</h3>--%>
+<%--                <table class="table table-striped">--%>
+<%--                    <thead>--%>
+<%--                    <tr>--%>
+<%--                        <th scope="col">Ngày</th>--%>
+<%--                        <th scope="col">Số lượng đơn hàng</th>--%>
+<%--                        <th scope="col">Doanh thu(VND)</th>--%>
+<%--                    </tr>--%>
+
+<%--                    </thead>--%>
+<%--                    <tbody>--%>
+<%--                    <c:forEach var="list" items="${listRevenueDay}">--%>
+<%--                        <tr>--%>
+<%--                            <td>${list.createDay}</td>--%>
+<%--                            <td>${list.SoLuongDonHang}</td>--%>
+<%--                            <td>${list.DoanhThu}</td>--%>
+<%--                        </tr>--%>
+<%--                    </c:forEach>--%>
+<%--                    </tbody>--%>
+<%--                </table>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+
+<%--    </div>--%>
+<%--</div>--%>
+<%--<div class="container-fluid pt-4 px-4">--%>
+<%--    <div class="row g-4">--%>
+<%--        <div class="col-sm-12 col-xl-12">--%>
+<%--            <div class="bg-light text-center rounded p-4">--%>
+<%--                <h3 class="pb-2 ">Số lượng và Doanh thu theo tháng</h3>--%>
+<%--                <table class="table table-striped">--%>
+<%--                    <thead>--%>
+<%--                    <tr>--%>
+<%--                        <th scope="col">Năm</th>--%>
+<%--                        <th scope="col">Tháng</th>--%>
+<%--                        <th scope="col">Số lượng đơn hàng</th>--%>
+<%--                        <th scope="col">Doanh thu(VND)</th>--%>
+<%--                    </tr>--%>
+
+<%--                    </thead>--%>
+<%--                    <tbody>--%>
+<%--                    <c:forEach var="list" items="${listRevenueMonth}">--%>
+<%--                        <tr>--%>
+<%--                            <td>${list.Nam}</td>--%>
+<%--                            <td>${list.Thang}</td>--%>
+<%--                            <td>${list.SoLuongDonHang}</td>--%>
+<%--                            <td>${list.DoanhThu}</td>--%>
+<%--                        </tr>--%>
+<%--                    </c:forEach>--%>
+<%--                    </tbody>--%>
+<%--                </table>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+
+<%--    </div>--%>
+<%--</div>--%>
+<%--<div class="container-fluid pt-4 px-4">--%>
+<%--    <div class="row g-4">--%>
+<%--        <div class="col-sm-12 col-xl-12">--%>
+<%--            <div class="bg-light text-center rounded p-4">--%>
+<%--                <h3 class="pb-2">Số lượng và Doanh thu theo năm</h3>--%>
+<%--                <table class="table table-striped">--%>
+<%--                    <thead>--%>
+<%--                    <tr>--%>
+<%--                        <th scope="col">Năm</th>--%>
+<%--                        <th scope="col">Số lượng đơn hàng</th>--%>
+<%--                        <th scope="col">Doanh thu(VND)</th>--%>
+<%--                    </tr>--%>
+
+<%--                    </thead>--%>
+<%--                    <tbody>--%>
+<%--                    <c:forEach var="list" items="${listRevenueYear}">--%>
+<%--                        <tr>--%>
+<%--                            <td>${list.Nam}</td>--%>
+<%--                            <td>${list.SoLuongDonHang}</td>--%>
+<%--                            <td>${list.DoanhThu}</td>--%>
+<%--                        </tr>--%>
+<%--                    </c:forEach>--%>
+<%--                    </tbody>--%>
+<%--                </table>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+
+<%--    </div>--%>
+<%--</div>--%>
 
 
 <script>

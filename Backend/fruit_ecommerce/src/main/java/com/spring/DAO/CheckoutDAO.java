@@ -73,18 +73,18 @@ public class CheckoutDAO
     //===========================================================
 
     public Checkout findById(int id) {
-        String sql = "SELECT * FROM checkout WHERE id = ?";
+        String sql = "SELECT * FROM orders WHERE id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, new CheckoutMapper());
     }
 
     public void updateOrderStatus(int id, String status) {
-        String sql = "UPDATE checkout SET status = ? WHERE id = ?";
+        String sql = "UPDATE orders SET status = ? WHERE id = ?";
         jdbcTemplate.update(sql, status, id);
     }
 
     // Thêm phương thức để xóa chi tiết đơn hàng
     public void deleteCheckoutDetails(int checkoutid) {
-        String sql = "DELETE FROM checkoutdetail WHERE order_id = ?";
+        String sql = "DELETE FROM order_detail WHERE order_id = ?";
         jdbcTemplate.update(sql, checkoutid);
     }
 
@@ -96,7 +96,7 @@ public class CheckoutDAO
 
     // Lấy danh sách chi tiết đơn hàng
     public List<CheckoutDetail> getCheckoutDetails(int checkoutid) {
-        String sql = "SELECT * FROM checkoutdetail WHERE order_id = ?";
+        String sql = "SELECT * FROM order_detail WHERE order_id = ?";
         return jdbcTemplate.query(sql, new Object[]{checkoutid}, new CheckoutDetailMapper());
     }
 }

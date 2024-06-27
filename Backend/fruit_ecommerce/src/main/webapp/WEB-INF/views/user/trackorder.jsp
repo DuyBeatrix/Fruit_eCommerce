@@ -27,12 +27,12 @@
                 <td style="height: 90px; vertical-align: middle">${order.total}</td>
                 <td style="height: 90px; vertical-align: middle">${order.status}</td>
                 <td style="height: 90px; vertical-align: middle">
-                    <c:if test="${order.status != 'Rejected'}">
+<%--                    <c:if test="${order.status != 'Rejected'}">--%>
                         <a href="<c:url value="/trackorderdetail/${order.checkoutid}"/>">View order details</a>
-                    </c:if>
+<%--                    </c:if>--%>
                 </td>
                 <td style="height: 90px; vertical-align: middle">
-                    <c:if test="${order.status == 'Prepairing'}">
+                    <c:if test="${order.status == 'Preparing'}">
                         <form action="<c:url value='/cancelorder'/>" method="post" onsubmit="event.preventDefault(); confirmCancelOrder(this);">
                             <input type="hidden" name="checkoutid" value="${order.checkoutid}"/>
                             <button type="submit" class="btn btn-danger">Hủy đơn hàng</button>

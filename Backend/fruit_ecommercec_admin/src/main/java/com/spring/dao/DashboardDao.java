@@ -9,10 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Repository
 public class DashboardDao {
@@ -45,5 +42,19 @@ public class DashboardDao {
         } else {
             return results.get(0);
         }
+    }
+    public List<Map<String, Object>> getProductSellByDay(String day) {
+        String sql = "SELECT p.product_name as Name, p.product_price as Price, SUM(od.quantity) AS SoLuongSanPhamBanDuoc FROM orders o JOIN order_detail od ON o.id = od.order_id JOIN product p ON od.product_id = p.id WHERE DATE(o.createDay) = ? GROUP BY p.product_name";
+        return jdbcTemplate.queryForList(sql,day);
+    }
+
+    public List<Map<String, Object>> getProductSellByMonth(int year, int month) {
+        String sql = "SELECT p.product_name as Name, p.product_price as Price, SUM(od.quantity) AS SoLuongSanPhamBanDuoc FROM orders o JOIN order_detail od ON o.id = od.order_id JOIN product p ON od.product_id = p.id WHERE YEAR(o.createDay) = ? AND MONTH(o.createDay) = ? GROUP BY p.product_name";
+        return jdbcTemplate.queryForList(sql, year, month);
+    }
+
+    public List<Map<String, Object>> getProductsellByYear(int year) {
+        String sql = "SELECT p.product_name as Name, p.product_price as Price, SUM(od.quantity) AS SoLuongSanPhamBanDuoc FROM orders o JOIN order_detail od ON o.id = od.order_id JOIN product p ON od.product_id = p.id WHERE YEAR(o.createDay) = ? GROUP BY p.product_name";
+        return jdbcTemplate.queryForList(sql, year);
     }
 }

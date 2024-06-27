@@ -30,16 +30,16 @@ public class CheckoutController
         ModelAndView mv = new ModelAndView();
         mv.setViewName("user/checkout");
         Checkout checkout = new Checkout();
-//        loginInfo = (User) session.getAttribute("loginInfo");
-//        if(loginInfo != null)
-//        {
-//            checkout.setAddress(loginInfo.getCusAddress());
-//            checkout.setFullName(loginInfo.getCusName());
-//            checkout.setPhone(loginInfo.getCusPhone());
-//            checkout.setEmail(loginInfo.getCusEmail());
-//            checkout.setUserid(loginInfo.getId());
-//
-//        }
+        loginInfo = (User) session.getAttribute("loginInfo");
+        if(loginInfo != null)
+        {
+            checkout.setAddress(loginInfo.getCusAddress());
+            checkout.setFullName(loginInfo.getCusName());
+            checkout.setPhone(loginInfo.getCusPhone());
+            checkout.setEmail(loginInfo.getCusEmail());
+            checkout.setUserid(loginInfo.getId());
+
+        }
         mv.addObject("checkout", checkout);
 
         return mv;
@@ -70,6 +70,6 @@ public class CheckoutController
         checkout.setQuantity((Integer) session.getAttribute("totalQuantity"));
         checkout.setTotal((Double) session.getAttribute("totalPrice"));
         session.setAttribute("checkoutdata", checkout);
-        return "redirect:/cart";
+        return "redirect:https://www.facebook.com/";
     }
 }

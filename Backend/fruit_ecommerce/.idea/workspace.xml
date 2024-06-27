@@ -10,141 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e574f791-92e6-4074-81c0-b97492133f31" name="Changes" comment="up">
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/commons-codec-1.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/httpclient-4.5.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/httpcore-4.4.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-annotations-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-core-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-databind-2.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/json-20231013.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/banana.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/resource/user/img/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/vnpay_return.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/controller/FeedbackController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/dao/FeedbackDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/dao/OrderDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/dao/UserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/Feedback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/FeedbackMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/OrderDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/OrderDetailMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/OrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/Orders.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/model/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/FeedbackService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/FeedbackServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/UserServiceIpml.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/lib/commons-fileupload-1.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/lib/commons-io-2.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/banana.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/baner-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/banner-fruits.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/best-product-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/best-product-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/best-product-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/best-product-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/best-product-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/blog-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/details/details-author.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/details/details-hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/details/details-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/sidebar/sr-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/sidebar/sr-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/blog/sidebar/sr-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/cart-page-header-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/categories/ca.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/categories/hoa-qua.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/categories/rau-cu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/categories/thit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/featur-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/featur-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/featur-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/fruite-item-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/hero-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/hero-img-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/hero-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/img-login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/products/ca-dieu-hong-fillet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/products/orange-small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/products/raumuong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/products/thitthanbo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/single-item.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/suppliers/gioi-thieu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/resource/admin/img/vegetable-item-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/addfeedback.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/feedback.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/order.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/updateproduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/CartDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/CartDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/CheckoutDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/CheckoutDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/NewSaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/DAO/NewSaleDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/AuthServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/Service/AuthServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/config/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/CheckoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/CheckoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/PaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Checkout.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Checkout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/CheckoutMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/CheckoutMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/classes/com/spring/model/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/decorators.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-annotations-2.13.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-core-2.13.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/lib/jackson-databind-2.13.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/auth/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/auth/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/layout/user/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/newsale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/views/user/newsale.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommerce_war/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/classes/com/spring/service/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-9.0.87/webapps/fruit_ecommercec_admin_war/WEB-INF/views/admin/product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/NewSaleDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/user/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/newsale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/newsale.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/productbycategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/productbycategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CheckoutDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/DAO/CheckoutDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Service/CheckoutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Service/CheckoutServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/shop-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/shop-detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorder.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorderdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/trackorderdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/dao/DashboardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/java/com/spring/service/DashboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fruit_ecommercec_admin/src/main/webapp/WEB-INF/views/admin/order.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +258,11 @@
       <workItem from="1719020384941" duration="1946000" />
       <workItem from="1719062750117" duration="2527000" />
       <workItem from="1719113913347" duration="8782000" />
-      <workItem from="1719127290091" duration="1108000" />
+      <workItem from="1719127290091" duration="2360000" />
+      <workItem from="1719131563155" duration="3399000" />
+      <workItem from="1719155959928" duration="1315000" />
+      <workItem from="1719328925375" duration="2650000" />
+      <workItem from="1719416504466" duration="2580000" />
     </task>
     <task id="LOCAL-00001" summary="update product by category and pagination list product">
       <option name="closed" value="true" />
@@ -454,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719126406202</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="up">
+      <option name="closed" value="true" />
+      <created>1719128650117</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719128650117</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
