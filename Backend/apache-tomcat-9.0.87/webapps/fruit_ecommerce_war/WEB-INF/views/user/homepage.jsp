@@ -69,8 +69,8 @@
                         <i class="fas fa-car-side fa-3x text-white"></i>
                     </div>
                     <div class="featurs-content text-center">
-                        <h5>Free Shipping</h5>
-                        <p class="mb-0">Free on order over $300</p>
+                        <h5>Miễn phí vận chuyển</h5>
+                        <p class="mb-0">Trong khu vực nội thành</p>
                     </div>
                 </div>
             </div>
@@ -80,8 +80,8 @@
                         <i class="fas fa-user-shield fa-3x text-white"></i>
                     </div>
                     <div class="featurs-content text-center">
-                        <h5>Security Payment</h5>
-                        <p class="mb-0">100% security payment</p>
+                        <h5>Thanh toán an toàn</h5>
+                        <p class="mb-0">100% Thanh toán an toàn</p>
                     </div>
                 </div>
             </div>
@@ -91,8 +91,8 @@
                         <i class="fas fa-exchange-alt fa-3x text-white"></i>
                     </div>
                     <div class="featurs-content text-center">
-                        <h5>30 Day Return</h5>
-                        <p class="mb-0">30 day money guarantee</p>
+                        <h5>Hỗ trợ hoàn trả</h5>
+                        <p class="mb-0">Hỗ trợ hoàn tiền</p>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,8 @@
                         <i class="fa fa-phone-alt fa-3x text-white"></i>
                     </div>
                     <div class="featurs-content text-center">
-                        <h5>24/7 Support</h5>
-                        <p class="mb-0">Support every time fast</p>
+                        <h5>Hỗ trợ 24/7</h5>
+                        <p class="mb-0">Hỗ trợ nhiệt tình</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
         <div class="tab-class text-center">
             <div class="row g-4">
                 <div class="col-lg-4 text-start">
-                    <h1>Our Organic Products</h1>
+                    <h1>Sản phẩm hữu cơ</h1>
                 </div>
                 <div class="col-lg-8 text-end">
                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
@@ -240,7 +240,7 @@
 <!-- Vesitable Shop Start-->
 <div class="container-fluid vesitable py-5">
     <div class="container py-5">
-        <h1 class="mb-0">Fresh Organic Vegetables</h1>
+        <h1 class="mb-0">Rau quả tươi</h1>
         <div class="owl-carousel vegetable-carousel justify-content-center">
             <c:forEach var="list" items="${listvegetable}">
             <div class="border border-primary rounded position-relative vesitable-item">
@@ -305,7 +305,7 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-            <h1 class="display-4">Bestseller Products</h1>
+            <h1 class="display-4">Sản phẩm bán chạy</h1>
             <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which
                 looks reasonable.</p>
         </div>
@@ -385,7 +385,7 @@
     <div class="container py-5">
         <div class="testimonial-header text-center">
             <h4 class="text-primary">Our Testimonial</h4>
-            <h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
+            <h1 class="display-5 mb-5 text-dark">Phản hồi khách hàng</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
             <div class="testimonial-item img-border-radius bg-light rounded p-4">

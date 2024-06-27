@@ -34,7 +34,7 @@
                                         <span class="h1 fw-bold mb-0 text-primary">Fruitables</span>
                                     </div>
 
-                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create an account to log in</h5>
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Tạo tài khoản để đăng nhập</h5>
                                     <p class="text-danger mt-2">${requestScope.message}</p>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17">Email</label>
@@ -50,16 +50,16 @@
                                         <form:input type="password" id="password" class="form-control form-control-lg" path="password" required="true" minlength="5"/>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="rePassword">Enter the password again</label>
+                                        <label class="form-label" for="rePassword">Nhập lại Password</label>
                                         <input type="password" id="rePassword" class="form-control form-control-lg" name="rePassword" required/>
                                     </div>
 
                                     <div class="pt-1 mb-4">
                                         <button class="btn btn-primary btn-lg btn-block w-100 text-white" type="submit">
-                                            Register
+                                            Đăng ký
                                         </button>
                                     </div>
-                                    <p class="mb-5 pb-lg-2">Do you already have an account? <a href="<c:url value="/login"/> "  style="color: #7fad39;"> Login</a></p>
+                                    <p class="mb-5 pb-lg-2">Bạn đã có tài khoản? <a href="<c:url value="/login"/> "  style="color: #7fad39;">Đăng nhập</a></p>
 
                                 </form:form>
 

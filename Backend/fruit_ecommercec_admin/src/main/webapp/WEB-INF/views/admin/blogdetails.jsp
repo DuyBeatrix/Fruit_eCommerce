@@ -17,7 +17,7 @@
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Quản Lý Bài Viết</h6>
-            <td><a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/blogdetails/add">Thêm Bài Viết</a></td>
+            <a class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/blogdetails/add">Thêm Bài Viết</a>
         </div>
         <p class="text-success">${addMessageSuccess}</p>
         <p class="text-danger">${addMessageFail}</p>
@@ -44,7 +44,7 @@
                         <td>${blogDetail.title}</td>
                         <td>${blogDetail.description}</td>
                         <td><img src="${pageContext.request.contextPath}/blog/image/${blogDetail.blogImg}" width="100" height="100"/></td>
-                        <c:out value="${pageContext.request.contextPath}/blog/image/${blogDetail.blogImg}" />
+<%--                        <c:out value="${pageContext.request.contextPath}/blog/image/${blogDetail.blogImg}" />--%>
 <%--                        <td>${blogDetail.blogImg} </td>--%>
                         <td>
                            <a href="${pageContext.request.contextPath}/blogdetails/edit/${blogDetail.id}" class="me-4"><i class="fa-solid fa-arrows-rotate"></i></a>

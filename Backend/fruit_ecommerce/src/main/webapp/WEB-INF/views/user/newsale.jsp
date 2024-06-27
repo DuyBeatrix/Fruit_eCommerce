@@ -13,7 +13,7 @@
 <div class="container-fluid py-5 mt-5">
     <div class="container py-5">
         <div class="row g-4 mb-5">
-            <h1 class="fw-bold mb-0">Selling products</h1>
+            <h1 class="fw-bold mb-0">Sản phẩm Bán chạy</h1>
             <div class="vesitable">
                 <div class="owl-carousel vegetable-carousel justify-content-center">
 
@@ -40,7 +40,7 @@
 
                 </div>
             </div>
-            <h1 class="fw-bold mb-0">Discount products</h1>
+            <h1 class="fw-bold mb-0">Sản phẩm khuyến mãi</h1>
             <div class="vesitable">
                 <div class="owl-carousel vegetable-carousel justify-content-center">
 

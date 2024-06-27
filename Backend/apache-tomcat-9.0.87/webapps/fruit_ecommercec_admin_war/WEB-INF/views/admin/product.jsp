@@ -8,7 +8,10 @@
     <div class="bg-light rounded h-100 p-4">
         <h6 class="mb-4">Product</h6>
         <a href="addproduct" class="btn btn-primary mb-2"><span>+</span> Add new product</a>
+        <p class="text-danger">${msg}</p>
+
         <table class="table table-hover">
+
             <thead>
             <tr>
                 <th scope="col">ID</th>

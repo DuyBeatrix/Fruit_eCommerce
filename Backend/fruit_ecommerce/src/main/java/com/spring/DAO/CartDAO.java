@@ -1,7 +1,7 @@
 package com.spring.DAO;
 
 import com.spring.model.Cart;
-import com.spring.model.Products;
+import com.spring.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -21,30 +21,18 @@ public class CartDAO
     public HashMap<Integer, Cart> addCart(int id, HashMap<Integer, Cart> cart, int quantity)
     {
         Cart itemCart = new Cart();
-        Products product = productDAO.FindProductByID(id);
+        Product product = productDAO.FindProductByID(id);
         if(product != null && cart.containsKey(id))
         {
             itemCart = cart.get(id);
             itemCart.setQuantity(itemCart.getQuantity() + quantity);
-            double giaGoc = itemCart.getProduct().getProductPrice();
-            int soLuong = itemCart.getQuantity();
-            if(itemCart.getProduct().getSale() > 0)
-            {
-                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getSale() / 100)) * soLuong);
-            }
-            else itemCart.setTotalPrice(giaGoc * soLuong);
+            itemCart.setTotalPrice(itemCart.getProduct().getProductPrice() * itemCart.getQuantity());
         }
         else
         {
             itemCart.setProduct(product);
             itemCart.setQuantity(quantity);
-            double giaGoc = itemCart.getProduct().getProductPrice();
-            int soLuong = itemCart.getQuantity();
-            if(itemCart.getProduct().getSale() > 0)
-            {
-                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getSale() / 100)) * soLuong);
-            }
-            else itemCart.setTotalPrice(giaGoc * soLuong);
+            itemCart.setTotalPrice(product.getProductPrice());
         }
         cart.put(id, itemCart);
         return cart;
@@ -59,14 +47,7 @@ public class CartDAO
         {
             itemCart = cart.get(id);
             itemCart.setQuantity(quantity);
-
-            double giaGoc = itemCart.getProduct().getProductPrice();
-            int soLuong = itemCart.getQuantity();
-            if(itemCart.getProduct().getSale() > 0)
-            {
-                itemCart.setTotalPrice((giaGoc - (giaGoc * itemCart.getProduct().getSale() / 100)) * soLuong);
-            }
-            else itemCart.setTotalPrice(giaGoc * soLuong);
+            itemCart.setTotalPrice(itemCart.getProduct().getProductPrice() * quantity);
         }
         cart.put(id, itemCart);
         return cart;

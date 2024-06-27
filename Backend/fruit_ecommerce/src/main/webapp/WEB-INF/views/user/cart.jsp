@@ -42,24 +42,14 @@
                     <tr>
                         <th scope="row">
                             <div class="d-flex align-items-center">
-<!-- <<<<<<< dung
-                                <img src="${pageContext.request.contextPath}/product/image/${item.productImage}" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
-======= -->
-                                <img src="<c:url value="/resource/user/img/products/${item.value.product.productImg}"/>" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                <img src="<c:url value="/resource/user/img/products/${item.value.product.productImage}"/>" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
                             </div>
                         </th>
                         <td>
                             <p class="mb-0 mt-4">${item.value.product.productName}</p>
                         </td>
                         <td>
-                            <c:choose>
-                                <c:when test="${item.value.product.sale > 0}">
-                                    <p class="mb-0 mt-4" style="color: #339900;">${item.value.product.productPrice - (item.value.product.productPrice * item.value.product.sale / 100)} VNĐ/KG</p>
-                                </c:when>
-                                <c:otherwise>
-                                    <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
-                                </c:otherwise>
-                            </c:choose>
+                            <p class="mb-0 mt-4">${item.value.product.productPrice} VNĐ/KG</p>
                         </td>
                         <td>
                             <div class="input-group quantity mt-4" style="width: 100px;">
@@ -80,7 +70,7 @@
                             <p class="mb-0 mt-4">${item.value.totalPrice} VNĐ/KG</p>
                         </td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/deleteCart/${item.value.product.productId}" class="btn btn-md rounded-circle bg-light border mt-4" >
+                            <a href="${pageContext.request.contextPath}/deleteCart/${item.value.product.id}" class="btn btn-md rounded-circle bg-light border mt-4" >
                                 <i class="fa fa-trash text-danger"></i>
                             </a>
                         </td>
