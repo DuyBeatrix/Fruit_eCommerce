@@ -61,7 +61,11 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="d-flex align-items-center mt-2">
+<!-- <<<<<<< dung
+                                            <img src="${pageContext.request.contextPath}/product/image/${item.productImage}"
+======= -->
                                             <img src="<c:url value='/resource/user/img/products/${item.value.product.productImg}'/>"
+
                                                  class="img-fluid rounded-circle" style="width: 90px; height: 90px;"
                                                  alt="">
                                         </div>

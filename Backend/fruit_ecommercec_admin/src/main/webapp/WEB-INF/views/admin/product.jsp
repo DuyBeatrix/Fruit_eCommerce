@@ -34,6 +34,7 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Ảnh</th>
                 <th scope="col">Tên sản phẩm</th>
                 <th scope="col">Giá</th>
                 <th scope="col">Số lượng bán</th>
@@ -49,6 +50,7 @@
             <c:forEach var="product" items="${paginationProduct}">
                 <tr>
                     <th scope="row">${product.productId}</th>
+                    <td><img src="${pageContext.request.contextPath}/product/image/${product.productImg}" width="100" height="100"/></td>
                     <td>${product.productName}</td>
                     <td>${product.productPrice}</td>
                     <td>${product.sell_quantity}</td>

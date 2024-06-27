@@ -12,7 +12,7 @@
     <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="rounded position-relative fruite-item">
             <div class="fruite-img">
-                <img src="<c:url value="/resource/user/img/products/${probycate.productImg}"/>"
+                <img src="${pageContext.request.contextPath}/product/image/${probycate.productImg}"
                      class="img-fluid w-100 rounded-top"
                      alt="">
             </div>

@@ -25,7 +25,7 @@
         <img id="blah" src="${blogDetail.blogImg}" alt="Blog Image" style="max-width:100px; max-height:100px;"/>
       </div>
       <div class="mb-3">
-        <input accept="image/*" type='file' id="imgInp" class="form-control" />
+        <input accept="image/*" type='file' id="imgInp" name="file" class="form-control" />
         <form:hidden path="blogImg" id="fileInput" value="${blogDetail.blogImg}"/>
       </div>
 

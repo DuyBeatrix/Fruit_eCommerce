@@ -23,7 +23,7 @@
                         <div class="col-lg-6">
                             <div class="border rounded">
                                 <a href="#">
-                                    <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid rounded" alt="Image">
+                                    <img src="${pageContext.request.contextPath}/product/image/${item.productImg}" class="img-fluid rounded" alt="Image">
                                 </a>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                         <c:forEach var="item" items="${productSales}">
                             <div class="d-flex align-items-center justify-content-start">
                                 <div class="rounded" style="width: 100px; height: 100px;">
-                                    <img class="img-fluid me-5 rounded-circle" src="<c:url value="/resource/user/img/products/${item.productImg}"/>"
+                                    <img class="img-fluid me-5 rounded-circle" src="${pageContext.request.contextPath}/product/image/${item.productImg}"
                                          class="img-fluid rounded" alt="Image">
                                 </div>
                                 <div>
@@ -182,7 +182,7 @@
                 <c:forEach var="items" items="${similarProducts}">
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="<c:url value="/resource/user/img/products/${items.productImg}"/>"
+                            <img src="${pageContext.request.contextPath}/product/image/${items.productImg}"
                                  class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"

@@ -245,7 +245,7 @@
             <c:forEach var="list" items="${listvegetable}">
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
-                    <img src="<c:url value="/resource/user/img/products/${list.productImg}"/>"
+                    <img src="${pageContext.request.contextPath}/product/image/${list.productImg}"
                          class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
@@ -315,7 +315,7 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="<c:url value="/resource/user/img/products/${seller.productImg}"/>"
+                            <img src="${pageContext.request.contextPath}/product/image/${seller.productImg}"
                                  class="img-fluid rounded-circle w-100" alt=""/>
                         </div>
                         <div class="col-6">

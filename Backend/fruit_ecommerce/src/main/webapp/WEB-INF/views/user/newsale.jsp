@@ -20,7 +20,11 @@
                     <c:forEach var="item" items="${sellingProduct}">
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
+<!-- <<<<<<< dung
+                                <img src="${pageContext.request.contextPath}/product/image/${item.productImage}" class="img-fluid w-100 rounded-top" alt="">
+======= -->
                                 <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid w-100 rounded-top" alt="">
+
                             </div>
                             <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">${item.cateName}</div>
                             <div class="p-4 pb-0 rounded-bottom">
@@ -43,7 +47,11 @@
                     <c:forEach var="item" items="${discountProduct}">
                         <div class="border border-primary rounded position-relative vesitable-item">
                             <div class="vesitable-img">
+<!-- <<<<<<< dung
+                                <img src="${pageContext.request.contextPath}/product/image/${item.productImage}" class="img-fluid w-100 rounded-top bg-light" alt="">
+======= -->
                                 <img src="<c:url value="/resource/user/img/products/${item.productImg}"/>" class="img-fluid w-100 rounded-top bg-light" alt="">
+
                             </div>
                             <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">${item.cateName}</div>
                             <div class="p-4 pb-0 rounded-bottom">
