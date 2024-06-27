@@ -70,7 +70,7 @@
                             <p class="mb-0 mt-4">${item.value.totalPrice} VNĐ/KG</p>
                         </td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/deleteCart/${item.value.product.id}" class="btn btn-md rounded-circle bg-light border mt-4" >
+                            <a href="${pageContext.request.contextPath}/deleteCart/${item.value.product.productId}" class="btn btn-md rounded-circle bg-light border mt-4" >
                                 <i class="fa fa-trash text-danger"></i>
                             </a>
                         </td>
@@ -83,7 +83,7 @@
 
         <div class="row g-4 justify-content-end">
             <div class="col-8">
-                <img style="width:700px; height:auto; margin-left:0; display: block" src="<c:url value="/resource/user/img/cartdecor.jpg"/>">;
+                <img style="width:700px; height:auto; margin-left:0; display: block" src="<c:url value="/resource/user/img/cartdecor.jpg"/>">
             </div>
             <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                 <div class="bg-light rounded">

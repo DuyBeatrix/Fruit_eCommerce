@@ -60,7 +60,7 @@ public class CheckoutController
             checkoutService.addCheckoutDetail(carts);
             session.removeAttribute("cart");
         }
-        return "redirect:/cart";
+        return "redirect:/shop/1";
     }
     @RequestMapping(value = "/saveData", method = RequestMethod.POST)
     public String saveData(HttpServletRequest request, HttpSession session, @ModelAttribute("checkout") Checkout checkout, RedirectAttributes redirectAttributes)
@@ -70,6 +70,6 @@ public class CheckoutController
         checkout.setQuantity((Integer) session.getAttribute("totalQuantity"));
         checkout.setTotal((Double) session.getAttribute("totalPrice"));
         session.setAttribute("checkoutdata", checkout);
-        return "redirect:https://www.facebook.com/";
+        return "redirect:/cart";
     }
 }
