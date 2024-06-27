@@ -4,9 +4,9 @@ public class Cart
 {
     private int quantity;
     private double totalPrice;
-    private Product product;
+    private Products product;
 
-    public Cart(int quantity, double totalPrice, Product product) {
+    public Cart(int quantity, double totalPrice, Products product) {
         this.quantity = quantity;
         this.totalPrice = totalPrice;
         this.product = product;
@@ -14,10 +14,10 @@ public class Cart
 
     public Cart() {}
 
-    public Product getProduct() {
+    public Products getProduct() {
         return product;
     }
-    public void setProduct(Product product) {
+    public void setProduct(Products product) {
         this.product = product;
     }
     public double getTotalPrice() {

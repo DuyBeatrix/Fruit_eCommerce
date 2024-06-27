@@ -30,7 +30,7 @@ public class CheckoutServiceImpl implements CheckoutService
         {
             CheckoutDetail checkoutDetail = new CheckoutDetail();
             checkoutDetail.setCheckoutID(checkoutid);
-            checkoutDetail.setProductID(itemCart.getValue().getProduct().getId());
+            checkoutDetail.setProductID(itemCart.getValue().getProduct().getProductId());
             checkoutDetail.setQuantity(itemCart.getValue().getQuantity());
             checkoutDetail.setTotal(itemCart.getValue().getTotalPrice());
             checkoutDAO.addCheckoutDetail(checkoutDetail);
@@ -58,15 +58,13 @@ public class CheckoutServiceImpl implements CheckoutService
     {
         Checkout order = checkoutDAO.findById(checkoutid);
         if (order != null && "Prepairing".equals(order.getStatus())) {
-            // Lấy danh sách chi tiết đơn hàng
+
             List<CheckoutDetail> checkoutDetails = checkoutDAO.getCheckoutDetails(checkoutid);
             for (CheckoutDetail detail : checkoutDetails) {
-                // Cập nhật lại số lượng sản phẩm trong kho
+
                 checkoutDAO.updateQuantityOnCancel(detail.getProductID(), detail.getQuantity());
             }
-            // Xóa chi tiết đơn hàng
-            checkoutDAO.deleteCheckoutDetails(checkoutid);
-            // Cập nhật trạng thái đơn hàng
+
             checkoutDAO.updateOrderStatus(checkoutid, "Rejected");
         }
     }
